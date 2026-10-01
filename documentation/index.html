@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentation & Setup Guide — DRIVEFORGE Template</title>
+  <meta name="description" content="Technical documentation, file architecture, and customization guide for the DRIVEFORGE Vehicle Sales Resource & Knowledge Network website template.">
+  
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23f57c00'/><path d='M30 25 L70 50 L30 75 Z' fill='%23ffffff'/></svg>">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-driveforge" aria-label="Main Navigation">
+      <div class="container">
+        <a class="navbar-brand navbar-brand-logo" href="../index.html">
+          <span class="logo-badge"><i class="bi bi-shield-shaded"></i></span>
+          <span>DRIVE<span class="text-warning">FORGE</span> <small class="text-muted fw-normal fs-6 ms-1">DOCS</small></span>
+        </a>
+
+        <div class="d-flex align-items-center gap-3">
+          <button class="btn btn-icon theme-toggle-btn" type="button" aria-label="Toggle Theme">
+            <i class="bi bi-moon-stars-fill"></i>
+          </button>
+          <a href="../index.html" class="btn btn-secondary-custom py-1 px-3 small">
+            <i class="bi bi-arrow-left me-1"></i> View Live Site
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN DOCUMENTATION CONTENT -->
+  <main id="main-content" class="py-5">
+    <div class="container">
+      <div class="row g-5">
+        <!-- Sidebar Navigation (Left) -->
+        <div class="col-lg-3">
+          <div class="position-sticky" style="top: 100px;">
+            <div class="p-3 rounded-3 bg-secondary border border-subtle">
+              <h6 class="fw-bold text-uppercase text-warning mb-3" style="font-size: 0.8rem; letter-spacing: 0.08em;">Documentation Index</h6>
+              <ul class="list-unstyled mb-0 d-flex flex-column gap-2 small">
+                <li><a href="#overview" class="text-reset">1. Template Overview</a></li>
+                <li><a href="#structure" class="text-reset">2. Directory Structure</a></li>
+                <li><a href="#theme-colors" class="text-reset">3. Design Tokens & Colors</a></li>
+                <li><a href="#typography" class="text-reset">4. Typography & Fonts</a></li>
+                <li><a href="#dark-mode" class="text-reset">5. Dark Mode Implementation</a></li>
+                <li><a href="#interactions" class="text-reset">6. JavaScript Interactions</a></li>
+                <li><a href="#seo-a11y" class="text-reset">7. SEO & Accessibility</a></li>
+                <li><a href="#credits" class="text-reset">8. Credits & Disclaimer</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Documentation Body (Right) -->
+        <div class="col-lg-9">
+          <!-- Overview -->
+          <section id="overview" class="mb-5 pb-4 border-bottom border-subtle">
+            <span class="badge-custom badge-amber mb-2">Technical Reference</span>
+            <h1 class="display-6 fw-bold mb-3">DRIVEFORGE Template Documentation</h1>
+            <p class="fs-5 text-muted mb-4">
+              DRIVEFORGE is an editorial-grade, production-quality website template designed for vehicle sales resource platforms, automotive training academies, and dealership sales enablement hubs.
+            </p>
+
+            <div class="row g-3">
+              <div class="col-md-4">
+                <div class="p-3 rounded bg-tertiary border border-subtle">
+                  <div class="fw-bold text-warning mb-1"><i class="bi bi-code-slash me-1"></i> Core Stack</div>
+                  <div class="text-muted small">HTML5, Bootstrap 5.3.3, CSS3 Variables, Vanilla JS, GSAP.</div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="p-3 rounded bg-tertiary border border-subtle">
+                  <div class="fw-bold text-success mb-1"><i class="bi bi-moon-stars me-1"></i> Dual Themes</div>
+                  <div class="text-muted small">Native Light & Dark themes with localStorage and OS preference sync.</div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="p-3 rounded bg-tertiary border border-subtle">
+                  <div class="fw-bold text-primary mb-1"><i class="bi bi-speedometer2 me-1"></i> Zero Bloat</div>
+                  <div class="text-muted small">No React/Vue build step needed. Works straight out of the box.</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Structure -->
+          <section id="structure" class="mb-5 pb-4 border-bottom border-subtle">
+            <h2 class="h3 fw-bold mb-3">2. Directory Structure</h2>
+            <p class="text-muted">The template follows a clean, compact, production-ready hierarchy:</p>
+            <pre class="p-3 rounded-3 text-light font-monospace small" style="background: var(--code-bg); overflow-x: auto;">
+driveforge/
+│
+├── index.html                  # Homepage (Editorial Hero, Live Search, Highlights)
+├── resources.html              # Searchable Resource Library with Filters & Sort
+├── resource-details.html       # Article Detail Layout with Checklist & Talk Tracks
+├── learn.html                  # Curriculum Architecture & Learning Paths
+├── video-tutorials.html        # Video Library & Interactive Modal Player
+├── templates.html              # Downloadable Sales Toolkits (PDF, XLSX, DOCX)
+├── community.html              # Peer Discussion Network & Start Discussion Modal
+├── about.html                  # Brand Mission, Pillars, Guidelines & Standards
+├── contact.html                # Inquiry Form with Real-time Validation
+│
+├── login.html                  # Front-End Sign In (Split-Screen, In-Place Alert)
+├── signup.html                 # Front-End Sign Up (Role Picker, Terms Check)
+├── forgot-password.html        # Compact Password Reset Request Card
+├── 404.html                    # Themed Detour 404 Page with Search
+│
+├── assets/
+│   ├── css/
+│   │   ├── bootstrap.min.css   # Bootstrap 5.3.3 Core
+│   │   ├── bootstrap-icons.min.css # Bootstrap Icons CSS
+│   │   ├── fonts/              # WOFF2/WOFF Icon Font Files
+│   │   └── style.css           # Master Custom Stylesheet & Tokens
+│   ├── js/
+│   │   ├── bootstrap.bundle.min.js
+│   │   ├── gsap.min.js         # GSAP 3.12.5 Animation Library
+│   │   └── main.js             # Theme, Search, Filters, Modals, Forms
+│   └── images/
+│       ├── hero/               # Executive Showroom Imagery
+│       ├── automotive/         # Vehicle Handover & Walkarounds
+│       ├── resources/          # Consultative Lounge Presentations
+│       └── videos/             # Masterclass & Desking Visuals
+│
+├── documentation/
+│   └── index.html              # This Technical Reference
+└── README.md                   # Repository & Project Overview
+            </pre>
+          </section>
+
+          <!-- Design Tokens & Colors -->
+          <section id="theme-colors" class="mb-5 pb-4 border-bottom border-subtle">
+            <h2 class="h3 fw-bold mb-3">3. Design Tokens & Colors</h2>
+            <p class="text-muted">
+              All visual tokens are defined via CSS custom properties in <code>assets/css/style.css</code>. To customize the brand accent, modify the <code>--accent-amber</code> variables:
+            </p>
+            <pre class="p-3 rounded-3 text-light font-monospace small" style="background: var(--code-bg); overflow-x: auto;">
+:root {
+  /* Automotive Amber Accent System */
+  --accent-amber: #f57c00;
+  --accent-amber-hover: #ff9800;
+  --accent-amber-active: #e65100;
+  --accent-amber-soft: rgba(245, 124, 0, 0.12);
+  --accent-amber-glow: rgba(245, 124, 0, 0.28);
+  --accent-blue: #2563eb;
+}
+            </pre>
+          </section>
+
+          <!-- Typography -->
+          <section id="typography" class="mb-5 pb-4 border-bottom border-subtle">
+            <h2 class="h3 fw-bold mb-3">4. Typography & Fonts</h2>
+            <p class="text-muted">
+              DRIVEFORGE leverages three distinct typefaces via Google Fonts to achieve an authoritative editorial-automotive balance:
+            </p>
+            <ul>
+              <li><strong>Space Grotesk:</strong> Display headings, large titles, card headers, and numeric stats.</li>
+              <li><strong>Inter:</strong> Body text, navigation elements, metadata tags, and interactive form controls.</li>
+              <li><strong>DM Serif Display:</strong> Selective editorial quotes and philosophical callouts.</li>
+            </ul>
+          </section>
+
+          <!-- Dark Mode -->
+          <section id="dark-mode" class="mb-5 pb-4 border-bottom border-subtle">
+            <h2 class="h3 fw-bold mb-3">5. Dark Mode Implementation</h2>
+            <p class="text-muted">
+              The theme switcher is managed in <code>assets/js/main.js</code>. It checks for a saved theme in <code>localStorage</code>, falls back to the operating system's <code>prefers-color-scheme</code>, and applies the <code>data-bs-theme</code> attribute on the <code>&lt;html&gt;</code> element.
+            </p>
+          </section>
+
+          <!-- JavaScript Interactions -->
+          <section id="interactions" class="mb-5 pb-4 border-bottom border-subtle">
+            <h2 class="h3 fw-bold mb-3">6. JavaScript Interactions</h2>
+            <p class="text-muted">The vanilla JS module in <code>main.js</code> encapsulates several key functionalities:</p>
+            <ul>
+              <li><strong>Live Search Engine:</strong> Triggers with keyboard shortcut <code>/</code> or <code>Ctrl+K</code>. Offers instantaneous autocomplete suggestions.</li>
+              <li><strong>Dynamic Filtering & Sorting:</strong> Instant client-side filtering on <code>resources.html</code>, <code>video-tutorials.html</code>, and <code>templates.html</code> without page reloads.</li>
+              <li><strong>Modal Video Player:</strong> Reusable lightbox simulating scenario video lessons with interactive controls.</li>
+              <li><strong>File Download Simulation:</strong> Triggers mock sample downloads with toast notification feedback.</li>
+              <li><strong>Live Community Submission:</strong> Validates the discussion form and immediately prepends the new post to the top of the discussion feed.</li>
+              <li><strong>Bookmark Toggle:</strong> Saves/removes resources with instant toast feedback.</li>
+            </ul>
+          </section>
+
+          <!-- SEO & Accessibility -->
+          <section id="seo-a11y" class="mb-5 pb-4 border-bottom border-subtle">
+            <h2 class="h3 fw-bold mb-3">7. SEO & Accessibility</h2>
+            <p class="text-muted">
+              Every page includes semantic HTML5 landmarks (<code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;footer&gt;</code>), skip-to-content links, visible keyboard focus indicators, accessible ARIA attributes, and Open Graph tags.
+            </p>
+          </section>
+
+          <!-- Credits & Disclaimer -->
+          <section id="credits">
+            <h2 class="h3 fw-bold mb-3">8. Credits & Fictional Brand Notice</h2>
+            <div class="alert alert-info border-subtle" role="alert">
+              <i class="bi bi-info-circle-fill me-2"></i>
+              <strong>Notice:</strong> <strong>DRIVEFORGE</strong> is a fictional demonstration brand created for commercial template marketplaces and client projects. All statistics, user avatars, dealership scenarios, and downloadable tools are demonstration assets.
+            </div>
+            <p class="text-muted small">
+              Libraries used: Bootstrap 5.3.3 (MIT), Bootstrap Icons (MIT), GSAP 3.12.5 (Standard Web License), Google Fonts (OFL).
+            </p>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer-driveforge">
+    <div class="container text-center text-muted small">
+      © 2026 DRIVEFORGE Template Documentation. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/gsap.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

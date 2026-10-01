@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DRIVEFORGE — Vehicle Sales Resource & Knowledge Network</title>
+  <meta name="description" content="DRIVEFORGE is the premier knowledge hub for vehicle sales professionals. Explore practical sales guides, video tutorials, downloadable checklists, and community discussions.">
+  <meta name="keywords" content="vehicle sales resources, automotive sales training, car sales guides, vehicle sales templates, automotive sales community">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="DRIVEFORGE — Knowledge That Moves Sales Forward">
+  <meta property="og:description" content="Practical resources, proven sales knowledge, and a community built for vehicle sales professionals.">
+  <meta property="og:type" content="website">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  
+  <!-- Favicon placeholder SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23f57c00'/><path d='M30 25 L70 50 L30 75 Z' fill='%23ffffff'/></svg>">
+</head>
+<body>
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ===================================================================
+       NAVBAR
+       =================================================================== -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-driveforge" aria-label="Main Navigation">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand navbar-brand-logo" href="index.html">
+          <span class="logo-badge"><i class="bi bi-shield-shaded"></i></span>
+          <span>DRIVE<span class="text-warning">FORGE</span></span>
+        </a>
+
+        <!-- Mobile Toggler -->
+        <div class="d-flex align-items-center gap-2 d-lg-none">
+          <button class="btn btn-icon theme-toggle-btn" type="button" aria-label="Toggle Theme">
+            <i class="bi bi-moon-stars-fill"></i>
+          </button>
+          <button class="navbar-toggler navbar-toggler-custom" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavbar" aria-controls="mobileNavbar" aria-label="Toggle navigation">
+            <i class="bi bi-list fs-4"></i>
+          </button>
+        </div>
+
+        <!-- Desktop Navigation Menu -->
+        <div class="collapse navbar-collapse" id="desktopNavMenu">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+            <li class="nav-item">
+              <a class="nav-link-custom active" aria-current="page" href="index.html">Home</a>
+            </li>
+
+            <!-- Resources Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link-custom dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Resources
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item dropdown-item-custom" href="resources.html?type=documentation">
+                    <i class="bi bi-journal-code"></i>
+                    <div class="dropdown-item-text">
+                      <span class="dropdown-item-title">Documentation</span>
+                      <span class="dropdown-item-desc">Frameworks & sales methodologies</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item dropdown-item-custom" href="resources.html?type=guides">
+                    <i class="bi bi-book"></i>
+                    <div class="dropdown-item-text">
+                      <span class="dropdown-item-title">Sales Guides</span>
+                      <span class="dropdown-item-desc">In-depth consultative roadmaps</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item dropdown-item-custom" href="resources.html?type=playbooks">
+                    <i class="bi bi-diagram-3"></i>
+                    <div class="dropdown-item-text">
+                      <span class="dropdown-item-title">Playbooks</span>
+                      <span class="dropdown-item-desc">Step-by-step dealership playbooks</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item dropdown-item-custom" href="resources.html?type=checklists">
+                    <i class="bi bi-check2-square"></i>
+                    <div class="dropdown-item-text">
+                      <span class="dropdown-item-title">Checklists</span>
+                      <span class="dropdown-item-desc">Delivery, handover & walkaround lists</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item dropdown-item-custom" href="resources.html?type=scripts">
+                    <i class="bi bi-chat-quote"></i>
+                    <div class="dropdown-item-text">
+                      <span class="dropdown-item-title">Scripts</span>
+                      <span class="dropdown-item-desc">Phone, showroom & objection dialogs</span>
+                    </div>
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider my-1"></li>
+                <li>
+                  <a class="dropdown-item dropdown-item-custom" href="templates.html">
+                    <i class="bi bi-download"></i>
+                    <div class="dropdown-item-text">
+                      <span class="dropdown-item-title">Downloads & Toolkits</span>
+                      <span class="dropdown-item-desc">Ready-to-use worksheets & planners</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Learn Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link-custom dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Learn
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item dropdown-item-custom" href="video-tutorials.html">
+                    <i class="bi bi-play-circle-fill"></i>
+                    <div class="dropdown-item-text">
+                      <span class="dropdown-item-title">Video Tutorials</span>
+                      <span class="dropdown-item-desc">Scenario roleplays & masterclasses</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item dropdown-item-custom" href="learn.html#fundamentals">
+                    <i class="bi bi-compass"></i>
+                    <div class="dropdown-item-text">
+                      <span class="dropdown-item-title">Sales Fundamentals</span>
+                      <span class="dropdown-item-desc">Core customer discovery basics</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item dropdown-item-custom" href="learn.html#conversations">
+                    <i class="bi bi-chat-left-dots"></i>
+                    <div class="dropdown-item-text">
+                      <span class="dropdown-item-title">Customer Conversations</span>
+                      <span class="dropdown-item-desc">Uncovering buying motivations</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item dropdown-item-custom" href="learn.html#follow-up">
+                    <i class="bi bi-arrow-repeat"></i>
+                    <div class="dropdown-item-text">
+                      <span class="dropdown-item-title">Follow-Up Strategies</span>
+                      <span class="dropdown-item-desc">Multi-channel cadence & timing</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item dropdown-item-custom" href="learn.html#negotiation">
+                    <i class="bi bi-calculator"></i>
+                    <div class="dropdown-item-text">
+                      <span class="dropdown-item-title">Negotiation & Desking</span>
+                      <span class="dropdown-item-desc">Trade-in and payment presentations</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item dropdown-item-custom" href="learn.html#closing">
+                    <i class="bi bi-check-all"></i>
+                    <div class="dropdown-item-text">
+                      <span class="dropdown-item-title">Closing Techniques</span>
+                      <span class="dropdown-item-desc">Securing commitment with integrity</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link-custom" href="community.html">Community</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link-custom" href="templates.html">Templates</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link-custom" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link-custom" href="contact.html">Contact</a>
+            </li>
+          </ul>
+
+          <!-- Right Action Controls -->
+          <div class="d-flex align-items-center gap-3">
+            <button class="btn btn-icon theme-toggle-btn" type="button" aria-label="Toggle Theme" title="Toggle Theme">
+              <i class="bi bi-moon-stars-fill"></i>
+            </button>
+            <a href="login.html" class="btn-ghost-custom">Login</a>
+            <a href="signup.html" class="btn-primary-custom py-2 px-3" style="font-size: 0.9rem;">
+              <span>Join the Network</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Offcanvas Menu -->
+    <div class="offcanvas offcanvas-end mobile-nav-panel" tabindex="-1" id="mobileNavbar" aria-labelledby="mobileNavbarLabel">
+      <div class="offcanvas-header border-bottom border-subtle">
+        <a class="navbar-brand navbar-brand-logo mb-0" href="index.html">
+          <span class="logo-badge"><i class="bi bi-shield-shaded"></i></span>
+          <span>DRIVE<span class="text-warning">FORGE</span></span>
+        </a>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body d-flex flex-column justify-content-between p-4">
+        <div>
+          <ul class="navbar-nav mb-4">
+            <li class="nav-item mb-2">
+              <a class="nav-link-custom active fs-5" href="index.html">Home</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link-custom fs-5" href="resources.html">Resources</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link-custom fs-5" href="learn.html">Learn Hub</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link-custom fs-5" href="video-tutorials.html">Video Tutorials</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link-custom fs-5" href="community.html">Community</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link-custom fs-5" href="templates.html">Templates</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link-custom fs-5" href="about.html">About</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link-custom fs-5" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="pt-3 border-top border-subtle d-grid gap-2">
+          <a href="login.html" class="btn btn-secondary-custom w-100">Login</a>
+          <a href="signup.html" class="btn btn-primary-custom w-100">Join the Network</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================================================================
+       MAIN CONTENT
+       =================================================================== -->
+  <main id="main-content">
+    
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <div class="hero-editorial-lead">
+              <i class="bi bi-lightning-charge-fill"></i>
+              Professional Sales Resource Network
+            </div>
+            <h1 class="hero-headline">
+              Knowledge That Moves <br><span class="text-warning">Sales Forward.</span>
+            </h1>
+            <p class="hero-subtext">
+              Practical resources, proven sales knowledge, and a community built for vehicle sales professionals. Explore step-by-step playbooks, scenario tutorials, and ready-to-use deal sheets.
+            </p>
+
+            <!-- CTA Group -->
+            <div class="d-flex flex-wrap align-items-center gap-3 hero-cta-group mb-4">
+              <a href="resources.html" class="btn-primary-custom">
+                <span>Explore Resources</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+              <a href="signup.html" class="btn-secondary-custom">
+                <i class="bi bi-people-fill me-1"></i>
+                <span>Join the Network</span>
+              </a>
+            </div>
+
+            <!-- Integrated Live Search -->
+            <div class="search-wrapper hero-search-box mt-4">
+              <div class="search-input-group">
+                <i class="bi bi-search search-icon"></i>
+                <input type="text" class="global-search-input" placeholder="What are you looking for? (e.g., Objections, Follow-Up...)" aria-label="Search resources">
+                <span class="search-kbd" title="Press / to focus search">/</span>
+                <a href="resources.html" class="btn btn-primary-custom py-1 px-3 d-none d-sm-inline-flex" style="font-size: 0.85rem;">Search</a>
+              </div>
+              <div class="popular-searches">
+                <span class="text-muted fw-semibold me-1" style="font-size: 0.8rem;">Popular:</span>
+                <button type="button" class="popular-tag" data-search="Follow-Up Scripts">Follow-Up Scripts</button>
+                <button type="button" class="popular-tag" data-search="Trade-In">Trade-In Conversations</button>
+                <button type="button" class="popular-tag" data-search="Objection">Objection Handling</button>
+                <button type="button" class="popular-tag" data-search="Closing">Closing Techniques</button>
+                <button type="button" class="popular-tag" data-search="Retention">Customer Retention</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Editorial Visual Composition -->
+          <div class="col-lg-6">
+            <div class="hero-composition-wrap">
+              <img src="assets/images/hero/hero_automotive_knowledge.jpg" alt="Automotive showroom executive consultation and modern vehicle presentation" class="hero-composition-image">
+              
+              <!-- Floating Card 1: Resource Notification -->
+              <div class="hero-floating-card hero-card-top">
+                <div class="d-flex align-items-center gap-2 mb-1">
+                  <span class="badge-custom badge-amber">Field Playbook</span>
+                  <span class="text-muted" style="font-size: 0.75rem;">12 min read</span>
+                </div>
+                <div class="fw-bold" style="font-size: 0.9rem; line-height: 1.3;">Vehicle Sales Follow-Up: 4-Stage Cadence</div>
+                <div class="d-flex align-items-center justify-content-between mt-2 pt-2 border-top border-subtle" style="font-size: 0.78rem;">
+                  <span class="text-success"><i class="bi bi-check-circle-fill me-1"></i> Verified Methodology</span>
+                  <a href="resource-details.html" class="text-warning fw-semibold">View <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+
+              <!-- Floating Card 2: Community Snippet -->
+              <div class="hero-floating-card hero-card-bottom">
+                <div class="d-flex align-items-center gap-2 mb-1">
+                  <span class="badge-custom badge-blue">Trending Discussion</span>
+                  <span class="text-muted" style="font-size: 0.75rem;">24 replies</span>
+                </div>
+                <div class="fw-bold" style="font-size: 0.9rem; line-height: 1.3;">"How do you handle customers who only talk price?"</div>
+                <div class="d-flex align-items-center gap-2 mt-2" style="font-size: 0.78rem; color: var(--text-muted);">
+                  <i class="bi bi-chat-heart text-warning"></i> 87 consultants engaged
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS STRIP (EDITORIAL & CLEAN) -->
+    <section class="py-4 border-top border-bottom border-subtle bg-secondary-subtle">
+      <div class="container">
+        <div class="row g-4 text-center text-md-start">
+          <div class="col-6 col-md-3">
+            <div class="d-flex align-items-center justify-content-center justify-content-md-start gap-3">
+              <i class="bi bi-journal-bookmark-fill text-warning fs-2"></i>
+              <div>
+                <div class="fw-bold fs-4 font-monospace">180+</div>
+                <div class="text-muted small">Curated Sales Guides</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="d-flex align-items-center justify-content-center justify-content-md-start gap-3">
+              <i class="bi bi-play-btn-fill text-primary fs-2"></i>
+              <div>
+                <div class="fw-bold fs-4 font-monospace">45+</div>
+                <div class="text-muted small">Scenario Video Lessons</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="d-flex align-items-center justify-content-center justify-content-md-start gap-3">
+              <i class="bi bi-file-earmark-arrow-down-fill text-success fs-2"></i>
+              <div>
+                <div class="fw-bold fs-4 font-monospace">60+</div>
+                <div class="text-muted small">Field-Ready Toolkits</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="d-flex align-items-center justify-content-center justify-content-md-start gap-3">
+              <i class="bi bi-chat-square-text-fill text-info fs-2"></i>
+              <div>
+                <div class="fw-bold fs-4 font-monospace">100%</div>
+                <div class="text-muted small">Practical Dealership Focus</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESOURCE CATEGORIES (VISUALLY STRONG GRID) -->
+    <section class="py-5">
+      <div class="container">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4 pb-2 border-bottom border-subtle">
+          <div>
+            <span class="badge-custom badge-amber mb-2">Explore By Category</span>
+            <h2 class="h2 mb-1">Knowledge Structured For Action</h2>
+            <p class="text-muted mb-0">Browse specialized resources designed for modern dealership sales floors.</p>
+          </div>
+          <a href="resources.html" class="btn btn-ghost-custom mt-3 mt-md-0">
+            View All Categories <i class="bi bi-arrow-right ms-1"></i>
+          </a>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-md-4 col-sm-6">
+            <a href="resources.html?type=guides" class="category-pill-card">
+              <div class="category-pill-icon"><i class="bi bi-book"></i></div>
+              <div>
+                <div class="fw-bold" style="font-size: 1.05rem;">Sales Guides</div>
+                <div class="text-muted small">Deep-dive consultative methodologies</div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <a href="resources.html?type=playbooks" class="category-pill-card">
+              <div class="category-pill-icon"><i class="bi bi-diagram-3"></i></div>
+              <div>
+                <div class="fw-bold" style="font-size: 1.05rem;">Playbooks</div>
+                <div class="text-muted small">Multi-touch process frameworks</div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <a href="resources.html?type=checklists" class="category-pill-card">
+              <div class="category-pill-icon"><i class="bi bi-check2-square"></i></div>
+              <div>
+                <div class="fw-bold" style="font-size: 1.05rem;">Checklists</div>
+                <div class="text-muted small">Handover, delivery & appraisal steps</div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <a href="resources.html?type=scripts" class="category-pill-card">
+              <div class="category-pill-icon"><i class="bi bi-chat-quote"></i></div>
+              <div>
+                <div class="fw-bold" style="font-size: 1.05rem;">Scripts & Dialogues</div>
+                <div class="text-muted small">Verbatim talk tracks for tricky moments</div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <a href="video-tutorials.html" class="category-pill-card">
+              <div class="category-pill-icon"><i class="bi bi-camera-video"></i></div>
+              <div>
+                <div class="fw-bold" style="font-size: 1.05rem;">Video Tutorials</div>
+                <div class="text-muted small">Real scenario breakdown & roleplays</div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <a href="templates.html" class="category-pill-card">
+              <div class="category-pill-icon"><i class="bi bi-file-earmark-spreadsheet"></i></div>
+              <div>
+                <div class="fw-bold" style="font-size: 1.05rem;">Templates</div>
+                <div class="text-muted small">Planners, trackers and customer worksheets</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED RESOURCES SECTION (VARIED CARD TREATMENTS) -->
+    <section class="py-5 bg-tertiary-subtle">
+      <div class="container">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4">
+          <div>
+            <span class="badge-custom badge-amber mb-2">Editor's Selection</span>
+            <h2 class="h2 mb-1">Featured Sales Resources</h2>
+            <p class="text-muted mb-0">High-impact guides and tools vetted for immediate implementation.</p>
+          </div>
+          <div class="d-flex gap-2 mt-3 mt-md-0">
+            <a href="resources.html" class="btn btn-secondary-custom">
+              Full Resource Library <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Card 1: Documentation / Playbook Treatment -->
+          <div class="col-lg-4 col-md-6">
+            <div class="resource-card-base card-treatment-doc">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="badge-custom badge-amber">Playbook</span>
+                <button type="button" class="btn btn-icon bookmark-toggle-btn" aria-label="Bookmark">
+                  <i class="bi bi-bookmark"></i>
+                </button>
+              </div>
+              <div class="doc-icon-wrap"><i class="bi bi-arrow-repeat"></i></div>
+              <h3 class="h5 fw-bold mb-2">
+                <a href="resource-details.html" class="text-reset">Vehicle Sales Follow-Up Playbook</a>
+              </h3>
+              <p class="text-muted small mb-4">
+                A structured 14-day multi-touch follow-up cadence engineered to rekindle quiet leads after test drives without sounding pushy.
+              </p>
+              <div class="d-flex align-items-center justify-content-between pt-3 border-top border-subtle mt-auto">
+                <span class="text-muted small"><i class="bi bi-clock me-1"></i> 12 min read</span>
+                <a href="resource-details.html" class="fw-semibold text-warning">Read Guide <i class="bi bi-arrow-right ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Editorial Guide Treatment -->
+          <div class="col-lg-4 col-md-6">
+            <div class="resource-card-base card-treatment-guide">
+              <img src="assets/images/resources/sales_consultation_lounge.jpg" alt="Sales consultation" class="guide-cover-img">
+              <div class="guide-content-body">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="badge-custom badge-blue">Sales Guide</span>
+                  <button type="button" class="btn btn-icon bookmark-toggle-btn" aria-label="Bookmark">
+                    <i class="bi bi-bookmark"></i>
+                  </button>
+                </div>
+                <h3 class="h5 fw-bold mb-2">
+                  <a href="resource-details.html" class="text-reset">Handling Common Customer Objections</a>
+                </h3>
+                <p class="text-muted small mb-3">
+                  Strategic responses to "I need to think about it", "Your price is too high", and "I have another appointment down the street".
+                </p>
+                <div class="d-flex align-items-center justify-content-between pt-3 border-top border-subtle mt-auto">
+                  <span class="text-muted small"><i class="bi bi-clock me-1"></i> 9 min read</span>
+                  <a href="resource-details.html" class="fw-semibold text-warning">Read Guide <i class="bi bi-arrow-right ms-1"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Download Toolkit Treatment -->
+          <div class="col-lg-4 col-md-6">
+            <div class="resource-card-base card-treatment-download">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <div>
+                  <span class="download-format-badge">PDF</span>
+                  <span class="badge-custom">Checklist</span>
+                </div>
+                <button type="button" class="btn btn-icon bookmark-toggle-btn" aria-label="Bookmark">
+                  <i class="bi bi-bookmark"></i>
+                </button>
+              </div>
+              <h3 class="h5 fw-bold mb-2">
+                <a href="templates.html" class="text-reset">Trade-In Conversation Checklist</a>
+              </h3>
+              <p class="text-muted small mb-4">
+                Walk through the customer vehicle together. De-escalate appraisal friction and set realistic valuation expectations early.
+              </p>
+              <div class="download-meta-strip">
+                <span><i class="bi bi-hdd me-1"></i> 1.4 MB</span>
+                <button type="button" class="btn btn-primary-custom py-1 px-3 download-trigger-btn" data-file="Trade-In-Appraisal-Checklist.pdf" data-type="PDF Document" data-size="1.4 MB" style="font-size: 0.85rem;">
+                  <i class="bi bi-download"></i> Download
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Video Card Treatment -->
+          <div class="col-lg-4 col-md-6">
+            <div class="resource-card-base card-treatment-video">
+              <div class="video-thumb-container video-interactive-trigger" role="button" data-title="Opening the Customer Conversation" data-category="Showroom Communication" data-duration="11:45" data-trainer="Elena Cruz, Senior Trainer" data-poster="assets/images/automotive/test_drive_walkaround.jpg">
+                <img src="assets/images/automotive/test_drive_walkaround.jpg" alt="Video thumbnail" class="video-thumb-img">
+                <div class="video-play-btn"><i class="bi bi-play-fill"></i></div>
+                <span class="video-duration-tag">11:45</span>
+              </div>
+              <div class="video-content-body">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="badge-custom badge-success">Beginner</span>
+                  <button type="button" class="btn btn-icon bookmark-toggle-btn" aria-label="Bookmark">
+                    <i class="bi bi-bookmark"></i>
+                  </button>
+                </div>
+                <h3 class="h5 fw-bold mb-2">
+                  <a href="#" class="text-reset video-interactive-trigger" data-title="Opening the Customer Conversation">Opening the Customer Conversation</a>
+                </h3>
+                <p class="text-muted small mb-3">
+                  Replace "Can I help you?" with natural, disarming greetings that encourage open dialogue.
+                </p>
+                <div class="d-flex align-items-center justify-content-between pt-3 border-top border-subtle mt-auto">
+                  <span class="text-muted small"><i class="bi bi-eye me-1"></i> 1.2k views</span>
+                  <button type="button" class="btn btn-link text-warning p-0 fw-semibold text-decoration-none video-interactive-trigger" data-title="Opening the Customer Conversation">
+                    Watch Now <i class="bi bi-play-circle ms-1"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: Script / Talk-Track Treatment -->
+          <div class="col-lg-4 col-md-6">
+            <div class="resource-card-base card-treatment-doc">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="badge-custom badge-blue">Scripts</span>
+                <button type="button" class="btn btn-icon bookmark-toggle-btn" aria-label="Bookmark">
+                  <i class="bi bi-bookmark"></i>
+                </button>
+              </div>
+              <div class="doc-icon-wrap" style="background: rgba(16, 185, 129, 0.1); color: #10b981;"><i class="bi bi-chat-quote-fill"></i></div>
+              <h3 class="h5 fw-bold mb-2">
+                <a href="resource-details.html" class="text-reset">Test Drive Conversation Framework</a>
+              </h3>
+              <p class="text-muted small mb-4">
+                What to say during the first 5 minutes of a test drive to let the customer experience ownership without overwhelming tech chatter.
+              </p>
+              <div class="d-flex align-items-center justify-content-between pt-3 border-top border-subtle mt-auto">
+                <span class="text-muted small"><i class="bi bi-clock me-1"></i> 8 min read</span>
+                <a href="resource-details.html" class="fw-semibold text-warning">Read Script <i class="bi bi-arrow-right ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6: Download Planner Treatment -->
+          <div class="col-lg-4 col-md-6">
+            <div class="resource-card-base card-treatment-download">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <div>
+                  <span class="download-format-badge" style="background: rgba(37, 99, 235, 0.1); color: var(--accent-blue);">XLSX</span>
+                  <span class="badge-custom">Planner</span>
+                </div>
+                <button type="button" class="btn btn-icon bookmark-toggle-btn" aria-label="Bookmark">
+                  <i class="bi bi-bookmark"></i>
+                </button>
+              </div>
+              <h3 class="h5 fw-bold mb-2">
+                <a href="templates.html" class="text-reset">Daily Sales Consultant Activity Planner</a>
+              </h3>
+              <p class="text-muted small mb-4">
+                A simple time-blocking system for showroom visits, follow-up calls, video walkarounds, and appointment setting.
+              </p>
+              <div class="download-meta-strip">
+                <span><i class="bi bi-hdd me-1"></i> 640 KB</span>
+                <button type="button" class="btn btn-primary-custom py-1 px-3 download-trigger-btn" data-file="Daily-Sales-Activity-Planner.xlsx" data-type="Excel Spreadsheet" data-size="640 KB" style="font-size: 0.85rem;">
+                  <i class="bi bi-download"></i> Download
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO LEARNING SPOTLIGHT -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-5">
+            <span class="badge-custom badge-amber mb-2">Practical Masterclasses</span>
+            <h2 class="h2 mb-3">Learn From Real Sales Scenarios.</h2>
+            <p class="text-muted mb-4">
+              Watch step-by-step roleplays covering initial contact, vehicle presentations, trade-in negotiations, and closing without high-pressure tactics.
+            </p>
+            <ul class="list-unstyled mb-4">
+              <li class="d-flex align-items-center gap-2 mb-3">
+                <i class="bi bi-check-circle-fill text-warning"></i>
+                <span>Real showroom situations recreated by veteran consultants</span>
+              </li>
+              <li class="d-flex align-items-center gap-2 mb-3">
+                <i class="bi bi-check-circle-fill text-warning"></i>
+                <span>Micro-lessons under 15 minutes designed for quick study between appointments</span>
+              </li>
+              <li class="d-flex align-items-center gap-2 mb-3">
+                <i class="bi bi-check-circle-fill text-warning"></i>
+                <span>Downloadable transcript and dialogue notes included with each lesson</span>
+              </li>
+            </ul>
+            <a href="video-tutorials.html" class="btn-primary-custom">
+              <i class="bi bi-play-circle-fill"></i>
+              <span>Watch All Tutorials</span>
+            </a>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="resource-card-base card-treatment-video shadow-lg">
+              <div class="video-thumb-container video-interactive-trigger" role="button" data-title="Overcoming Price Objections & Financing Hesitations" data-category="Negotiation" data-duration="16:40" data-trainer="Elena Cruz, Lead Masterclass Instructor" data-poster="assets/images/videos/video_sales_masterclass.jpg" style="height: 340px;">
+                <img src="assets/images/videos/video_sales_masterclass.jpg" alt="Video masterclass" class="video-thumb-img">
+                <div class="video-play-btn" style="width: 72px; height: 72px; font-size: 2rem;"><i class="bi bi-play-fill"></i></div>
+                <span class="video-duration-tag fs-6 py-1 px-3">16:40</span>
+              </div>
+              <div class="p-4">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="badge-custom badge-amber">Featured Masterclass</span>
+                  <span class="text-muted small"><i class="bi bi-mortarboard me-1"></i> Intermediate</span>
+                </div>
+                <h3 class="h4 fw-bold mb-2">Overcoming Price Objections & Financing Hesitations</h3>
+                <p class="text-muted mb-0">Learn how to pivot conversation from gross price to monthly cash flow, total cost of ownership, and lifestyle value with complete confidence.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOWNLOADABLE TOOLKITS SECTION -->
+    <section class="py-5 bg-tertiary-subtle">
+      <div class="container">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4 pb-2 border-bottom border-subtle">
+          <div>
+            <span class="badge-custom badge-amber mb-2">Ready To Deploy</span>
+            <h2 class="h2 mb-1">Downloadable Sales Toolkits</h2>
+            <p class="text-muted mb-0">Practical worksheets, trackers, and email sequences ready for instant use.</p>
+          </div>
+          <a href="templates.html" class="btn btn-ghost-custom mt-3 mt-md-0">
+            View All Templates <i class="bi bi-arrow-right ms-1"></i>
+          </a>
+        </div>
+
+        <div class="row g-4">
+          <!-- Item 1 -->
+          <div class="col-md-4 col-sm-6">
+            <div class="resource-card-base card-treatment-download">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="download-format-badge">PDF</span>
+                <span class="text-muted small">1.2 MB</span>
+              </div>
+              <h4 class="h6 fw-bold mb-2">Sales Call Discovery Checklist</h4>
+              <p class="text-muted small mb-3">Ensure your phone conversations capture hot buttons before scheduling the showroom appointment.</p>
+              <button type="button" class="btn btn-secondary-custom w-100 py-1 download-trigger-btn" data-file="Sales-Call-Discovery-Checklist.pdf" data-type="PDF Document" data-size="1.2 MB">
+                <i class="bi bi-download me-1"></i> Download PDF
+              </button>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="col-md-4 col-sm-6">
+            <div class="resource-card-base card-treatment-download">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="download-format-badge" style="background: rgba(37, 99, 235, 0.1); color: var(--accent-blue);">DOCX</span>
+                <span class="text-muted small">850 KB</span>
+              </div>
+              <h4 class="h6 fw-bold mb-2">Post-Visit Follow-Up Email Sequence</h4>
+              <p class="text-muted small mb-3">5 personalized email templates engineered for day 1, 3, 7, and 14 following a dealership visit.</p>
+              <button type="button" class="btn btn-secondary-custom w-100 py-1 download-trigger-btn" data-file="Post-Visit-Follow-Up-Templates.docx" data-type="Word Document" data-size="850 KB">
+                <i class="bi bi-download me-1"></i> Download Word
+              </button>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="col-md-4 col-sm-6">
+            <div class="resource-card-base card-treatment-download">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="download-format-badge">PDF</span>
+                <span class="text-muted small">1.5 MB</span>
+              </div>
+              <h4 class="h6 fw-bold mb-2">6-Point Test Drive Walkaround Sheet</h4>
+              <p class="text-muted small mb-3">Guide customers around the vehicle systematically from front grille to cockpit tech.</p>
+              <button type="button" class="btn btn-secondary-custom w-100 py-1 download-trigger-btn" data-file="Test-Drive-Walkaround-Sheet.pdf" data-type="PDF Document" data-size="1.5 MB">
+                <i class="bi bi-download me-1"></i> Download PDF
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMMUNITY DISCUSSION PREVIEW -->
+    <section class="py-5">
+      <div class="container">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4 pb-2 border-bottom border-subtle">
+          <div>
+            <span class="badge-custom badge-blue mb-2">Peer Discussion Network</span>
+            <h2 class="h2 mb-1">Learn From People Who Sell Every Day.</h2>
+            <p class="text-muted mb-0">Join honest discussions with vehicle sales consultants and managers facing real showroom challenges.</p>
+          </div>
+          <a href="community.html" class="btn-primary-custom mt-3 mt-md-0">
+            <i class="bi bi-chat-dots-fill"></i>
+            <span>Explore Community</span>
+          </a>
+        </div>
+
+        <div class="row g-4">
+          <!-- Discussion 1 -->
+          <div class="col-lg-6">
+            <div class="resource-card-base card-treatment-discussion">
+              <div class="d-flex align-items-center justify-content-between mb-2">
+                <div class="d-flex align-items-center gap-2">
+                  <div class="discussion-avatar">MK</div>
+                  <div>
+                    <strong style="font-size: 0.95rem;">Marcus K. (Sales Consultant)</strong>
+                    <div class="text-muted" style="font-size: 0.78rem;">Posted 3 hours ago</div>
+                  </div>
+                </div>
+                <span class="badge-custom badge-amber">Customer Conversations</span>
+              </div>
+              <h3 class="h5 fw-bold mb-2">
+                <a href="community.html" class="text-reset">"How do you handle customers who only want to talk price before test driving?"</a>
+              </h3>
+              <p class="text-muted small mb-3">
+                Whenever a shopper walks in asking for the absolute bottom dollar before we even open the vehicle doors, what is your best bridge question to regain value control?
+              </p>
+              <div class="d-flex align-items-center justify-content-between pt-3 border-top border-subtle mt-auto" style="font-size: 0.85rem; color: var(--text-muted);">
+                <div class="d-flex gap-3">
+                  <span><i class="bi bi-chat-dots me-1"></i> 38 replies</span>
+                  <span><i class="bi bi-eye me-1"></i> 640 views</span>
+                </div>
+                <a href="community.html" class="fw-semibold text-warning">Join Discussion <i class="bi bi-arrow-right ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Discussion 2 -->
+          <div class="col-lg-6">
+            <div class="resource-card-base card-treatment-discussion">
+              <div class="d-flex align-items-center justify-content-between mb-2">
+                <div class="d-flex align-items-center gap-2">
+                  <div class="discussion-avatar" style="color: var(--accent-blue);">SL</div>
+                  <div>
+                    <strong style="font-size: 0.95rem;">Sarah L. (BDC Manager)</strong>
+                    <div class="text-muted" style="font-size: 0.78rem;">Posted 6 hours ago</div>
+                  </div>
+                </div>
+                <span class="badge-custom badge-blue">Follow-Up</span>
+              </div>
+              <h3 class="h5 fw-bold mb-2">
+                <a href="community.html" class="text-reset">"Best follow-up cadence after a test drive where customer seemed enthusiastic but vanished?"</a>
+              </h3>
+              <p class="text-muted small mb-3">
+                Great connection, full drive, agreed on color and trim. Then radio silence for 48 hours. What video or text hook gets the highest reply rate without pressure?
+              </p>
+              <div class="d-flex align-items-center justify-content-between pt-3 border-top border-subtle mt-auto" style="font-size: 0.85rem; color: var(--text-muted);">
+                <div class="d-flex gap-3">
+                  <span><i class="bi bi-chat-dots me-1"></i> 45 replies</span>
+                  <span><i class="bi bi-eye me-1"></i> 890 views</span>
+                </div>
+                <a href="community.html" class="fw-semibold text-warning">Join Discussion <i class="bi bi-arrow-right ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION BANNER -->
+    <section class="py-5" style="background: linear-gradient(135deg, #111722 0%, #0d121c 100%); color: #ffffff;">
+      <div class="container text-center py-4">
+        <span class="badge-custom badge-amber mb-3">Join 12,000+ Sales Professionals</span>
+        <h2 class="display-5 text-white mb-3 fw-bold">Build Your Competitive Sales Edge.</h2>
+        <p class="text-light-emphasis mx-auto mb-4" style="max-width: 620px; font-size: 1.15rem;">
+          Get unrestricted access to field-tested automotive sales playbooks, video masterclasses, downloadable templates, and collaborative peer insights.
+        </p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a href="signup.html" class="btn-primary-custom px-4 py-3 fs-6">
+            <span>Create Free Account</span>
+            <i class="bi bi-arrow-right"></i>
+          </a>
+          <a href="resources.html" class="btn-secondary-custom px-4 py-3 fs-6">
+            <span>Browse Library</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================================================================
+       VIDEO PLAYER MODAL
+       =================================================================== -->
+  <div class="modal fade modal-custom" id="videoPlayerModal" tabindex="-1" aria-labelledby="videoPlayerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <span class="badge-custom badge-amber mb-1 video-modal-category">Masterclass</span>
+            <h5 class="modal-title h5 fw-bold video-modal-title" id="videoPlayerModalLabel">Video Lesson Title</h5>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="video-player-mock">
+            <img src="assets/images/videos/video_sales_masterclass.jpg" alt="Video frame" class="video-modal-poster">
+            <div class="video-play-btn" style="width: 64px; height: 64px;"><i class="bi bi-play-fill fs-2"></i></div>
+            <div class="video-player-controls">
+              <button class="btn btn-sm text-white p-0"><i class="bi bi-play-fill fs-5"></i></button>
+              <div class="video-scrubber">
+                <div class="video-scrubber-fill"></div>
+              </div>
+              <span class="small font-monospace video-modal-duration">14:20</span>
+              <button class="btn btn-sm text-white p-0"><i class="bi bi-volume-up-fill fs-5"></i></button>
+              <button class="btn btn-sm text-white p-0"><i class="bi bi-fullscreen fs-5"></i></button>
+            </div>
+          </div>
+          <div class="p-4">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <span class="text-muted small"><i class="bi bi-person-badge me-1"></i> Instructor: <strong class="text-reset video-modal-trainer">Elena Cruz</strong></span>
+              <span class="badge-custom badge-success"><i class="bi bi-shield-check me-1"></i> DRIVEFORGE Certified</span>
+            </div>
+            <p class="small text-muted mb-0">
+              This interactive video tutorial provides verbatim scripts, behavioral psychology cues, and timing checkpoints. Demo video player simulation for front-end evaluation.
+            </p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary-custom py-1 px-3 download-trigger-btn" data-file="Lesson-Notes-Summary.pdf" data-type="PDF Notes" data-size="420 KB">
+            <i class="bi bi-file-earmark-text me-1"></i> Download Lesson Notes
+          </button>
+          <button type="button" class="btn btn-primary-custom py-1 px-3" data-bs-dismiss="modal">Close Player</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       FOOTER
+       =================================================================== -->
+  <footer class="footer-driveforge">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Col 1: Brand -->
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-logo-title">
+            <span class="logo-badge"><i class="bi bi-shield-shaded"></i></span>
+            <span>DRIVE<span class="text-warning">FORGE</span></span>
+          </div>
+          <p style="color: #94a3b8; font-size: 0.95rem; max-width: 320px;">
+            "Knowledge That Moves Sales Forward."
+          </p>
+          <p style="color: #64748b; font-size: 0.85rem; max-width: 320px;">
+            Practical resources, proven sales knowledge, and a community built for vehicle sales professionals.
+          </p>
+          <div class="d-flex gap-2 mt-3">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Explore -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-nav-list">
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="learn.html">Learn</a></li>
+            <li><a href="video-tutorials.html">Video Tutorials</a></li>
+            <li><a href="templates.html">Templates</a></li>
+            <li><a href="documentation/index.html">Template Guide</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Community -->
+        <div class="col-lg-3 col-md-6 col-6">
+          <h4 class="footer-heading">Community</h4>
+          <ul class="footer-nav-list">
+            <li><a href="community.html">Discussions</a></li>
+            <li><a href="community.html#popular">Popular Topics</a></li>
+            <li><a href="community.html#start">Start a Discussion</a></li>
+            <li><a href="about.html#guidelines">Community Guidelines</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Company -->
+        <div class="col-lg-3 col-md-6">
+          <h4 class="footer-heading">Company</h4>
+          <ul class="footer-nav-list">
+            <li><a href="about.html">About DRIVEFORGE</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="login.html">Member Login</a></li>
+            <li><a href="signup.html">Create Account</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Strip -->
+      <div class="footer-bottom-strip d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div>
+          © 2026 DRIVEFORGE. All rights reserved. Fictional demonstration brand.
+        </div>
+        <div class="d-flex gap-3">
+          <a href="about.html" class="text-reset text-decoration-none">Privacy Policy</a>
+          <a href="about.html" class="text-reset text-decoration-none">Terms of Service</a>
+          <a href="about.html#guidelines" class="text-reset text-decoration-none">Community Guidelines</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/gsap.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning Hub & Paths — DRIVEFORGE Knowledge Network</title>
+  <meta name="description" content="Structured curriculum and learning paths for automotive sales consultants, sales managers, and BDC representatives. Master consultations, negotiation, and closing.">
+  
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23f57c00'/><path d='M30 25 L70 50 L30 75 Z' fill='%23ffffff'/></svg>">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-driveforge" aria-label="Main Navigation">
+      <div class="container">
+        <a class="navbar-brand navbar-brand-logo" href="index.html">
+          <span class="logo-badge"><i class="bi bi-shield-shaded"></i></span>
+          <span>DRIVE<span class="text-warning">FORGE</span></span>
+        </a>
+
+        <div class="d-flex align-items-center gap-2 d-lg-none">
+          <button class="btn btn-icon theme-toggle-btn" type="button" aria-label="Toggle Theme">
+            <i class="bi bi-moon-stars-fill"></i>
+          </button>
+          <button class="navbar-toggler navbar-toggler-custom" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavbar" aria-controls="mobileNavbar" aria-label="Toggle navigation">
+            <i class="bi bi-list fs-4"></i>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="desktopNavMenu">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+            <li class="nav-item"><a class="nav-link-custom" href="index.html">Home</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link-custom dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Resources</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item dropdown-item-custom" href="resources.html"><i class="bi bi-collection"></i> All Resources</a></li>
+                <li><a class="dropdown-item dropdown-item-custom" href="resources.html?type=playbooks"><i class="bi bi-diagram-3"></i> Playbooks</a></li>
+                <li><a class="dropdown-item dropdown-item-custom" href="templates.html"><i class="bi bi-download"></i> Downloads</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link-custom dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">Learn</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item dropdown-item-custom" href="video-tutorials.html"><i class="bi bi-play-circle-fill"></i> Video Tutorials</a></li>
+                <li><a class="dropdown-item dropdown-item-custom" href="learn.html"><i class="bi bi-mortarboard"></i> Learning Paths</a></li>
+                <li><a class="dropdown-item dropdown-item-custom" href="learn.html#fundamentals"><i class="bi bi-compass"></i> Fundamentals</a></li>
+                <li><a class="dropdown-item dropdown-item-custom" href="learn.html#negotiation"><i class="bi bi-calculator"></i> Negotiation</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link-custom" href="community.html">Community</a></li>
+            <li class="nav-item"><a class="nav-link-custom" href="templates.html">Templates</a></li>
+            <li class="nav-item"><a class="nav-link-custom" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link-custom" href="contact.html">Contact</a></li>
+          </ul>
+
+          <div class="d-flex align-items-center gap-3">
+            <button class="btn btn-icon theme-toggle-btn" type="button" aria-label="Toggle Theme">
+              <i class="bi bi-moon-stars-fill"></i>
+            </button>
+            <a href="login.html" class="btn-ghost-custom">Login</a>
+            <a href="signup.html" class="btn-primary-custom py-2 px-3" style="font-size: 0.9rem;">
+              <span>Join the Network</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Offcanvas -->
+    <div class="offcanvas offcanvas-end mobile-nav-panel" tabindex="-1" id="mobileNavbar">
+      <div class="offcanvas-header border-bottom border-subtle">
+        <a class="navbar-brand navbar-brand-logo mb-0" href="index.html">
+          <span class="logo-badge"><i class="bi bi-shield-shaded"></i></span>
+          <span>DRIVE<span class="text-warning">FORGE</span></span>
+        </a>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <div class="offcanvas-body d-flex flex-column justify-content-between p-4">
+        <ul class="navbar-nav mb-4">
+          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="index.html">Home</a></li>
+          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="resources.html">Resources</a></li>
+          <li class="nav-item mb-2"><a class="nav-link-custom active fs-5" href="learn.html">Learn Hub</a></li>
+          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="video-tutorials.html">Video Tutorials</a></li>
+          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="community.html">Community</a></li>
+          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="templates.html">Templates</a></li>
+          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="about.html">About</a></li>
+          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="contact.html">Contact</a></li>
+        </ul>
+        <div class="pt-3 border-top border-subtle d-grid gap-2">
+          <a href="login.html" class="btn btn-secondary-custom w-100">Login</a>
+          <a href="signup.html" class="btn btn-primary-custom w-100">Join the Network</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content" class="py-5">
+    <div class="container">
+      <!-- Breadcrumb & Header -->
+      <nav aria-label="breadcrumb" class="mb-3">
+        <ol class="breadcrumb" style="font-size: 0.85rem;">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Learn Hub</li>
+        </ol>
+      </nav>
+
+      <div class="row align-items-end justify-content-between mb-5">
+        <div class="col-lg-7">
+          <span class="badge-custom badge-amber mb-2">Curriculum Architecture</span>
+          <h1 class="display-5 fw-bold mb-2">Structured Paths to Master Vehicle Sales.</h1>
+          <p class="text-muted fs-5 mb-0">
+            Progress through curated learning tracks engineered by top dealership practitioners. Move step-by-step from initial lot greeting to complex deal desking.
+          </p>
+        </div>
+        <div class="col-lg-4 mt-3 mt-lg-0 text-lg-end">
+          <a href="video-tutorials.html" class="btn btn-primary-custom">
+            <i class="bi bi-play-circle-fill"></i>
+            <span>Browse Video Lessons</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- LEARNING PATHS SHOWCASE -->
+      <div class="row g-4 mb-5">
+        
+        <!-- Path 1 -->
+        <div class="col-lg-6">
+          <div class="learning-path-card">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="badge-custom badge-success"><i class="bi bi-check-circle me-1"></i> Foundation Track</span>
+              <span class="text-muted small"><i class="bi bi-clock me-1"></i> 5 Modules • 18 Lessons</span>
+            </div>
+            <h2 class="h4 fw-bold mb-2">The 30-Day Consultant Onboarding Track</h2>
+            <p class="text-muted small mb-4">
+              Designed for new dealership sales consultants to gain complete fluency in vehicle product knowledge, lot etiquette, CRM logging, and consultative qualification.
+            </p>
+
+            <div class="path-step-timeline">
+              <div class="path-step-item">
+                <div class="path-step-dot completed"></div>
+                <div class="fw-bold" style="font-size: 0.95rem;">Module 1: The Modern Showroom Mindset</div>
+                <div class="text-muted small">Understanding buyer psychology and shifting from salesperson to vehicle advisor.</div>
+              </div>
+              <div class="path-step-item">
+                <div class="path-step-dot"></div>
+                <div class="fw-bold" style="font-size: 0.95rem;">Module 2: Conducting the Dynamic Walkaround</div>
+                <div class="text-muted small">Highlighting driver-assist tech, trim upgrades, and ergonomics effectively.</div>
+              </div>
+              <div class="path-step-item">
+                <div class="path-step-dot"></div>
+                <div class="fw-bold" style="font-size: 0.95rem;">Module 3: Test Drive Psychology</div>
+                <div class="text-muted small">Building emotional ownership and handling in-cabin inquiries smoothly.</div>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-center justify-content-between pt-3 border-top border-subtle mt-4">
+              <span class="text-success small fw-semibold"><i class="bi bi-mortarboard-fill me-1"></i> Certificate of Completion</span>
+              <a href="resource-details.html" class="btn btn-primary-custom py-1 px-3" style="font-size: 0.85rem;">Start Path <i class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Path 2 -->
+        <div class="col-lg-6">
+          <div class="learning-path-card">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="badge-custom badge-amber"><i class="bi bi-lightning-charge me-1"></i> Advanced Track</span>
+              <span class="text-muted small"><i class="bi bi-clock me-1"></i> 4 Modules • 14 Lessons</span>
+            </div>
+            <h2 class="h4 fw-bold mb-2">Advanced Negotiation & Deal Desking</h2>
+            <p class="text-muted small mb-4">
+              Master the financial mechanics of automotive retail: trade-in equity defense, interest rate explanations, lease structure comparisons, and closing pencil presentations.
+            </p>
+
+            <div class="path-step-timeline">
+              <div class="path-step-item">
+                <div class="path-step-dot completed"></div>
+                <div class="fw-bold" style="font-size: 0.95rem;">Module 1: The First Pencil Presentation</div>
+                <div class="text-muted small">Presenting payments and money factor clearly to maintain trust and credibility.</div>
+              </div>
+              <div class="path-step-item">
+                <div class="path-step-dot"></div>
+                <div class="fw-bold" style="font-size: 0.95rem;">Module 2: De-escalating Trade-In Valuation Gaps</div>
+                <div class="text-muted small">Silent walkaround frameworks that let the customer discover wear and reconditioning costs.</div>
+              </div>
+              <div class="path-step-item">
+                <div class="path-step-dot"></div>
+                <div class="fw-bold" style="font-size: 0.95rem;">Module 3: F&I Bridge Techniques</div>
+                <div class="text-muted small">Warm handovers to Finance & Insurance that preserve deal profitability.</div>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-center justify-content-between pt-3 border-top border-subtle mt-4">
+              <span class="text-warning small fw-semibold"><i class="bi bi-star-fill me-1"></i> Popular With Managers</span>
+              <a href="resource-details.html" class="btn btn-primary-custom py-1 px-3" style="font-size: 0.85rem;">Start Path <i class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Path 3 -->
+        <div class="col-lg-6">
+          <div class="learning-path-card">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="badge-custom badge-blue"><i class="bi bi-cpu me-1"></i> Tech & EV Mastery</span>
+              <span class="text-muted small"><i class="bi bi-clock me-1"></i> 4 Modules • 12 Lessons</span>
+            </div>
+            <h2 class="h4 fw-bold mb-2">Electric Vehicle & Tech Consultative Selling</h2>
+            <p class="text-muted small mb-4">
+              Equip yourself to navigate high-tech cockpits, EV charging speeds, federal/state tax subsidies, battery degradation myths, and total cost of ownership calculations.
+            </p>
+
+            <div class="path-step-timeline">
+              <div class="path-step-item">
+                <div class="path-step-dot completed"></div>
+                <div class="fw-bold" style="font-size: 0.95rem;">Module 1: Eliminating Range Anxiety</div>
+                <div class="text-muted small">Practical customer route mapping and real-world kilowatt-hour comparisons.</div>
+              </div>
+              <div class="path-step-item">
+                <div class="path-step-dot"></div>
+                <div class="fw-bold" style="font-size: 0.95rem;">Module 2: Level 2 Home Charger Consultations</div>
+                <div class="text-muted small">How to explain 240V installation, utility rebates, and off-peak charging schedules.</div>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-center justify-content-between pt-3 border-top border-subtle mt-4">
+              <span class="text-info small fw-semibold"><i class="bi bi-lightning-fill me-1"></i> High Industry Demand</span>
+              <a href="resource-details.html" class="btn btn-primary-custom py-1 px-3" style="font-size: 0.85rem;">Start Path <i class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Path 4 -->
+        <div class="col-lg-6">
+          <div class="learning-path-card">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="badge-custom"><i class="bi bi-headset me-1"></i> Conversion Blueprint</span>
+              <span class="text-muted small"><i class="bi bi-clock me-1"></i> 3 Modules • 10 Lessons</span>
+            </div>
+            <h2 class="h4 fw-bold mb-2">BDC to Showroom Conversion Blueprint</h2>
+            <p class="text-muted small mb-4">
+              Turn digital leads and inbound phone calls into confirmed showroom appointments that actually show up at the dealership doors.
+            </p>
+
+            <div class="path-step-timeline">
+              <div class="path-step-item">
+                <div class="path-step-dot completed"></div>
+                <div class="fw-bold" style="font-size: 0.95rem;">Module 1: The 5-Minute Lead Response Rule</div>
+                <div class="text-muted small">Setting the tone with personalized video replies before rival dealers respond.</div>
+              </div>
+              <div class="path-step-item">
+                <div class="path-step-dot"></div>
+                <div class="fw-bold" style="font-size: 0.95rem;">Module 2: The VIP Appointment Technique</div>
+                <div class="text-muted small">Preparing the vehicle upfront with customer name on display to secure 85%+ show rates.</div>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-center justify-content-between pt-3 border-top border-subtle mt-4">
+              <span class="text-muted small"><i class="bi bi-graph-up me-1"></i> Proven 35% Show Rate Lift</span>
+              <a href="resource-details.html" class="btn btn-primary-custom py-1 px-3" style="font-size: 0.85rem;">Start Path <i class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FEATURED DEEP-DIVE LESSONS (EDITORIAL GRID) -->
+      <section class="py-4 border-top border-subtle">
+        <div class="d-flex justify-content-between align-items-end mb-4">
+          <div>
+            <span class="badge-custom badge-amber mb-2">Independent Modules</span>
+            <h2 class="h3 mb-1">Featured Practical Masterclasses</h2>
+            <p class="text-muted mb-0">Target specific sales skills for immediate improvement on the showroom floor.</p>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Item 1 -->
+          <div class="col-md-4">
+            <div class="card p-3 h-100 border-subtle" style="background: var(--bg-card);">
+              <div class="d-flex justify-content-between mb-2">
+                <span class="badge-custom badge-amber">Customer Discovery</span>
+                <span class="text-muted small">20 min</span>
+              </div>
+              <h4 class="h6 fw-bold mb-2">The 5 Diagnostic Questions Top Sellers Ask</h4>
+              <p class="text-muted small mb-3">Uncover budget flexibility, past dealership dissatisfaction, and primary purchase motivators early.</p>
+              <a href="resource-details.html" class="fw-semibold text-warning mt-auto small">Read Lesson <i class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="col-md-4">
+            <div class="card p-3 h-100 border-subtle" style="background: var(--bg-card);">
+              <div class="d-flex justify-content-between mb-2">
+                <span class="badge-custom badge-blue">Negotiation</span>
+                <span class="text-muted small">25 min</span>
+              </div>
+              <h4 class="h6 fw-bold mb-2">The Monthly Payment vs Out-the-Door Paradox</h4>
+              <p class="text-muted small mb-3">How to align payment expectations without confusing the buyer on total financed sum.</p>
+              <a href="resource-details.html" class="fw-semibold text-warning mt-auto small">Read Lesson <i class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="col-md-4">
+            <div class="card p-3 h-100 border-subtle" style="background: var(--bg-card);">
+              <div class="d-flex justify-content-between mb-2">
+                <span class="badge-custom badge-success">Retention</span>
+                <span class="text-muted small">15 min</span>
+              </div>
+              <h4 class="h6 fw-bold mb-2">The 48-Hour Vehicle Handover Perfection Guide</h4>
+              <p class="text-muted small mb-3">Turn delivery day into 5-star Google reviews and immediate referral introductions.</p>
+              <a href="resource-details.html" class="fw-semibold text-warning mt-auto small">Read Lesson <i class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer-driveforge">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-logo-title">
+            <span class="logo-badge"><i class="bi bi-shield-shaded"></i></span>
+            <span>DRIVE<span class="text-warning">FORGE</span></span>
+          </div>
+          <p style="color: #94a3b8; font-size: 0.95rem;">"Knowledge That Moves Sales Forward."</p>
+          <p style="color: #64748b; font-size: 0.85rem;">Practical resources and proven knowledge for vehicle sales professionals.</p>
+        </div>
+        <div class="col-lg-2 col-md-6 col-6">
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-nav-list">
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="learn.html">Learn</a></li>
+            <li><a href="video-tutorials.html">Video Tutorials</a></li>
+            <li><a href="templates.html">Templates</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 col-6">
+          <h4 class="footer-heading">Community</h4>
+          <ul class="footer-nav-list">
+            <li><a href="community.html">Discussions</a></li>
+            <li><a href="community.html">Popular Topics</a></li>
+            <li><a href="community.html">Start a Discussion</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h4 class="footer-heading">Company</h4>
+          <ul class="footer-nav-list">
+            <li><a href="about.html">About DRIVEFORGE</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="login.html">Member Login</a></li>
+            <li><a href="signup.html">Create Account</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom-strip d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div>© 2026 DRIVEFORGE. All rights reserved. Fictional demonstration brand.</div>
+        <div class="d-flex gap-3">
+          <a href="about.html" class="text-reset text-decoration-none">Privacy Policy</a>
+          <a href="about.html" class="text-reset text-decoration-none">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/gsap.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

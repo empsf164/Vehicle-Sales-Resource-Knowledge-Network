@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Tutorials — DRIVEFORGE Knowledge Network</title>
+  <meta name="description" content="Watch high-definition scenario roleplays, negotiation masterclasses, and consultative sales tutorials taught by veteran vehicle sales experts.">
+  
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23f57c00'/><path d='M30 25 L70 50 L30 75 Z' fill='%23ffffff'/></svg>">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-driveforge" aria-label="Main Navigation">
+      <div class="container">
+        <a class="navbar-brand navbar-brand-logo" href="index.html">
+          <span class="logo-badge"><i class="bi bi-shield-shaded"></i></span>
+          <span>DRIVE<span class="text-warning">FORGE</span></span>
+        </a>
+
+        <div class="d-flex align-items-center gap-2 d-lg-none">
+          <button class="btn btn-icon theme-toggle-btn" type="button" aria-label="Toggle Theme">
+            <i class="bi bi-moon-stars-fill"></i>
+          </button>
+          <button class="navbar-toggler navbar-toggler-custom" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavbar" aria-controls="mobileNavbar" aria-label="Toggle navigation">
+            <i class="bi bi-list fs-4"></i>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="desktopNavMenu">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+            <li class="nav-item"><a class="nav-link-custom" href="index.html">Home</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link-custom dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Resources</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item dropdown-item-custom" href="resources.html"><i class="bi bi-collection"></i> All Resources</a></li>
+                <li><a class="dropdown-item dropdown-item-custom" href="resources.html?type=playbooks"><i class="bi bi-diagram-3"></i> Playbooks</a></li>
+                <li><a class="dropdown-item dropdown-item-custom" href="resources.html?type=guides"><i class="bi bi-book"></i> Sales Guides</a></li>
+                <li><a class="dropdown-item dropdown-item-custom" href="templates.html"><i class="bi bi-download"></i> Downloads</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link-custom dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">Learn</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item dropdown-item-custom" href="video-tutorials.html"><i class="bi bi-play-circle-fill"></i> Video Tutorials</a></li>
+                <li><a class="dropdown-item dropdown-item-custom" href="learn.html"><i class="bi bi-mortarboard"></i> Learning Paths</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link-custom" href="community.html">Community</a></li>
+            <li class="nav-item"><a class="nav-link-custom" href="templates.html">Templates</a></li>
+            <li class="nav-item"><a class="nav-link-custom" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link-custom" href="contact.html">Contact</a></li>
+          </ul>
+
+          <div class="d-flex align-items-center gap-3">
+            <button class="btn btn-icon theme-toggle-btn" type="button" aria-label="Toggle Theme">
+              <i class="bi bi-moon-stars-fill"></i>
+            </button>
+            <a href="login.html" class="btn-ghost-custom">Login</a>
+            <a href="signup.html" class="btn-primary-custom py-2 px-3" style="font-size: 0.9rem;">
+              <span>Join the Network</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Offcanvas -->
+    <div class="offcanvas offcanvas-end mobile-nav-panel" tabindex="-1" id="mobileNavbar">
+      <div class="offcanvas-header border-bottom border-subtle">
+        <a class="navbar-brand navbar-brand-logo mb-0" href="index.html">
+          <span class="logo-badge"><i class="bi bi-shield-shaded"></i></span>
+          <span>DRIVE<span class="text-warning">FORGE</span></span>
+        </a>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <div class="offcanvas-body d-flex flex-column justify-content-between p-4">
+        <ul class="navbar-nav mb-4">
+          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="index.html">Home</a></li>
+          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="resources.html">Resources</a></li>
+          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="learn.html">Learn Hub</a></li>
+          <li class="nav-item mb-2"><a class="nav-link-custom active fs-5" href="video-tutorials.html">Video Tutorials</a></li>
+          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="community.html">Community</a></li>
+          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="templates.html">Templates</a></li>
+          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="about.html">About</a></li>
+          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="contact.html">Contact</a></li>
+        </ul>
+        <div class="pt-3 border-top border-subtle d-grid gap-2">
+          <a href="login.html" class="btn btn-secondary-custom w-100">Login</a>
+          <a href="signup.html" class="btn btn-primary-custom w-100">Join the Network</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content" class="py-5">
+    <div class="container">
+      <!-- Breadcrumb & Header -->
+      <nav aria-label="breadcrumb" class="mb-3">
+        <ol class="breadcrumb" style="font-size: 0.85rem;">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="learn.html">Learn</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Video Tutorials</li>
+        </ol>
+      </nav>
+
+      <div class="mb-4">
+        <span class="badge-custom badge-amber mb-2">Scenario-Based Learning</span>
+        <h1 class="display-5 fw-bold mb-2">Watch. Practice. Sell Better.</h1>
+        <p class="text-muted fs-5" style="max-width: 720px;">
+          Learn from real showroom scenarios. Watch verbatim dialogue breakdowns, non-verbal posture cues, trade-in walkarounds, and closing transitions.
+        </p>
+      </div>
+
+      <!-- FEATURED MASTERCLASS SPOTLIGHT -->
+      <div class="card border-medium shadow-lg mb-5 overflow-hidden" style="background: var(--bg-card); border-radius: var(--radius-lg);">
+        <div class="row g-0">
+          <div class="col-lg-7">
+            <div class="video-thumb-container video-interactive-trigger" role="button" data-title="Overcoming Price Objections & Financing Hesitations" data-category="Negotiation" data-duration="16:40" data-trainer="Elena Cruz, Lead Masterclass Instructor" data-poster="assets/images/videos/video_sales_masterclass.jpg" style="height: 100%; min-height: 380px;">
+              <img src="assets/images/videos/video_sales_masterclass.jpg" alt="Video masterclass" class="video-thumb-img">
+              <div class="video-play-btn" style="width: 80px; height: 80px; font-size: 2.4rem;"><i class="bi bi-play-fill"></i></div>
+              <span class="video-duration-tag fs-6 py-1 px-3">16:40</span>
+            </div>
+          </div>
+          <div class="col-lg-5 p-4 p-lg-5 d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="badge-custom badge-amber">Featured Masterclass</span>
+                <span class="badge-custom badge-blue">Negotiation</span>
+              </div>
+              <h2 class="h3 fw-bold mb-3">Overcoming Price Objections & Financing Hesitations</h2>
+              <p class="text-muted small mb-4">
+                Watch Elena Cruz demonstrate how to calmly break down out-the-door price resistance, isolate real financial blockers from reflex complaints, and present monthly payment options with complete transparency.
+              </p>
+
+              <div class="mb-4">
+                <div class="fw-semibold small text-uppercase text-warning mb-2"><i class="bi bi-check-all me-1"></i> What You Will Learn:</div>
+                <ul class="list-unstyled small text-muted mb-0 d-flex flex-column gap-2">
+                  <li><i class="bi bi-check-circle text-success me-2"></i> The "Isolate and Acknowledge" verbal pivot</li>
+                  <li><i class="bi bi-check-circle text-success me-2"></i> How to calculate cost-per-day vehicle value</li>
+                  <li><i class="bi bi-check-circle text-success me-2"></i> Transitioning to Finance without customer friction</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-center justify-content-between pt-3 border-top border-subtle">
+              <div class="d-flex align-items-center gap-2">
+                <div class="discussion-avatar" style="width: 36px; height: 36px; font-size: 0.8rem;">EC</div>
+                <div class="small">
+                  <div class="fw-bold">Elena Cruz</div>
+                  <div class="text-muted" style="font-size: 0.75rem;">15 Yrs Automotive Training</div>
+                </div>
+              </div>
+              <button type="button" class="btn btn-primary-custom py-2 px-3 video-interactive-trigger" data-title="Overcoming Price Objections & Financing Hesitations" data-category="Negotiation" data-duration="16:40" data-trainer="Elena Cruz" data-poster="assets/images/videos/video_sales_masterclass.jpg" style="font-size: 0.9rem;">
+                <i class="bi bi-play-circle-fill me-1"></i> Watch Masterclass
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FILTER CONTROLS & SEARCH -->
+      <div class="card p-3 p-md-4 mb-4 border-subtle" style="background: var(--bg-secondary);">
+        <div class="row g-3 align-items-center">
+          <div class="col-lg-6">
+            <div class="search-input-group m-0" style="box-shadow: none;">
+              <i class="bi bi-search search-icon"></i>
+              <input type="text" class="library-search-input" placeholder="Search tutorials by topic, scenario, or keyword..." aria-label="Search video tutorials">
+            </div>
+          </div>
+          <div class="col-lg-6 d-flex justify-content-lg-end align-items-center gap-3">
+            <div class="results-counter text-muted small fw-semibold">Showing 6 video lessons</div>
+          </div>
+        </div>
+
+        <!-- Category Tabs -->
+        <div class="filter-tabs mt-3 mb-0">
+          <button type="button" class="filter-btn active" data-filter="all">All Videos</button>
+          <button type="button" class="filter-btn" data-filter="communication">Communication</button>
+          <button type="button" class="filter-btn" data-filter="objections">Objections</button>
+          <button type="button" class="filter-btn" data-filter="negotiation">Negotiation</button>
+          <button type="button" class="filter-btn" data-filter="closing">Closing</button>
+          <button type="button" class="filter-btn" data-filter="follow-up">Follow-Up</button>
+        </div>
+      </div>
+
+      <!-- VIDEO TUTORIALS GRID -->
+      <div class="row g-4 filterable-grid">
+        <!-- Video 1 -->
+        <div class="col-lg-4 col-md-6 filterable-card" data-category="communication" data-date="20261001" data-popularity="94">
+          <div class="resource-card-base card-treatment-video">
+            <div class="video-thumb-container video-interactive-trigger" role="button" data-title="Opening the Customer Conversation" data-category="Communication" data-duration="11:45" data-trainer="Elena Cruz, Lead Instructor" data-poster="assets/images/automotive/test_drive_walkaround.jpg">
+              <img src="assets/images/automotive/test_drive_walkaround.jpg" alt="Opening conversation" class="video-thumb-img">
+              <div class="video-play-btn"><i class="bi bi-play-fill"></i></div>
+              <span class="video-duration-tag">11:45</span>
+            </div>
+            <div class="video-content-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge-custom badge-success">Beginner</span>
+                <span class="text-muted small"><i class="bi bi-eye me-1"></i> 1.2k views</span>
+              </div>
+              <h3 class="card-title-text h5 fw-bold mb-2">
+                <a href="#" class="text-reset video-interactive-trigger" data-title="Opening the Customer Conversation">Opening the Customer Conversation</a>
+              </h3>
+              <p class="card-desc-text text-muted small mb-3">
+                Disarm customer defenses on the lot within the first 60 seconds. Replace generic questions with helpful observations.
+              </p>
+              <div class="d-flex align-items-center justify-content-between pt-3 border-top border-subtle mt-auto">
+                <span class="badge-custom">Communication</span>
+                <button type="button" class="btn btn-link text-warning p-0 fw-semibold text-decoration-none video-interactive-trigger" data-title="Opening the Customer Conversation">
+                  Play Video <i class="bi bi-play-circle ms-1"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="col-lg-4 col-md-6 filterable-card" data-category="negotiation" data-date="20260928" data-popularity="98">
+          <div class="resource-card-base card-treatment-video">
+            <div class="video-thumb-container video-interactive-trigger" role="button" data-title="Reviewing Financing & Desking Pencils" data-category="Negotiation" data-duration="18:15" data-trainer="Marcus Vance, Desking Coach" data-poster="assets/images/videos/sales_negotiation_desk.jpg">
+              <img src="assets/images/videos/sales_negotiation_desk.jpg" alt="Desking pencil video" class="video-thumb-img">
+              <div class="video-play-btn"><i class="bi bi-play-fill"></i></div>
+              <span class="video-duration-tag">18:15</span>
+            </div>
+            <div class="video-content-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge-custom badge-amber">Intermediate</span>
+                <span class="text-muted small"><i class="bi bi-eye me-1"></i> 2.4k views</span>
+              </div>
+              <h3 class="card-title-text h5 fw-bold mb-2">
+                <a href="#" class="text-reset video-interactive-trigger" data-title="Reviewing Financing & Desking Pencils">Reviewing Financing & Desking Pencils</a>
+              </h3>
+              <p class="card-desc-text text-muted small mb-3">
+                How to walk customers through down payment tiers, term lengths, and trade-in allowances on paper without confusing them.
+              </p>
+              <div class="d-flex align-items-center justify-content-between pt-3 border-top border-subtle mt-auto">
+                <span class="badge-custom">Negotiation</span>
+                <button type="button" class="btn btn-link text-warning p-0 fw-semibold text-decoration-none video-interactive-trigger" data-title="Reviewing Financing & Desking Pencils">
+                  Play Video <i class="bi bi-play-circle ms-1"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video 3 -->
+        <div class="col-lg-4 col-md-6 filterable-card" data-category="objections" data-date="20260924" data-popularity="88">
+          <div class="resource-card-base card-treatment-video">
+            <div class="video-thumb-container video-interactive-trigger" role="button" data-title="Overcoming the 'I Need to Think About It' Stall" data-category="Objections" data-duration="13:30" data-trainer="Elena Cruz, Lead Instructor" data-poster="assets/images/resources/sales_consultation_lounge.jpg">
+              <img src="assets/images/resources/sales_consultation_lounge.jpg" alt="Objections stall video" class="video-thumb-img">
+              <div class="video-play-btn"><i class="bi bi-play-fill"></i></div>
+              <span class="video-duration-tag">13:30</span>
+            </div>
+            <div class="video-content-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge-custom badge-amber">Intermediate</span>
+                <span class="text-muted small"><i class="bi bi-eye me-1"></i> 1.9k views</span>
+              </div>
+              <h3 class="card-title-text h5 fw-bold mb-2">
+                <a href="#" class="text-reset video-interactive-trigger" data-title="Overcoming the 'I Need to Think About It' Stall">Overcoming the "I Need to Think About It" Stall</a>
+              </h3>
+              <p class="card-desc-text text-muted small mb-3">
+                Uncover what they actually need to think about: vehicle fit, monthly payment, or spousal agreement, with respect.
+              </p>
+              <div class="d-flex align-items-center justify-content-between pt-3 border-top border-subtle mt-auto">
+                <span class="badge-custom">Objections</span>
+                <button type="button" class="btn btn-link text-warning p-0 fw-semibold text-decoration-none video-interactive-trigger" data-title="Overcoming the 'I Need to Think About It' Stall">
+                  Play Video <i class="bi bi-play-circle ms-1"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video 4 -->
+        <div class="col-lg-4 col-md-6 filterable-card" data-category="closing" data-date="20260920" data-popularity="91">
+          <div class="resource-card-base card-treatment-video">
+            <div class="video-thumb-container video-interactive-trigger" role="button" data-title="Asking Better Closing Questions" data-category="Closing" data-duration="14:50" data-trainer="Elena Cruz & Team" data-poster="assets/images/videos/video_sales_masterclass.jpg">
+              <img src="assets/images/videos/video_sales_masterclass.jpg" alt="Closing questions video" class="video-thumb-img">
+              <div class="video-play-btn"><i class="bi bi-play-fill"></i></div>
+              <span class="video-duration-tag">14:50</span>
+            </div>
+            <div class="video-content-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge-custom badge-blue">Advanced</span>
+                <span class="text-muted small"><i class="bi bi-eye me-1"></i> 3.1k views</span>
+              </div>
+              <h3 class="card-title-text h5 fw-bold mb-2">
+                <a href="#" class="text-reset video-interactive-trigger" data-title="Asking Better Closing Questions">Asking Better Closing Questions</a>
+              </h3>
+              <p class="card-desc-text text-muted small mb-3">
+                Replace pushy closing lines with natural assumption and commitment questions that feel like cooperative problem-solving.
+              </p>
+              <div class="d-flex align-items-center justify-content-between pt-3 border-top border-subtle mt-auto">
+                <span class="badge-custom">Closing</span>
+                <button type="button" class="btn btn-link text-warning p-0 fw-semibold text-decoration-none video-interactive-trigger" data-title="Asking Better Closing Questions">
+                  Play Video <i class="bi bi-play-circle ms-1"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video 5 -->
+        <div class="col-lg-4 col-md-6 filterable-card" data-category="follow-up" data-date="20260915" data-popularity="85">
+          <div class="resource-card-base card-treatment-video">
+            <div class="video-thumb-container video-interactive-trigger" role="button" data-title="Recording High-Conversion Video Texts" data-category="Follow-Up" data-duration="09:20" data-trainer="Elena Cruz, Lead Instructor" data-poster="assets/images/hero/hero_automotive_knowledge.jpg">
+              <img src="assets/images/hero/hero_automotive_knowledge.jpg" alt="Video text follow-up" class="video-thumb-img">
+              <div class="video-play-btn"><i class="bi bi-play-fill"></i></div>
+              <span class="video-duration-tag">09:20</span>
+            </div>
+            <div class="video-content-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge-custom badge-success">Beginner</span>
+                <span class="text-muted small"><i class="bi bi-eye me-1"></i> 1.5k views</span>
+              </div>
+              <h3 class="card-title-text h5 fw-bold mb-2">
+                <a href="#" class="text-reset video-interactive-trigger" data-title="Recording High-Conversion Video Texts">Recording High-Conversion Video Texts</a>
+              </h3>
+              <p class="card-desc-text text-muted small mb-3">
+                Practical tips on smartphone framing, audio quality in noisy showrooms, and the exact 30-second script structure.
+              </p>
+              <div class="d-flex align-items-center justify-content-between pt-3 border-top border-subtle mt-auto">
+                <span class="badge-custom">Follow-Up</span>
+                <button type="button" class="btn btn-link text-warning p-0 fw-semibold text-decoration-none video-interactive-trigger" data-title="Recording High-Conversion Video Texts">
+                  Play Video <i class="bi bi-play-circle ms-1"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video 6 -->
+        <div class="col-lg-4 col-md-6 filterable-card" data-category="communication" data-date="20260910" data-popularity="89">
+          <div class="resource-card-base card-treatment-video">
+            <div class="video-thumb-container video-interactive-trigger" role="button" data-title="Building Test Drive Confidence" data-category="Communication" data-duration="15:10" data-trainer="Marcus Vance, Desking Coach" data-poster="assets/images/automotive/test_drive_walkaround.jpg">
+              <img src="assets/images/automotive/test_drive_walkaround.jpg" alt="Test drive confidence" class="video-thumb-img">
+              <div class="video-play-btn"><i class="bi bi-play-fill"></i></div>
+              <span class="video-duration-tag">15:10</span>
+            </div>
+            <div class="video-content-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge-custom badge-amber">Intermediate</span>
+                <span class="text-muted small"><i class="bi bi-eye me-1"></i> 2.1k views</span>
+              </div>
+              <h3 class="card-title-text h5 fw-bold mb-2">
+                <a href="#" class="text-reset video-interactive-trigger" data-title="Building Test Drive Confidence">Building Test Drive Confidence</a>
+              </h3>
+              <p class="card-desc-text text-muted small mb-3">
+                How to select the right test route (hills, highway merges, parking ease) to emphasize the vehicle's dynamic strengths.
+              </p>
+              <div class="d-flex align-items-center justify-content-between pt-3 border-top border-subtle mt-auto">
+                <span class="badge-custom">Communication</span>
+                <button type="button" class="btn btn-link text-warning p-0 fw-semibold text-decoration-none video-interactive-trigger" data-title="Building Test Drive Confidence">
+                  Play Video <i class="bi bi-play-circle ms-1"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- No Results Notice -->
+      <div class="no-results-notice text-center py-5" style="display: none;">
+        <i class="bi bi-camera-video text-muted fs-1 mb-3"></i>
+        <h4 class="h5 fw-bold">No video tutorials found</h4>
+        <p class="text-muted">Try resetting your category filter or search query.</p>
+        <button type="button" class="btn btn-secondary-custom filter-reset-btn" onclick="document.querySelector('.filter-btn[data-filter=\'all\']').click();">Reset Filters</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Video Player Modal -->
+  <div class="modal fade modal-custom" id="videoPlayerModal" tabindex="-1" aria-labelledby="videoPlayerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <span class="badge-custom badge-amber mb-1 video-modal-category">Video Lesson</span>
+            <h5 class="modal-title h5 fw-bold video-modal-title" id="videoPlayerModalLabel">Video Lesson</h5>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="video-player-mock">
+            <img src="assets/images/videos/video_sales_masterclass.jpg" alt="Video frame" class="video-modal-poster">
+            <div class="video-play-btn" style="width: 64px; height: 64px;"><i class="bi bi-play-fill fs-2"></i></div>
+            <div class="video-player-controls">
+              <button class="btn btn-sm text-white p-0"><i class="bi bi-play-fill fs-5"></i></button>
+              <div class="video-scrubber"><div class="video-scrubber-fill"></div></div>
+              <span class="small font-monospace video-modal-duration">16:40</span>
+              <button class="btn btn-sm text-white p-0"><i class="bi bi-volume-up-fill fs-5"></i></button>
+              <button class="btn btn-sm text-white p-0"><i class="bi bi-fullscreen fs-5"></i></button>
+            </div>
+          </div>
+          <div class="p-4">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <span class="text-muted small"><i class="bi bi-person-badge me-1"></i> Instructor: <strong class="text-reset video-modal-trainer">Elena Cruz</strong></span>
+              <span class="badge-custom badge-success"><i class="bi bi-check-circle-fill me-1"></i> Practical Demo</span>
+            </div>
+            <p class="small text-muted mb-0">
+              Interactive scenario walkthrough simulating live vehicle sales conversations. Includes field scripts and behavioral cues.
+            </p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary-custom py-1 px-3 download-trigger-btn" data-file="Video-Lesson-Key-Points.pdf" data-type="PDF Summary" data-size="380 KB">
+            <i class="bi bi-file-earmark-text me-1"></i> Download Script PDF
+          </button>
+          <button type="button" class="btn btn-primary-custom py-1 px-3" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer-driveforge">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-logo-title">
+            <span class="logo-badge"><i class="bi bi-shield-shaded"></i></span>
+            <span>DRIVE<span class="text-warning">FORGE</span></span>
+          </div>
+          <p style="color: #94a3b8; font-size: 0.95rem;">"Knowledge That Moves Sales Forward."</p>
+          <p style="color: #64748b; font-size: 0.85rem;">Practical resources and proven knowledge for vehicle sales professionals.</p>
+        </div>
+        <div class="col-lg-2 col-md-6 col-6">
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-nav-list">
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="learn.html">Learn</a></li>
+            <li><a href="video-tutorials.html">Video Tutorials</a></li>
+            <li><a href="templates.html">Templates</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 col-6">
+          <h4 class="footer-heading">Community</h4>
+          <ul class="footer-nav-list">
+            <li><a href="community.html">Discussions</a></li>
+            <li><a href="community.html">Popular Topics</a></li>
+            <li><a href="community.html">Start a Discussion</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h4 class="footer-heading">Company</h4>
+          <ul class="footer-nav-list">
+            <li><a href="about.html">About DRIVEFORGE</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="login.html">Member Login</a></li>
+            <li><a href="signup.html">Create Account</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom-strip d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div>© 2026 DRIVEFORGE. All rights reserved. Fictional demonstration brand.</div>
+        <div class="d-flex gap-3">
+          <a href="about.html" class="text-reset text-decoration-none">Privacy Policy</a>
+          <a href="about.html" class="text-reset text-decoration-none">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/gsap.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

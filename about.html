@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About DRIVEFORGE — Vehicle Sales Knowledge Network</title>
+  <meta name="description" content="Learn about DRIVEFORGE's mission to empower automotive sales professionals through structured knowledge, scenario video tutorials, and practical field toolkits.">
+  
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23f57c00'/><path d='M30 25 L70 50 L30 75 Z' fill='%23ffffff'/></svg>">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-driveforge" aria-label="Main Navigation">
+      <div class="container">
+        <a class="navbar-brand navbar-brand-logo" href="index.html">
+          <span class="logo-badge"><i class="bi bi-shield-shaded"></i></span>
+          <span>DRIVE<span class="text-warning">FORGE</span></span>
+        </a>
+
+        <div class="d-flex align-items-center gap-2 d-lg-none">
+          <button class="btn btn-icon theme-toggle-btn" type="button" aria-label="Toggle Theme">
+            <i class="bi bi-moon-stars-fill"></i>
+          </button>
+          <button class="navbar-toggler navbar-toggler-custom" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavbar" aria-controls="mobileNavbar" aria-label="Toggle navigation">
+            <i class="bi bi-list fs-4"></i>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="desktopNavMenu">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+            <li class="nav-item"><a class="nav-link-custom" href="index.html">Home</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link-custom dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Resources</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item dropdown-item-custom" href="resources.html"><i class="bi bi-collection"></i> All Resources</a></li>
+                <li><a class="dropdown-item dropdown-item-custom" href="resources.html?type=playbooks"><i class="bi bi-diagram-3"></i> Playbooks</a></li>
+                <li><a class="dropdown-item dropdown-item-custom" href="templates.html"><i class="bi bi-download"></i> Downloads</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link-custom dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Learn</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item dropdown-item-custom" href="video-tutorials.html"><i class="bi bi-play-circle-fill"></i> Video Tutorials</a></li>
+                <li><a class="dropdown-item dropdown-item-custom" href="learn.html"><i class="bi bi-mortarboard"></i> Learning Paths</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link-custom" href="community.html">Community</a></li>
+            <li class="nav-item"><a class="nav-link-custom" href="templates.html">Templates</a></li>
+            <li class="nav-item"><a class="nav-link-custom active" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link-custom" href="contact.html">Contact</a></li>
+          </ul>
+
+          <div class="d-flex align-items-center gap-3">
+            <button class="btn btn-icon theme-toggle-btn" type="button" aria-label="Toggle Theme">
+              <i class="bi bi-moon-stars-fill"></i>
+            </button>
+            <a href="login.html" class="btn-ghost-custom">Login</a>
+            <a href="signup.html" class="btn-primary-custom py-2 px-3" style="font-size: 0.9rem;">
+              <span>Join the Network</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Offcanvas -->
+    <div class="offcanvas offcanvas-end mobile-nav-panel" tabindex="-1" id="mobileNavbar">
+      <div class="offcanvas-header border-bottom border-subtle">
+        <a class="navbar-brand navbar-brand-logo mb-0" href="index.html">
+          <span class="logo-badge"><i class="bi bi-shield-shaded"></i></span>
+          <span>DRIVE<span class="text-warning">FORGE</span></span>
+        </a>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <div class="offcanvas-body d-flex flex-column justify-content-between p-4">
+        <ul class="navbar-nav mb-4">
+          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="index.html">Home</a></li>
+          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="resources.html">Resources</a></li>
+          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="learn.html">Learn Hub</a></li>
+          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="video-tutorials.html">Video Tutorials</a></li>
+          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="community.html">Community</a></li>
+          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="templates.html">Templates</a></li>
+          <li class="nav-item mb-2"><a class="nav-link-custom active fs-5" href="about.html">About</a></li>
+          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="contact.html">Contact</a></li>
+        </ul>
+        <div class="pt-3 border-top border-subtle d-grid gap-2">
+          <a href="login.html" class="btn btn-secondary-custom w-100">Login</a>
+          <a href="signup.html" class="btn btn-primary-custom w-100">Join the Network</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content" class="py-5">
+    <div class="container">
+      <nav aria-label="breadcrumb" class="mb-3">
+        <ol class="breadcrumb" style="font-size: 0.85rem;">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">About</li>
+        </ol>
+      </nav>
+
+      <!-- Mission Hero -->
+      <div class="row align-items-center g-5 mb-5 pb-4 border-bottom border-subtle">
+        <div class="col-lg-6">
+          <span class="badge-custom badge-amber mb-2">Our Mission</span>
+          <h1 class="display-5 fw-bold mb-3">Knowledge That Moves <span class="text-warning">Sales Forward.</span></h1>
+          <p class="fs-5 text-muted mb-4">
+            DRIVEFORGE was conceived to bridge the gap between intuitive showroom talent and repeatable, consultative sales excellence.
+          </p>
+          <p class="text-secondary">
+            For decades, automotive sales onboarding was limited to "shadow the senior guy on the lot." In today's digital automotive era, vehicle buyers arrive with weeks of research, trade-in valuation reports, and financing comparisons in hand.
+          </p>
+          <p class="text-secondary mb-0">
+            DRIVEFORGE equips sales professionals with tested playbooks, verbatim conversation scripts, and structured field toolkits so they can lead transparent, consultative sales that close faster and build lasting customer loyalty.
+          </p>
+        </div>
+        <div class="col-lg-6">
+          <div class="rounded-4 overflow-hidden border border-subtle shadow-lg">
+            <img src="assets/images/automotive/test_drive_walkaround.jpg" alt="Automotive sales consultation and delivery" style="width: 100%; height: 420px; object-fit: cover;">
+          </div>
+        </div>
+      </div>
+
+      <!-- What We Provide (4 Pillars) -->
+      <div class="mb-5 pb-4 border-bottom border-subtle">
+        <div class="text-center max-w-700 mx-auto mb-5">
+          <span class="badge-custom badge-blue mb-2">Platform Pillars</span>
+          <h2 class="h2 fw-bold">Built for Real Dealership Realities</h2>
+          <p class="text-muted">Four core capabilities designed to elevate daily sales floor execution.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="card p-4 h-100 border-subtle" style="background: var(--bg-card);">
+              <div class="category-pill-icon mb-3"><i class="bi bi-journal-bookmark-fill"></i></div>
+              <h3 class="h5 fw-bold mb-2">Curated Knowledge</h3>
+              <p class="text-muted small mb-0">Step-by-step playbooks and consultative roadmaps that eliminate high-pressure sales tropes.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card p-4 h-100 border-subtle" style="background: var(--bg-card);">
+              <div class="category-pill-icon mb-3" style="background: rgba(37, 99, 235, 0.1); color: var(--accent-blue);"><i class="bi bi-camera-video-fill"></i></div>
+              <h3 class="h5 fw-bold mb-2">Scenario Video Training</h3>
+              <p class="text-muted small mb-0">Realistic roleplays demonstrating greetings, trade-in walkarounds, and deal desking pencils.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card p-4 h-100 border-subtle" style="background: var(--bg-card);">
+              <div class="category-pill-icon mb-3" style="background: rgba(16, 185, 129, 0.1); color: #10b981;"><i class="bi bi-tools"></i></div>
+              <h3 class="h5 fw-bold mb-2">Field-Ready Toolkits</h3>
+              <p class="text-muted small mb-0">Printable checklists, daily planners, and CRM email sequences formatted for instant deployment.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card p-4 h-100 border-subtle" style="background: var(--bg-card);">
+              <div class="category-pill-icon mb-3" style="background: rgba(147, 51, 234, 0.1); color: #9333ea;"><i class="bi bi-people-fill"></i></div>
+              <h3 class="h5 fw-bold mb-2">Peer Discussion</h3>
+              <p class="text-muted small mb-0">A collaborative forum where consultants openly troubleshoot difficult buyer objections.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Who It's For -->
+      <div class="mb-5 pb-4 border-bottom border-subtle">
+        <h2 class="h3 fw-bold mb-4">Who the Network Serves</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="p-3 rounded bg-tertiary border border-subtle h-100">
+              <h4 class="h6 fw-bold text-warning mb-2"><i class="bi bi-person-badge me-1"></i> Sales Consultants</h4>
+              <p class="text-muted small mb-0">From rookies in their first 30 days to top producers seeking fresh talk tracks and video follow-up methods.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-3 rounded bg-tertiary border border-subtle h-100">
+              <h4 class="h6 fw-bold text-primary mb-2"><i class="bi bi-briefcase me-1"></i> Sales Managers & Desking Pros</h4>
+              <p class="text-muted small mb-0">Structures for transparent deal presentation, trade equity explanation, and consistent staff coaching.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-3 rounded bg-tertiary border border-subtle h-100">
+              <h4 class="h6 fw-bold text-success mb-2"><i class="bi bi-headset me-1"></i> BDC & Internet Representatives</h4>
+              <p class="text-muted small mb-0">Proven templates and response cadences that boost appointment show rates from digital inquiries.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Community Philosophy & Standards (Anchor for Guidelines) -->
+      <div id="guidelines" class="card p-4 p-lg-5 border-medium" style="background: var(--bg-secondary); border-radius: var(--radius-lg);">
+        <span class="badge-custom badge-amber mb-2">Standards of Engagement</span>
+        <h3 class="h3 fw-bold mb-3">Community Philosophy & Code of Conduct</h3>
+        <p class="text-muted mb-4">
+          DRIVEFORGE is built on the belief that automotive sales is a noble, consultative profession. We hold our network members to the highest professional standards:
+        </p>
+
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="d-flex gap-3">
+              <i class="bi bi-shield-check text-warning fs-4 flex-shrink-0"></i>
+              <div>
+                <h4 class="h6 fw-bold mb-1">Authentic Floor Experience</h4>
+                <p class="text-muted small mb-0">We value tactics proven on dealership showrooms over abstract theory. Real situations, practical responses.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="d-flex gap-3">
+              <i class="bi bi-lock-fill text-warning fs-4 flex-shrink-0"></i>
+              <div>
+                <h4 class="h6 fw-bold mb-1">Customer Privacy Protection</h4>
+                <p class="text-muted small mb-0">Never share identifiable customer names, private phone numbers, or proprietary dealer documents in forum posts.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="d-flex gap-3">
+              <i class="bi bi-chat-heart text-warning fs-4 flex-shrink-0"></i>
+              <div>
+                <h4 class="h6 fw-bold mb-1">Professional Mentorship</h4>
+                <p class="text-muted small mb-0">Experienced managers support green consultants. Constructive feedback is welcomed; gatekeeping is rejected.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="d-flex gap-3">
+              <i class="bi bi-patch-check-fill text-warning fs-4 flex-shrink-0"></i>
+              <div>
+                <h4 class="h6 fw-bold mb-1">Demonstration Notice</h4>
+                <p class="text-muted small mb-0">DRIVEFORGE is an editorial template and demonstration platform. All scenarios and brand names are fictional examples.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer-driveforge">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-logo-title">
+            <span class="logo-badge"><i class="bi bi-shield-shaded"></i></span>
+            <span>DRIVE<span class="text-warning">FORGE</span></span>
+          </div>
+          <p style="color: #94a3b8; font-size: 0.95rem;">"Knowledge That Moves Sales Forward."</p>
+          <p style="color: #64748b; font-size: 0.85rem;">Practical resources and proven knowledge for vehicle sales professionals.</p>
+        </div>
+        <div class="col-lg-2 col-md-6 col-6">
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-nav-list">
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="learn.html">Learn</a></li>
+            <li><a href="video-tutorials.html">Video Tutorials</a></li>
+            <li><a href="templates.html">Templates</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 col-6">
+          <h4 class="footer-heading">Community</h4>
+          <ul class="footer-nav-list">
+            <li><a href="community.html">Discussions</a></li>
+            <li><a href="community.html">Popular Topics</a></li>
+            <li><a href="community.html">Start a Discussion</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h4 class="footer-heading">Company</h4>
+          <ul class="footer-nav-list">
+            <li><a href="about.html">About DRIVEFORGE</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="login.html">Member Login</a></li>
+            <li><a href="signup.html">Create Account</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom-strip d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div>© 2026 DRIVEFORGE. All rights reserved. Fictional demonstration brand.</div>
+        <div class="d-flex gap-3">
+          <a href="about.html" class="text-reset text-decoration-none">Privacy Policy</a>
+          <a href="about.html" class="text-reset text-decoration-none">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/gsap.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

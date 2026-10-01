@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sales Community & Peer Discussions — DRIVEFORGE Knowledge Network</title>
+  <meta name="description" content="Connect with vehicle sales consultants, sales managers, and BDC pros. Discuss real showroom challenges, price objection strategies, and customer retention.">
+  
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23f57c00'/><path d='M30 25 L70 50 L30 75 Z' fill='%23ffffff'/></svg>">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-driveforge" aria-label="Main Navigation">
+      <div class="container">
+        <a class="navbar-brand navbar-brand-logo" href="index.html">
+          <span class="logo-badge"><i class="bi bi-shield-shaded"></i></span>
+          <span>DRIVE<span class="text-warning">FORGE</span></span>
+        </a>
+
+        <div class="d-flex align-items-center gap-2 d-lg-none">
+          <button class="btn btn-icon theme-toggle-btn" type="button" aria-label="Toggle Theme">
+            <i class="bi bi-moon-stars-fill"></i>
+          </button>
+          <button class="navbar-toggler navbar-toggler-custom" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavbar" aria-controls="mobileNavbar" aria-label="Toggle navigation">
+            <i class="bi bi-list fs-4"></i>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="desktopNavMenu">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+            <li class="nav-item"><a class="nav-link-custom" href="index.html">Home</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link-custom dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Resources</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item dropdown-item-custom" href="resources.html"><i class="bi bi-collection"></i> All Resources</a></li>
+                <li><a class="dropdown-item dropdown-item-custom" href="resources.html?type=playbooks"><i class="bi bi-diagram-3"></i> Playbooks</a></li>
+                <li><a class="dropdown-item dropdown-item-custom" href="templates.html"><i class="bi bi-download"></i> Downloads</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link-custom dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Learn</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item dropdown-item-custom" href="video-tutorials.html"><i class="bi bi-play-circle-fill"></i> Video Tutorials</a></li>
+                <li><a class="dropdown-item dropdown-item-custom" href="learn.html"><i class="bi bi-mortarboard"></i> Learning Paths</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link-custom active" href="community.html">Community</a></li>
+            <li class="nav-item"><a class="nav-link-custom" href="templates.html">Templates</a></li>
+            <li class="nav-item"><a class="nav-link-custom" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link-custom" href="contact.html">Contact</a></li>
+          </ul>
+
+          <div class="d-flex align-items-center gap-3">
+            <button class="btn btn-icon theme-toggle-btn" type="button" aria-label="Toggle Theme">
+              <i class="bi bi-moon-stars-fill"></i>
+            </button>
+            <a href="login.html" class="btn-ghost-custom">Login</a>
+            <a href="signup.html" class="btn-primary-custom py-2 px-3" style="font-size: 0.9rem;">
+              <span>Join the Network</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Offcanvas -->
+    <div class="offcanvas offcanvas-end mobile-nav-panel" tabindex="-1" id="mobileNavbar">
+      <div class="offcanvas-header border-bottom border-subtle">
+        <a class="navbar-brand navbar-brand-logo mb-0" href="index.html">
+          <span class="logo-badge"><i class="bi bi-shield-shaded"></i></span>
+          <span>DRIVE<span class="text-warning">FORGE</span></span>
+        </a>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <div class="offcanvas-body d-flex flex-column justify-content-between p-4">
+        <ul class="navbar-nav mb-4">
+          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="index.html">Home</a></li>
+          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="resources.html">Resources</a></li>
+          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="learn.html">Learn Hub</a></li>
+          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="video-tutorials.html">Video Tutorials</a></li>
+          <li class="nav-item mb-2"><a class="nav-link-custom active fs-5" href="community.html">Community</a></li>
+          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="templates.html">Templates</a></li>
+          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="about.html">About</a></li>
+          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="contact.html">Contact</a></li>
+        </ul>
+        <div class="pt-3 border-top border-subtle d-grid gap-2">
+          <a href="login.html" class="btn btn-secondary-custom w-100">Login</a>
+          <a href="signup.html" class="btn btn-primary-custom w-100">Join the Network</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content" class="py-5">
+    <div class="container">
+      <nav aria-label="breadcrumb" class="mb-3">
+        <ol class="breadcrumb" style="font-size: 0.85rem;">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Community</li>
+        </ol>
+      </nav>
+
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4 gap-3">
+        <div>
+          <span class="badge-custom badge-amber mb-2">Automotive Peer Network</span>
+          <h1 class="display-5 fw-bold mb-1">Ask. Share. Learn.</h1>
+          <p class="text-muted fs-5 mb-0" style="max-width: 650px;">
+            A professional discussion network built specifically for vehicle sales consultants, managers, and trainers to exchange real showroom experiences.
+          </p>
+        </div>
+        <div>
+          <button type="button" class="btn btn-primary-custom" data-bs-toggle="modal" data-bs-target="#startDiscussionModal">
+            <i class="bi bi-plus-circle-fill me-1"></i>
+            <span>Start a Discussion</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Controls & Filter Strip -->
+      <div class="card p-3 p-md-4 mb-4 border-subtle" style="background: var(--bg-secondary);">
+        <div class="row g-3 align-items-center">
+          <div class="col-lg-7">
+            <div class="search-input-group m-0" style="box-shadow: none;">
+              <i class="bi bi-search search-icon"></i>
+              <input type="text" class="library-search-input" placeholder="Search discussion topics, objections, scenarios..." aria-label="Search discussions">
+            </div>
+          </div>
+          <div class="col-lg-5 d-flex justify-content-lg-end align-items-center gap-3">
+            <div class="results-counter text-muted small fw-semibold">Showing active discussions</div>
+          </div>
+        </div>
+
+        <div class="filter-tabs mt-3 mb-0">
+          <button type="button" class="filter-btn active" data-filter="all">All Discussions</button>
+          <button type="button" class="filter-btn" data-filter="techniques">Sales Techniques</button>
+          <button type="button" class="filter-btn" data-filter="conversations">Customer Conversations</button>
+          <button type="button" class="filter-btn" data-filter="follow-up">Follow-Up</button>
+          <button type="button" class="filter-btn" data-filter="negotiation">Negotiation</button>
+          <button type="button" class="filter-btn" data-filter="dealership">Dealership Life</button>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Main Discussions Stream (Left) -->
+        <div class="col-lg-8" id="communityDiscussionFeed">
+          
+          <!-- Discussion Card 1 -->
+          <div class="resource-card-base card-treatment-discussion filterable-card mb-3" data-category="conversations" data-date="20261001" data-popularity="96">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <div class="d-flex align-items-center gap-2">
+                <div class="discussion-avatar">MK</div>
+                <div>
+                  <strong style="font-size: 0.92rem;">Marcus K. (Sales Consultant)</strong>
+                  <span class="text-muted" style="font-size: 0.78rem;"> • 3 hours ago</span>
+                </div>
+              </div>
+              <span class="badge-custom badge-amber">Customer Conversations</span>
+            </div>
+            <h3 class="card-title-text h5 mb-2">
+              <a href="#" class="text-reset">How do you handle customers who only want to talk price before test driving?</a>
+            </h3>
+            <p class="card-desc-text text-secondary mb-3" style="font-size: 0.95rem;">
+              Whenever a customer walks in and immediately says "Just give me your absolute lowest price, I'm not doing a test drive today," what talk track do you use to regain value control without sounding evasive?
+            </p>
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              <span class="badge-custom">#PriceStall</span>
+              <span class="badge-custom">#ShowroomGreeting</span>
+              <span class="badge-custom">#ValueFirst</span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between pt-2 border-top border-subtle" style="font-size: 0.85rem; color: var(--text-muted);">
+              <div class="d-flex gap-3">
+                <span><i class="bi bi-chat-dots me-1"></i> 38 replies</span>
+                <span><i class="bi bi-eye me-1"></i> 640 views</span>
+              </div>
+              <span class="text-warning fw-semibold"><i class="bi bi-fire me-1"></i> Trending Today</span>
+            </div>
+          </div>
+
+          <!-- Discussion Card 2 -->
+          <div class="resource-card-base card-treatment-discussion filterable-card mb-3" data-category="follow-up" data-date="20260930" data-popularity="92">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <div class="d-flex align-items-center gap-2">
+                <div class="discussion-avatar" style="color: var(--accent-blue);">SL</div>
+                <div>
+                  <strong style="font-size: 0.92rem;">Sarah L. (BDC Manager)</strong>
+                  <span class="text-muted" style="font-size: 0.78rem;"> • 6 hours ago</span>
+                </div>
+              </div>
+              <span class="badge-custom badge-blue">Follow-Up</span>
+            </div>
+            <h3 class="card-title-text h5 mb-2">
+              <a href="#" class="text-reset">Best follow-up cadence after a test drive where the customer seemed enthusiastic but vanished?</a>
+            </h3>
+            <p class="card-desc-text text-secondary mb-3" style="font-size: 0.95rem;">
+              We had a fantastic test drive on a new hybrid SUV. Customer smiled, complimented the ride, agreed on the color. Left saying they'd email their trade title that evening. 48 hours later, total silence. What video or text hook gets you the highest resurrection rate?
+            </p>
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              <span class="badge-custom">#GhostedLead</span>
+              <span class="badge-custom">#VideoText</span>
+              <span class="badge-custom">#TestDriveFollowUp</span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between pt-2 border-top border-subtle" style="font-size: 0.85rem; color: var(--text-muted);">
+              <div class="d-flex gap-3">
+                <span><i class="bi bi-chat-dots me-1"></i> 45 replies</span>
+                <span><i class="bi bi-eye me-1"></i> 890 views</span>
+              </div>
+              <span class="text-muted"><i class="bi bi-clock-history me-1"></i> Last active 12m ago</span>
+            </div>
+          </div>
+
+          <!-- Discussion Card 3 -->
+          <div class="resource-card-base card-treatment-discussion filterable-card mb-3" data-category="negotiation" data-date="20260928" data-popularity="88">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <div class="d-flex align-items-center gap-2">
+                <div class="discussion-avatar" style="color: #10b981;">DR</div>
+                <div>
+                  <strong style="font-size: 0.92rem;">David R. (Used Car Director)</strong>
+                  <span class="text-muted" style="font-size: 0.78rem;"> • Yesterday</span>
+                </div>
+              </div>
+              <span class="badge-custom badge-amber">Negotiation</span>
+            </div>
+            <h3 class="card-title-text h5 mb-2">
+              <a href="#" class="text-reset">What's your approach to difficult trade-in conversations when online instant cash offers are unrealistically high?</a>
+            </h3>
+            <p class="card-desc-text text-secondary mb-3" style="font-size: 0.95rem;">
+              Customers arriving with automated algorithmic instant offers from online national portals that didn't factor in curb rash, mismatched tires, and an illuminated check engine light. How do you bridge the expectation gap without insulting the customer's pride?
+            </p>
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              <span class="badge-custom">#TradeIn</span>
+              <span class="badge-custom">#Appraisal</span>
+              <span class="badge-custom">#UsedVehicles</span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between pt-2 border-top border-subtle" style="font-size: 0.85rem; color: var(--text-muted);">
+              <div class="d-flex gap-3">
+                <span><i class="bi bi-chat-dots me-1"></i> 52 replies</span>
+                <span><i class="bi bi-eye me-1"></i> 1,140 views</span>
+              </div>
+              <span class="text-muted"><i class="bi bi-clock-history me-1"></i> Last active 1h ago</span>
+            </div>
+          </div>
+
+          <!-- Discussion Card 4 -->
+          <div class="resource-card-base card-treatment-discussion filterable-card mb-3" data-category="techniques" data-date="20260925" data-popularity="85">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <div class="d-flex align-items-center gap-2">
+                <div class="discussion-avatar">AR</div>
+                <div>
+                  <strong style="font-size: 0.92rem;">Amanda Ross (Sales Trainer)</strong>
+                  <span class="text-muted" style="font-size: 0.78rem;"> • 2 days ago</span>
+                </div>
+              </div>
+              <span class="badge-custom">Sales Techniques</span>
+            </div>
+            <h3 class="card-title-text h5 mb-2">
+              <a href="#" class="text-reset">How do you train green pea consultants to stop spewing feature checklists on test drives?</a>
+            </h3>
+            <p class="card-desc-text text-secondary mb-3" style="font-size: 0.95rem;">
+              New hires often feel so nervous they recite horsepowers, torque specs, and suspension geometry the entire drive instead of letting the prospect feel the steering wheel and imagine owning it. What exercises broke this habit for your store?
+            </p>
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              <span class="badge-custom">#Training</span>
+              <span class="badge-custom">#TestDriveSilence</span>
+              <span class="badge-custom">#Rookies</span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between pt-2 border-top border-subtle" style="font-size: 0.85rem; color: var(--text-muted);">
+              <div class="d-flex gap-3">
+                <span><i class="bi bi-chat-dots me-1"></i> 29 replies</span>
+                <span><i class="bi bi-eye me-1"></i> 720 views</span>
+              </div>
+              <span class="text-muted"><i class="bi bi-clock-history me-1"></i> Last active 3h ago</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Community Sidebar -->
+        <div class="col-lg-4">
+          <!-- Community Stats -->
+          <div class="detail-sidebar-card">
+            <h4 class="h6 fw-bold text-uppercase text-warning mb-3">Network Pulse</h4>
+            <div class="row g-2 text-center">
+              <div class="col-6">
+                <div class="p-2 rounded bg-tertiary border border-subtle">
+                  <div class="fw-bold fs-5 font-monospace text-warning">2,480+</div>
+                  <div class="text-muted small">Topics Discussed</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="p-2 rounded bg-tertiary border border-subtle">
+                  <div class="fw-bold fs-5 font-monospace text-success">14,200+</div>
+                  <div class="text-muted small">Replies Shared</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Community Guidelines -->
+          <div class="detail-sidebar-card">
+            <h4 class="h6 fw-bold mb-3"><i class="bi bi-shield-check text-warning me-1"></i> Community Standards</h4>
+            <ul class="list-unstyled small text-muted mb-0 d-flex flex-column gap-2">
+              <li><i class="bi bi-check2 text-success me-1"></i> <strong>Real Experiences:</strong> Focus on tactical, tested advice from actual retail floors.</li>
+              <li><i class="bi bi-check2 text-success me-1"></i> <strong>Respectful Candor:</strong> Disagree with ideas, never demean fellow professionals.</li>
+              <li><i class="bi bi-check2 text-success me-1"></i> <strong>No Dealer Shaming:</strong> Keep dealership names and proprietary customer info anonymous.</li>
+            </ul>
+          </div>
+
+          <!-- Trending Tags -->
+          <div class="detail-sidebar-card">
+            <h4 class="h6 fw-bold mb-3">Trending Topics</h4>
+            <div class="d-flex flex-wrap gap-1">
+              <span class="popular-tag">#Objections</span>
+              <span class="popular-tag">#FollowUp</span>
+              <span class="popular-tag">#TradeIn</span>
+              <span class="popular-tag">#EVQuestions</span>
+              <span class="popular-tag">#PhoneDiscovery</span>
+              <span class="popular-tag">#ShowroomPacing</span>
+              <span class="popular-tag">#LeasePencil</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- START DISCUSSION MODAL -->
+  <div class="modal fade modal-custom" id="startDiscussionModal" tabindex="-1" aria-labelledby="startDiscussionModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <form id="newDiscussionForm">
+          <div class="modal-header">
+            <div>
+              <span class="badge-custom badge-amber mb-1">New Thread</span>
+              <h5 class="modal-title h5 fw-bold" id="startDiscussionModalLabel">Start a Community Discussion</h5>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="mb-3">
+              <label for="discussionTitle" class="form-label-custom">Discussion Title / Question *</label>
+              <input type="text" class="form-control form-control-custom" id="discussionTitle" placeholder="e.g., How do you overcome the monthly payment bump when interest rates shift?" required>
+            </div>
+
+            <div class="row g-3 mb-3">
+              <div class="col-md-6">
+                <label for="discussionCategory" class="form-label-custom">Category *</label>
+                <select class="form-select form-control-custom" id="discussionCategory" required>
+                  <option value="Sales Techniques">Sales Techniques</option>
+                  <option value="Customer Conversations">Customer Conversations</option>
+                  <option value="Follow-Up">Follow-Up</option>
+                  <option value="Negotiation">Negotiation</option>
+                  <option value="Dealership Life">Dealership Life</option>
+                  <option value="Training">Training & Mentorship</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="discussionTags" class="form-label-custom">Tags (comma-separated)</label>
+                <input type="text" class="form-control form-control-custom" id="discussionTags" placeholder="e.g., Objections, Desking, Finance">
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="discussionMessage" class="form-label-custom">Detailed Context / Scenario *</label>
+              <textarea class="form-control form-control-custom" id="discussionMessage" rows="5" placeholder="Describe the customer scenario, what happened, and what advice you are looking for from fellow consultants..." required></textarea>
+            </div>
+
+            <div class="form-text small text-muted">
+              <i class="bi bi-info-circle me-1"></i> Your discussion will be posted immediately to the DRIVEFORGE front-end feed.
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary-custom" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-primary-custom">
+              <i class="bi bi-send-fill me-1"></i> Post Discussion
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer-driveforge">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-logo-title">
+            <span class="logo-badge"><i class="bi bi-shield-shaded"></i></span>
+            <span>DRIVE<span class="text-warning">FORGE</span></span>
+          </div>
+          <p style="color: #94a3b8; font-size: 0.95rem;">"Knowledge That Moves Sales Forward."</p>
+          <p style="color: #64748b; font-size: 0.85rem;">Practical resources and proven knowledge for vehicle sales professionals.</p>
+        </div>
+        <div class="col-lg-2 col-md-6 col-6">
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-nav-list">
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="learn.html">Learn</a></li>
+            <li><a href="video-tutorials.html">Video Tutorials</a></li>
+            <li><a href="templates.html">Templates</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 col-6">
+          <h4 class="footer-heading">Community</h4>
+          <ul class="footer-nav-list">
+            <li><a href="community.html">Discussions</a></li>
+            <li><a href="community.html">Popular Topics</a></li>
+            <li><a href="community.html">Start a Discussion</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h4 class="footer-heading">Company</h4>
+          <ul class="footer-nav-list">
+            <li><a href="about.html">About DRIVEFORGE</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="login.html">Member Login</a></li>
+            <li><a href="signup.html">Create Account</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom-strip d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div>© 2026 DRIVEFORGE. All rights reserved. Fictional demonstration brand.</div>
+        <div class="d-flex gap-3">
+          <a href="about.html" class="text-reset text-decoration-none">Privacy Policy</a>
+          <a href="about.html" class="text-reset text-decoration-none">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/gsap.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
