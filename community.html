@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sales Community & Peer Discussions — DRIVEFORGE Knowledge Network</title>
   <meta name="description" content="Connect with vehicle sales consultants, sales managers, and BDC pros. Discuss real showroom challenges, price objection strategies, and customer retention.">
+  <meta name="keywords" content="car sales community, automotive sales forum, showroom objection discussion, sales consultant network, vehicle sales training">
   
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
@@ -14,17 +15,21 @@
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- NAVBAR -->
+  <!-- ===================================================================
+       NAVBAR
+       =================================================================== -->
   <header>
     <nav class="navbar navbar-expand-lg navbar-driveforge" aria-label="Main Navigation">
       <div class="container">
+        <!-- Brand Logo -->
         <a class="navbar-brand navbar-brand-logo" href="index.html">
           <span class="logo-badge"><i class="bi bi-shield-shaded"></i></span>
           <span>DRIVE<span class="text-warning">FORGE</span></span>
         </a>
 
+        <!-- Mobile Toggler & Theme Toggle -->
         <div class="d-flex align-items-center gap-2 d-lg-none">
-          <button class="btn btn-icon theme-toggle-btn" type="button" aria-label="Toggle Theme">
+          <button class="btn btn-icon theme-toggle-btn" type="button" aria-label="Toggle Theme" title="Toggle Theme">
             <i class="bi bi-moon-stars-fill"></i>
           </button>
           <button class="navbar-toggler navbar-toggler-custom" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavbar" aria-controls="mobileNavbar" aria-label="Toggle navigation">
@@ -32,38 +37,32 @@
           </button>
         </div>
 
+        <!-- Desktop Navigation Menu -->
         <div class="collapse navbar-collapse" id="desktopNavMenu">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
             <li class="nav-item"><a class="nav-link-custom" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link-custom" href="resources.html">Resources</a></li>
             <li class="nav-item dropdown">
-              <a class="nav-link-custom dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Resources</a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item dropdown-item-custom" href="resources.html"><i class="bi bi-collection"></i> All Resources</a></li>
-                <li><a class="dropdown-item dropdown-item-custom" href="resources.html?type=playbooks"><i class="bi bi-diagram-3"></i> Playbooks</a></li>
-                <li><a class="dropdown-item dropdown-item-custom" href="templates.html"><i class="bi bi-download"></i> Downloads</a></li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link-custom dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Learn</a>
+              <a class="nav-link-custom dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Learn</a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item dropdown-item-custom" href="video-tutorials.html"><i class="bi bi-play-circle-fill"></i> Video Tutorials</a></li>
                 <li><a class="dropdown-item dropdown-item-custom" href="learn.html"><i class="bi bi-mortarboard"></i> Learning Paths</a></li>
               </ul>
             </li>
-            <li class="nav-item"><a class="nav-link-custom active" href="community.html">Community</a></li>
+            <li class="nav-item"><a class="nav-link-custom active" aria-current="page" href="community.html">Community</a></li>
             <li class="nav-item"><a class="nav-link-custom" href="templates.html">Templates</a></li>
             <li class="nav-item"><a class="nav-link-custom" href="about.html">About</a></li>
             <li class="nav-item"><a class="nav-link-custom" href="contact.html">Contact</a></li>
           </ul>
 
+          <!-- Action Button: Login Only -->
           <div class="d-flex align-items-center gap-3">
-            <button class="btn btn-icon theme-toggle-btn" type="button" aria-label="Toggle Theme">
+            <button class="btn btn-icon theme-toggle-btn" type="button" aria-label="Toggle Theme" title="Toggle Theme">
               <i class="bi bi-moon-stars-fill"></i>
             </button>
-            <a href="login.html" class="btn-ghost-custom">Login</a>
-            <a href="signup.html" class="btn-primary-custom py-2 px-3" style="font-size: 0.9rem;">
-              <span>Join the Network</span>
-              <i class="bi bi-arrow-right"></i>
+            <a href="login.html" class="btn btn-primary-custom py-2 px-3" style="font-size: 0.9rem;">
+              <i class="bi bi-box-arrow-in-right me-1"></i>
+              <span>Login</span>
             </a>
           </div>
         </div>
@@ -77,30 +76,47 @@
           <span class="logo-badge"><i class="bi bi-shield-shaded"></i></span>
           <span>DRIVE<span class="text-warning">FORGE</span></span>
         </a>
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body d-flex flex-column justify-content-between p-4">
-        <ul class="navbar-nav mb-4">
-          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="index.html">Home</a></li>
-          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="resources.html">Resources</a></li>
-          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="learn.html">Learn Hub</a></li>
-          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="video-tutorials.html">Video Tutorials</a></li>
-          <li class="nav-item mb-2"><a class="nav-link-custom active fs-5" href="community.html">Community</a></li>
-          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="templates.html">Templates</a></li>
-          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="about.html">About</a></li>
-          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="contact.html">Contact</a></li>
-        </ul>
+        <div>
+          <ul class="navbar-nav mb-4">
+            <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="index.html">Home</a></li>
+            <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="resources.html">Resources</a></li>
+            
+            <!-- Learn Dropdown -->
+            <li class="nav-item mb-2 dropdown">
+              <a class="nav-link-custom dropdown-toggle fs-5 d-flex align-items-center justify-content-between" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span>Learn</span>
+              </a>
+              <ul class="dropdown-menu border border-subtle shadow-sm my-1">
+                <li><a class="dropdown-item dropdown-item-custom py-2" href="video-tutorials.html"><i class="bi bi-play-circle-fill me-2 text-warning"></i> Video Tutorials</a></li>
+                <li><a class="dropdown-item dropdown-item-custom py-2" href="learn.html"><i class="bi bi-mortarboard me-2 text-warning"></i> Learning Paths</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="templates.html">Templates</a></li>
+            <li class="nav-item mb-2"><a class="nav-link-custom active fs-5" href="community.html">Community</a></li>
+            <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="about.html">About</a></li>
+            <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
         <div class="pt-3 border-top border-subtle d-grid gap-2">
-          <a href="login.html" class="btn btn-secondary-custom w-100">Login</a>
-          <a href="signup.html" class="btn btn-primary-custom w-100">Join the Network</a>
+          <a href="login.html" class="btn btn-primary-custom w-100 py-2">
+            <i class="bi bi-box-arrow-in-right me-1"></i>
+            <span>Login</span>
+          </a>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- MAIN CONTENT -->
+  <!-- ===================================================================
+       MAIN CONTENT
+       =================================================================== -->
   <main id="main-content" class="py-5">
     <div class="container">
+      <!-- Breadcrumb -->
       <nav aria-label="breadcrumb" class="mb-3">
         <ol class="breadcrumb" style="font-size: 0.85rem;">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
@@ -108,33 +124,34 @@
         </ol>
       </nav>
 
+      <!-- Page Header -->
       <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4 gap-3">
         <div>
-          <span class="badge-custom badge-amber mb-2">Automotive Peer Network</span>
+          <span class="badge-custom badge-amber mb-2"><i class="bi bi-people-fill me-1"></i> Automotive Peer Network</span>
           <h1 class="display-5 fw-bold mb-1">Ask. Share. Learn.</h1>
-          <p class="text-muted fs-5 mb-0" style="max-width: 650px;">
-            A professional discussion network built specifically for vehicle sales consultants, managers, and trainers to exchange real showroom experiences.
+          <p class="text-muted fs-5 mb-0" style="max-width: 680px;">
+            A professional discussion network built specifically for vehicle sales consultants, sales managers, and trainers to exchange real showroom experiences.
           </p>
         </div>
         <div>
-          <button type="button" class="btn btn-primary-custom" data-bs-toggle="modal" data-bs-target="#startDiscussionModal">
-            <i class="bi bi-plus-circle-fill me-1"></i>
+          <button type="button" class="btn btn-primary-custom py-2 px-4 shadow-sm" data-bs-toggle="modal" data-bs-target="#startDiscussionModal">
+            <i class="bi bi-plus-circle-fill me-2"></i>
             <span>Start a Discussion</span>
           </button>
         </div>
       </div>
 
       <!-- Controls & Filter Strip -->
-      <div class="card p-3 p-md-4 mb-4 border-subtle" style="background: var(--bg-secondary);">
+      <div class="card p-3 p-md-4 mb-4 border-subtle shadow-sm" style="background: var(--bg-secondary); border-radius: var(--radius-lg);">
         <div class="row g-3 align-items-center">
           <div class="col-lg-7">
             <div class="search-input-group m-0" style="box-shadow: none;">
               <i class="bi bi-search search-icon"></i>
-              <input type="text" class="library-search-input" placeholder="Search discussion topics, objections, scenarios..." aria-label="Search discussions">
+              <input type="text" class="library-search-input" placeholder="Search discussion topics, objections, scenarios, scripts..." aria-label="Search discussions">
             </div>
           </div>
           <div class="col-lg-5 d-flex justify-content-lg-end align-items-center gap-3">
-            <div class="results-counter text-muted small fw-semibold">Showing active discussions</div>
+            <div class="results-counter text-muted small fw-semibold">Showing 6 discussions</div>
           </div>
         </div>
 
@@ -148,182 +165,542 @@
         </div>
       </div>
 
-      <div class="row g-4">
+      <!-- Main Layout Grid -->
+      <div class="row g-4 align-items-start">
         <!-- Main Discussions Stream (Left) -->
         <div class="col-lg-8" id="communityDiscussionFeed">
           
-          <!-- Discussion Card 1 -->
-          <div class="resource-card-base card-treatment-discussion filterable-card mb-3" data-category="conversations" data-date="20261001" data-popularity="96">
-            <div class="d-flex align-items-center justify-content-between mb-2">
+          <!-- Discussion Card 1: Price Objection -->
+          <div class="card-treatment-discussion filterable-card mb-4 p-4 rounded-4 bg-card border border-subtle shadow-sm" data-category="conversations" data-date="20261001" data-popularity="96">
+            <div class="d-flex align-items-center justify-content-between mb-3 flex-wrap gap-2">
               <div class="d-flex align-items-center gap-2">
                 <div class="discussion-avatar">MK</div>
                 <div>
-                  <strong style="font-size: 0.92rem;">Marcus K. (Sales Consultant)</strong>
-                  <span class="text-muted" style="font-size: 0.78rem;"> • 3 hours ago</span>
+                  <div class="fw-bold" style="font-size: 0.95rem; color: var(--text-primary);">Marcus K. <span class="badge-custom ms-1" style="font-size: 0.72rem;">Sales Consultant</span></div>
+                  <span class="text-muted" style="font-size: 0.8rem;">Metro Toyota • 3 hours ago</span>
                 </div>
               </div>
-              <span class="badge-custom badge-amber">Customer Conversations</span>
-            </div>
-            <h3 class="card-title-text h5 mb-2">
-              <a href="#" class="text-reset">How do you handle customers who only want to talk price before test driving?</a>
-            </h3>
-            <p class="card-desc-text text-secondary mb-3" style="font-size: 0.95rem;">
-              Whenever a customer walks in and immediately says "Just give me your absolute lowest price, I'm not doing a test drive today," what talk track do you use to regain value control without sounding evasive?
-            </p>
-            <div class="d-flex flex-wrap gap-2 mb-3">
-              <span class="badge-custom">#PriceStall</span>
-              <span class="badge-custom">#ShowroomGreeting</span>
-              <span class="badge-custom">#ValueFirst</span>
-            </div>
-            <div class="d-flex align-items-center justify-content-between pt-2 border-top border-subtle" style="font-size: 0.85rem; color: var(--text-muted);">
-              <div class="d-flex gap-3">
-                <span><i class="bi bi-chat-dots me-1"></i> 38 replies</span>
-                <span><i class="bi bi-eye me-1"></i> 640 views</span>
+              <div class="d-flex align-items-center gap-2">
+                <span class="badge-custom badge-amber">Customer Conversations</span>
+                <span class="badge bg-danger-subtle text-danger border border-danger-subtle small"><i class="bi bi-fire me-1"></i> Trending</span>
               </div>
-              <span class="text-warning fw-semibold"><i class="bi bi-fire me-1"></i> Trending Today</span>
+            </div>
+
+            <h3 class="card-title-text h5 fw-bold mb-2">
+              <a href="javascript:void(0);" class="text-reset text-decoration-none hover-amber discussion-title-link">How do you handle customers who only want to talk price before test driving?</a>
+            </h3>
+            
+            <p class="card-desc-text text-secondary mb-3" style="font-size: 0.96rem; line-height: 1.65;">
+              Whenever a customer walks in and immediately says "Just give me your absolute lowest out-the-door price, I'm not doing a test drive today," what talk track do you use to regain value control without sounding evasive or combative?
+            </p>
+
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              <span class="badge-custom popular-tag" data-search="PriceStall">#PriceStall</span>
+              <span class="badge-custom popular-tag" data-search="ShowroomGreeting">#ShowroomGreeting</span>
+              <span class="badge-custom popular-tag" data-search="ValueFirst">#ValueFirst</span>
+            </div>
+
+            <!-- Interaction Bar -->
+            <div class="d-flex align-items-center justify-content-between pt-3 border-top border-subtle flex-wrap gap-2">
+              <div class="d-flex align-items-center gap-2">
+                <button type="button" class="discussion-action-btn upvote-btn" data-votes="38" aria-label="Upvote discussion">
+                  <i class="bi bi-hand-thumbs-up-fill"></i>
+                  <span class="vote-count">38</span>
+                </button>
+                <button type="button" class="discussion-action-btn reply-toggle-btn" aria-label="Toggle replies">
+                  <i class="bi bi-chat-dots-fill"></i>
+                  <span>38 replies</span>
+                </button>
+                <span class="text-muted small ms-2"><i class="bi bi-eye me-1"></i> 640 views</span>
+              </div>
+              <div class="d-flex align-items-center gap-2">
+                <button type="button" class="discussion-action-btn share-btn" aria-label="Share discussion link">
+                  <i class="bi bi-share"></i>
+                  <span>Share</span>
+                </button>
+                <button type="button" class="discussion-action-btn bookmark-btn" aria-label="Bookmark discussion">
+                  <i class="bi bi-bookmark"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Expandable Reply Drawer (Preview of real community answers) -->
+            <div class="discussion-reply-drawer mt-3" style="display: none;">
+              <h4 class="small fw-bold text-uppercase text-muted mb-3"><i class="bi bi-chat-left-quote-fill text-warning me-1"></i> Top Community Insight</h4>
+              <div class="reply-bubble">
+                <div class="d-flex align-items-center justify-content-between mb-1">
+                  <strong class="small" style="color: var(--accent-amber);">Danielle Perez (General Sales Manager)</strong>
+                  <span class="text-muted" style="font-size: 0.75rem;">1 hour ago</span>
+                </div>
+                <p class="small text-secondary mb-0">
+                  "I tell them: <em>'I will gladly get you our very best price right on paper, Mr. Customer. My only job first is to make sure you actually love the vehicle, because even if I discounted it by 50%, the wrong car at any price is a waste of your hard-earned money. Let's do a 4-minute spin first.'</em> That disarms them 85% of the time."
+                </p>
+              </div>
+              
+              <!-- Quick Reply Form -->
+              <form class="quick-reply-form mt-2 d-flex gap-2">
+                <input type="text" class="form-control form-control-sm form-control-custom" placeholder="Share your experience or talk track..." required>
+                <button type="submit" class="btn btn-sm btn-primary-custom flex-shrink-0">Reply</button>
+              </form>
             </div>
           </div>
 
-          <!-- Discussion Card 2 -->
-          <div class="resource-card-base card-treatment-discussion filterable-card mb-3" data-category="follow-up" data-date="20260930" data-popularity="92">
-            <div class="d-flex align-items-center justify-content-between mb-2">
+          <!-- Discussion Card 2: Follow-Up -->
+          <div class="card-treatment-discussion filterable-card mb-4 p-4 rounded-4 bg-card border border-subtle shadow-sm" data-category="follow-up" data-date="20260930" data-popularity="92">
+            <div class="d-flex align-items-center justify-content-between mb-3 flex-wrap gap-2">
               <div class="d-flex align-items-center gap-2">
-                <div class="discussion-avatar" style="color: var(--accent-blue);">SL</div>
+                <div class="discussion-avatar avatar-blue">SL</div>
                 <div>
-                  <strong style="font-size: 0.92rem;">Sarah L. (BDC Manager)</strong>
-                  <span class="text-muted" style="font-size: 0.78rem;"> • 6 hours ago</span>
+                  <div class="fw-bold" style="font-size: 0.95rem; color: var(--text-primary);">Sarah L. <span class="badge-custom ms-1" style="font-size: 0.72rem;">BDC Director</span></div>
+                  <span class="text-muted" style="font-size: 0.8rem;">Summit Ford • 6 hours ago</span>
                 </div>
               </div>
               <span class="badge-custom badge-blue">Follow-Up</span>
             </div>
-            <h3 class="card-title-text h5 mb-2">
-              <a href="#" class="text-reset">Best follow-up cadence after a test drive where the customer seemed enthusiastic but vanished?</a>
+
+            <h3 class="card-title-text h5 fw-bold mb-2">
+              <a href="javascript:void(0);" class="text-reset text-decoration-none hover-amber discussion-title-link">Best follow-up cadence after a test drive where the customer seemed enthusiastic but vanished?</a>
             </h3>
-            <p class="card-desc-text text-secondary mb-3" style="font-size: 0.95rem;">
+
+            <p class="card-desc-text text-secondary mb-3" style="font-size: 0.96rem; line-height: 1.65;">
               We had a fantastic test drive on a new hybrid SUV. Customer smiled, complimented the ride, agreed on the color. Left saying they'd email their trade title that evening. 48 hours later, total silence. What video or text hook gets you the highest resurrection rate?
             </p>
+
             <div class="d-flex flex-wrap gap-2 mb-3">
-              <span class="badge-custom">#GhostedLead</span>
-              <span class="badge-custom">#VideoText</span>
-              <span class="badge-custom">#TestDriveFollowUp</span>
+              <span class="badge-custom popular-tag" data-search="GhostedLead">#GhostedLead</span>
+              <span class="badge-custom popular-tag" data-search="VideoText">#VideoText</span>
+              <span class="badge-custom popular-tag" data-search="TestDriveFollowUp">#TestDriveFollowUp</span>
             </div>
-            <div class="d-flex align-items-center justify-content-between pt-2 border-top border-subtle" style="font-size: 0.85rem; color: var(--text-muted);">
-              <div class="d-flex gap-3">
-                <span><i class="bi bi-chat-dots me-1"></i> 45 replies</span>
-                <span><i class="bi bi-eye me-1"></i> 890 views</span>
+
+            <div class="d-flex align-items-center justify-content-between pt-3 border-top border-subtle flex-wrap gap-2">
+              <div class="d-flex align-items-center gap-2">
+                <button type="button" class="discussion-action-btn upvote-btn" data-votes="45" aria-label="Upvote discussion">
+                  <i class="bi bi-hand-thumbs-up-fill"></i>
+                  <span class="vote-count">45</span>
+                </button>
+                <button type="button" class="discussion-action-btn reply-toggle-btn" aria-label="Toggle replies">
+                  <i class="bi bi-chat-dots-fill"></i>
+                  <span>45 replies</span>
+                </button>
+                <span class="text-muted small ms-2"><i class="bi bi-eye me-1"></i> 890 views</span>
               </div>
-              <span class="text-muted"><i class="bi bi-clock-history me-1"></i> Last active 12m ago</span>
+              <div class="d-flex align-items-center gap-2">
+                <button type="button" class="discussion-action-btn share-btn" aria-label="Share discussion link">
+                  <i class="bi bi-share"></i>
+                  <span>Share</span>
+                </button>
+                <button type="button" class="discussion-action-btn bookmark-btn" aria-label="Bookmark discussion">
+                  <i class="bi bi-bookmark"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="discussion-reply-drawer mt-3" style="display: none;">
+              <h4 class="small fw-bold text-uppercase text-muted mb-3"><i class="bi bi-chat-left-quote-fill text-primary me-1"></i> Top Community Insight</h4>
+              <div class="reply-bubble">
+                <div class="d-flex align-items-center justify-content-between mb-1">
+                  <strong class="small" style="color: var(--accent-blue);">Corey Vance (Lead Closer)</strong>
+                  <span class="text-muted" style="font-size: 0.75rem;">3 hours ago</span>
+                </div>
+                <p class="small text-secondary mb-0">
+                  "Send a 12-second vertical video recorded from the driver's seat pointing at the instrument cluster: <em>'Hey John, was just pulling the hybrid back into our prep bay and wanted to double-check if your garage clearance was 78 inches like you mentioned. Give me a quick shout!'</em> Questions about their space get answered 3x faster than 'just checking in'."
+                </p>
+              </div>
+              <form class="quick-reply-form mt-2 d-flex gap-2">
+                <input type="text" class="form-control form-control-sm form-control-custom" placeholder="Add your follow-up script..." required>
+                <button type="submit" class="btn btn-sm btn-primary-custom flex-shrink-0">Reply</button>
+              </form>
             </div>
           </div>
 
-          <!-- Discussion Card 3 -->
-          <div class="resource-card-base card-treatment-discussion filterable-card mb-3" data-category="negotiation" data-date="20260928" data-popularity="88">
-            <div class="d-flex align-items-center justify-content-between mb-2">
+          <!-- Discussion Card 3: Negotiation -->
+          <div class="card-treatment-discussion filterable-card mb-4 p-4 rounded-4 bg-card border border-subtle shadow-sm" data-category="negotiation" data-date="20260928" data-popularity="88">
+            <div class="d-flex align-items-center justify-content-between mb-3 flex-wrap gap-2">
               <div class="d-flex align-items-center gap-2">
-                <div class="discussion-avatar" style="color: #10b981;">DR</div>
+                <div class="discussion-avatar avatar-green">DR</div>
                 <div>
-                  <strong style="font-size: 0.92rem;">David R. (Used Car Director)</strong>
-                  <span class="text-muted" style="font-size: 0.78rem;"> • Yesterday</span>
+                  <div class="fw-bold" style="font-size: 0.95rem; color: var(--text-primary);">David R. <span class="badge-custom ms-1" style="font-size: 0.72rem;">Used Car Director</span></div>
+                  <span class="text-muted" style="font-size: 0.8rem;">Apex Automotive Group • Yesterday</span>
                 </div>
               </div>
               <span class="badge-custom badge-amber">Negotiation</span>
             </div>
-            <h3 class="card-title-text h5 mb-2">
-              <a href="#" class="text-reset">What's your approach to difficult trade-in conversations when online instant cash offers are unrealistically high?</a>
+
+            <h3 class="card-title-text h5 fw-bold mb-2">
+              <a href="javascript:void(0);" class="text-reset text-decoration-none hover-amber discussion-title-link">What's your approach to difficult trade-in conversations when online instant cash offers are unrealistically high?</a>
             </h3>
-            <p class="card-desc-text text-secondary mb-3" style="font-size: 0.95rem;">
+
+            <p class="card-desc-text text-secondary mb-3" style="font-size: 0.96rem; line-height: 1.65;">
               Customers arriving with automated algorithmic instant offers from online national portals that didn't factor in curb rash, mismatched tires, and an illuminated check engine light. How do you bridge the expectation gap without insulting the customer's pride?
             </p>
+
             <div class="d-flex flex-wrap gap-2 mb-3">
-              <span class="badge-custom">#TradeIn</span>
-              <span class="badge-custom">#Appraisal</span>
-              <span class="badge-custom">#UsedVehicles</span>
+              <span class="badge-custom popular-tag" data-search="TradeIn">#TradeIn</span>
+              <span class="badge-custom popular-tag" data-search="Appraisal">#Appraisal</span>
+              <span class="badge-custom popular-tag" data-search="UsedVehicles">#UsedVehicles</span>
             </div>
-            <div class="d-flex align-items-center justify-content-between pt-2 border-top border-subtle" style="font-size: 0.85rem; color: var(--text-muted);">
-              <div class="d-flex gap-3">
-                <span><i class="bi bi-chat-dots me-1"></i> 52 replies</span>
-                <span><i class="bi bi-eye me-1"></i> 1,140 views</span>
+
+            <div class="d-flex align-items-center justify-content-between pt-3 border-top border-subtle flex-wrap gap-2">
+              <div class="d-flex align-items-center gap-2">
+                <button type="button" class="discussion-action-btn upvote-btn" data-votes="52" aria-label="Upvote discussion">
+                  <i class="bi bi-hand-thumbs-up-fill"></i>
+                  <span class="vote-count">52</span>
+                </button>
+                <button type="button" class="discussion-action-btn reply-toggle-btn" aria-label="Toggle replies">
+                  <i class="bi bi-chat-dots-fill"></i>
+                  <span>52 replies</span>
+                </button>
+                <span class="text-muted small ms-2"><i class="bi bi-eye me-1"></i> 1,140 views</span>
               </div>
-              <span class="text-muted"><i class="bi bi-clock-history me-1"></i> Last active 1h ago</span>
+              <div class="d-flex align-items-center gap-2">
+                <button type="button" class="discussion-action-btn share-btn" aria-label="Share discussion link">
+                  <i class="bi bi-share"></i>
+                  <span>Share</span>
+                </button>
+                <button type="button" class="discussion-action-btn bookmark-btn" aria-label="Bookmark discussion">
+                  <i class="bi bi-bookmark"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="discussion-reply-drawer mt-3" style="display: none;">
+              <h4 class="small fw-bold text-uppercase text-muted mb-3"><i class="bi bi-chat-left-quote-fill text-success me-1"></i> Top Community Insight</h4>
+              <div class="reply-bubble">
+                <div class="d-flex align-items-center justify-content-between mb-1">
+                  <strong class="small" style="color: #10b981;">Elena Rostova (Used Car Appraiser)</strong>
+                  <span class="text-muted" style="font-size: 0.75rem;">12 hours ago</span>
+                </div>
+                <p class="small text-secondary mb-0">
+                  "Do the silent walkaround with the customer holding the clipboard! When you find the tire tread at 2/32, let them touch it and say: <em>'If you were buying this car from me today, would you want brand new tires on it before taking your family home?'</em> They nod, and they realize the reconditioning cost on their own."
+                </p>
+              </div>
+              <form class="quick-reply-form mt-2 d-flex gap-2">
+                <input type="text" class="form-control form-control-sm form-control-custom" placeholder="Share your appraisal strategy..." required>
+                <button type="submit" class="btn btn-sm btn-primary-custom flex-shrink-0">Reply</button>
+              </form>
             </div>
           </div>
 
-          <!-- Discussion Card 4 -->
-          <div class="resource-card-base card-treatment-discussion filterable-card mb-3" data-category="techniques" data-date="20260925" data-popularity="85">
-            <div class="d-flex align-items-center justify-content-between mb-2">
+          <!-- Discussion Card 4: Sales Techniques -->
+          <div class="card-treatment-discussion filterable-card mb-4 p-4 rounded-4 bg-card border border-subtle shadow-sm" data-category="techniques" data-date="20260925" data-popularity="85">
+            <div class="d-flex align-items-center justify-content-between mb-3 flex-wrap gap-2">
               <div class="d-flex align-items-center gap-2">
-                <div class="discussion-avatar">AR</div>
+                <div class="discussion-avatar avatar-purple">AR</div>
                 <div>
-                  <strong style="font-size: 0.92rem;">Amanda Ross (Sales Trainer)</strong>
-                  <span class="text-muted" style="font-size: 0.78rem;"> • 2 days ago</span>
+                  <div class="fw-bold" style="font-size: 0.95rem; color: var(--text-primary);">Amanda Ross <span class="badge-custom ms-1" style="font-size: 0.72rem;">Sales Academy Trainer</span></div>
+                  <span class="text-muted" style="font-size: 0.8rem;">AutoNation Institute • 2 days ago</span>
                 </div>
               </div>
               <span class="badge-custom">Sales Techniques</span>
             </div>
-            <h3 class="card-title-text h5 mb-2">
-              <a href="#" class="text-reset">How do you train green pea consultants to stop spewing feature checklists on test drives?</a>
+
+            <h3 class="card-title-text h5 fw-bold mb-2">
+              <a href="javascript:void(0);" class="text-reset text-decoration-none hover-amber discussion-title-link">How do you train green pea consultants to stop spewing feature checklists on test drives?</a>
             </h3>
-            <p class="card-desc-text text-secondary mb-3" style="font-size: 0.95rem;">
+
+            <p class="card-desc-text text-secondary mb-3" style="font-size: 0.96rem; line-height: 1.65;">
               New hires often feel so nervous they recite horsepowers, torque specs, and suspension geometry the entire drive instead of letting the prospect feel the steering wheel and imagine owning it. What exercises broke this habit for your store?
             </p>
+
             <div class="d-flex flex-wrap gap-2 mb-3">
-              <span class="badge-custom">#Training</span>
-              <span class="badge-custom">#TestDriveSilence</span>
-              <span class="badge-custom">#Rookies</span>
+              <span class="badge-custom popular-tag" data-search="Training">#Training</span>
+              <span class="badge-custom popular-tag" data-search="TestDriveSilence">#TestDriveSilence</span>
+              <span class="badge-custom popular-tag" data-search="Rookies">#Rookies</span>
             </div>
-            <div class="d-flex align-items-center justify-content-between pt-2 border-top border-subtle" style="font-size: 0.85rem; color: var(--text-muted);">
-              <div class="d-flex gap-3">
-                <span><i class="bi bi-chat-dots me-1"></i> 29 replies</span>
-                <span><i class="bi bi-eye me-1"></i> 720 views</span>
+
+            <div class="d-flex align-items-center justify-content-between pt-3 border-top border-subtle flex-wrap gap-2">
+              <div class="d-flex align-items-center gap-2">
+                <button type="button" class="discussion-action-btn upvote-btn" data-votes="29" aria-label="Upvote discussion">
+                  <i class="bi bi-hand-thumbs-up-fill"></i>
+                  <span class="vote-count">29</span>
+                </button>
+                <button type="button" class="discussion-action-btn reply-toggle-btn" aria-label="Toggle replies">
+                  <i class="bi bi-chat-dots-fill"></i>
+                  <span>29 replies</span>
+                </button>
+                <span class="text-muted small ms-2"><i class="bi bi-eye me-1"></i> 720 views</span>
               </div>
-              <span class="text-muted"><i class="bi bi-clock-history me-1"></i> Last active 3h ago</span>
+              <div class="d-flex align-items-center gap-2">
+                <button type="button" class="discussion-action-btn share-btn" aria-label="Share discussion link">
+                  <i class="bi bi-share"></i>
+                  <span>Share</span>
+                </button>
+                <button type="button" class="discussion-action-btn bookmark-btn" aria-label="Bookmark discussion">
+                  <i class="bi bi-bookmark"></i>
+                </button>
+              </div>
             </div>
+
+            <div class="discussion-reply-drawer mt-3" style="display: none;">
+              <h4 class="small fw-bold text-uppercase text-muted mb-3"><i class="bi bi-chat-left-quote-fill text-warning me-1"></i> Top Community Insight</h4>
+              <div class="reply-bubble">
+                <div class="d-flex align-items-center justify-content-between mb-1">
+                  <strong class="small" style="color: var(--accent-amber);">Jim K. (Dealership GM)</strong>
+                  <span class="text-muted" style="font-size: 0.75rem;">1 day ago</span>
+                </div>
+                <p class="small text-secondary mb-0">
+                  "The 'Rule of Three Words'. On the test drive, the salesperson is only allowed to speak three words at any turn: <em>'Notice that quietness?'</em>, <em>'Feel that acceleration?'</em>, <em>'Comfortable driving position?'</em>. The rest is pure silence."
+                </p>
+              </div>
+              <form class="quick-reply-form mt-2 d-flex gap-2">
+                <input type="text" class="form-control form-control-sm form-control-custom" placeholder="Add coaching tips..." required>
+                <button type="submit" class="btn btn-sm btn-primary-custom flex-shrink-0">Reply</button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Discussion Card 5: Dealership Life -->
+          <div class="card-treatment-discussion filterable-card mb-4 p-4 rounded-4 bg-card border border-subtle shadow-sm" data-category="dealership" data-date="20260924" data-popularity="81">
+            <div class="d-flex align-items-center justify-content-between mb-3 flex-wrap gap-2">
+              <div class="d-flex align-items-center gap-2">
+                <div class="discussion-avatar">TM</div>
+                <div>
+                  <div class="fw-bold" style="font-size: 0.95rem; color: var(--text-primary);">Trevor Miller <span class="badge-custom ms-1" style="font-size: 0.72rem;">GSM</span></div>
+                  <span class="text-muted" style="font-size: 0.8rem;">Pacific Coast Honda • 3 days ago</span>
+                </div>
+              </div>
+              <span class="badge-custom badge-amber">Dealership Life</span>
+            </div>
+
+            <h3 class="card-title-text h5 fw-bold mb-2">
+              <a href="javascript:void(0);" class="text-reset text-decoration-none hover-amber discussion-title-link">Managing Saturday showroom floor traffic: Up-rotation vs appointment-only zones</a>
+            </h3>
+
+            <p class="card-desc-text text-secondary mb-3" style="font-size: 0.96rem; line-height: 1.65;">
+              On busy weekend peak hours, our floor was descending into chaos between consultants who had scheduled deliveries and green peas sharking walk-ins at the glass door. What rotation systems maintain fair opportunity without turning the showroom into an auction house?
+            </p>
+
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              <span class="badge-custom popular-tag" data-search="ShowroomFloor">#ShowroomFloor</span>
+              <span class="badge-custom popular-tag" data-search="UpSystem">#UpSystem</span>
+              <span class="badge-custom popular-tag" data-search="WeekendSaturdays">#WeekendSaturdays</span>
+            </div>
+
+            <div class="d-flex align-items-center justify-content-between pt-3 border-top border-subtle flex-wrap gap-2">
+              <div class="d-flex align-items-center gap-2">
+                <button type="button" class="discussion-action-btn upvote-btn" data-votes="34" aria-label="Upvote discussion">
+                  <i class="bi bi-hand-thumbs-up-fill"></i>
+                  <span class="vote-count">34</span>
+                </button>
+                <button type="button" class="discussion-action-btn reply-toggle-btn" aria-label="Toggle replies">
+                  <i class="bi bi-chat-dots-fill"></i>
+                  <span>34 replies</span>
+                </button>
+                <span class="text-muted small ms-2"><i class="bi bi-eye me-1"></i> 810 views</span>
+              </div>
+              <div class="d-flex align-items-center gap-2">
+                <button type="button" class="discussion-action-btn share-btn" aria-label="Share discussion link">
+                  <i class="bi bi-share"></i>
+                  <span>Share</span>
+                </button>
+                <button type="button" class="discussion-action-btn bookmark-btn" aria-label="Bookmark discussion">
+                  <i class="bi bi-bookmark"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="discussion-reply-drawer mt-3" style="display: none;">
+              <h4 class="small fw-bold text-uppercase text-muted mb-3"><i class="bi bi-chat-left-quote-fill text-warning me-1"></i> Top Community Insight</h4>
+              <div class="reply-bubble">
+                <div class="d-flex align-items-center justify-content-between mb-1">
+                  <strong class="small" style="color: var(--accent-amber);">Brian Hayes (Senior Consultant)</strong>
+                  <span class="text-muted" style="font-size: 0.75rem;">2 days ago</span>
+                </div>
+                <p class="small text-secondary mb-0">
+                  "We designate an official Greeter desk on Saturdays. Customers with appointments are seated directly in the VIP lounge. Walk-ins go strictly to whoever is top of the digital Up-Board on the tablet. No roaming by the glass doors allowed."
+                </p>
+              </div>
+              <form class="quick-reply-form mt-2 d-flex gap-2">
+                <input type="text" class="form-control form-control-sm form-control-custom" placeholder="Add your floor management strategy..." required>
+                <button type="submit" class="btn btn-sm btn-primary-custom flex-shrink-0">Reply</button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Discussion Card 6: Sales Techniques (EVs) -->
+          <div class="card-treatment-discussion filterable-card mb-4 p-4 rounded-4 bg-card border border-subtle shadow-sm" data-category="techniques" data-date="20260922" data-popularity="89">
+            <div class="d-flex align-items-center justify-content-between mb-3 flex-wrap gap-2">
+              <div class="d-flex align-items-center gap-2">
+                <div class="discussion-avatar avatar-blue">EV</div>
+                <div>
+                  <div class="fw-bold" style="font-size: 0.95rem; color: var(--text-primary);">Elena Vance <span class="badge-custom ms-1" style="font-size: 0.72rem;">EV Specialist</span></div>
+                  <span class="text-muted" style="font-size: 0.8rem;">ChargePoint Certified • 5 days ago</span>
+                </div>
+              </div>
+              <span class="badge-custom badge-blue">Sales Techniques</span>
+            </div>
+
+            <h3 class="card-title-text h5 fw-bold mb-2">
+              <a href="javascript:void(0);" class="text-reset text-decoration-none hover-amber discussion-title-link">Overcoming EV range anxiety objections when the customer has never owned a battery vehicle</a>
+            </h3>
+
+            <p class="card-desc-text text-secondary mb-3" style="font-size: 0.96rem; line-height: 1.65;">
+              "What if I get stuck in a winter blizzard?" is the #1 question I get from suburban families looking at modern EVs. Sharing technical battery kW specs doesn't help. What analogy or practical calculation gives prospective EV buyers complete peace of mind?
+            </p>
+
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              <span class="badge-custom popular-tag" data-search="EVQuestions">#EVQuestions</span>
+              <span class="badge-custom popular-tag" data-search="RangeAnxiety">#RangeAnxiety</span>
+              <span class="badge-custom popular-tag" data-search="SmartphoneAnalogy">#SmartphoneAnalogy</span>
+            </div>
+
+            <div class="d-flex align-items-center justify-content-between pt-3 border-top border-subtle flex-wrap gap-2">
+              <div class="d-flex align-items-center gap-2">
+                <button type="button" class="discussion-action-btn upvote-btn" data-votes="41" aria-label="Upvote discussion">
+                  <i class="bi bi-hand-thumbs-up-fill"></i>
+                  <span class="vote-count">41</span>
+                </button>
+                <button type="button" class="discussion-action-btn reply-toggle-btn" aria-label="Toggle replies">
+                  <i class="bi bi-chat-dots-fill"></i>
+                  <span>41 replies</span>
+                </button>
+                <span class="text-muted small ms-2"><i class="bi bi-eye me-1"></i> 930 views</span>
+              </div>
+              <div class="d-flex align-items-center gap-2">
+                <button type="button" class="discussion-action-btn share-btn" aria-label="Share discussion link">
+                  <i class="bi bi-share"></i>
+                  <span>Share</span>
+                </button>
+                <button type="button" class="discussion-action-btn bookmark-btn" aria-label="Bookmark discussion">
+                  <i class="bi bi-bookmark"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="discussion-reply-drawer mt-3" style="display: none;">
+              <h4 class="small fw-bold text-uppercase text-muted mb-3"><i class="bi bi-chat-left-quote-fill text-primary me-1"></i> Top Community Insight</h4>
+              <div class="reply-bubble">
+                <div class="d-flex align-items-center justify-content-between mb-1">
+                  <strong class="small" style="color: var(--accent-blue);">Ray Morales (Product Specialist)</strong>
+                  <span class="text-muted" style="font-size: 0.75rem;">3 days ago</span>
+                </div>
+                <p class="small text-secondary mb-0">
+                  "I use the smartphone analogy: <em>'Do you wait until your phone dies in the middle of a shopping mall to find an electrical outlet? No, you plug it into your nightstand while you sleep, and every single morning you start with 100% full battery. An EV in your garage is identical.'</em> Works every single time."
+                </p>
+              </div>
+              <form class="quick-reply-form mt-2 d-flex gap-2">
+                <input type="text" class="form-control form-control-sm form-control-custom" placeholder="Share your EV objection talk track..." required>
+                <button type="submit" class="btn btn-sm btn-primary-custom flex-shrink-0">Reply</button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Empty State (Hidden unless no discussions match filter/search) -->
+          <div class="no-results-notice p-5 text-center rounded-4 border border-subtle bg-secondary my-3" style="display: none;">
+            <div class="mb-3 text-warning" style="font-size: 3rem;"><i class="bi bi-chat-square-dots"></i></div>
+            <h4 class="fw-bold mb-2">No Discussions Match Your Query</h4>
+            <p class="text-muted small mb-4">Try clearing your search terms or selecting a different discussion category.</p>
+            <button type="button" class="btn btn-primary-custom reset-filter-btn">
+              <i class="bi bi-arrow-counterclockwise me-1"></i> Reset Filters & Show All
+            </button>
           </div>
 
         </div>
 
-        <!-- Right Community Sidebar -->
+        <!-- Right Community Sidebar (Sticky) -->
         <div class="col-lg-4">
           <!-- Community Stats -->
-          <div class="detail-sidebar-card">
-            <h4 class="h6 fw-bold text-uppercase text-warning mb-3">Network Pulse</h4>
-            <div class="row g-2 text-center">
+          <div class="detail-sidebar-card shadow-sm">
+            <h4 class="h6 fw-bold text-uppercase text-warning mb-3"><i class="bi bi-activity me-1"></i> Network Pulse</h4>
+            <div class="row g-2 text-center mb-3">
               <div class="col-6">
-                <div class="p-2 rounded bg-tertiary border border-subtle">
-                  <div class="fw-bold fs-5 font-monospace text-warning">2,480+</div>
+                <div class="p-3 rounded-3 bg-tertiary border border-subtle">
+                  <div class="fw-bold fs-4 font-monospace text-warning">2,480+</div>
                   <div class="text-muted small">Topics Discussed</div>
                 </div>
               </div>
               <div class="col-6">
-                <div class="p-2 rounded bg-tertiary border border-subtle">
-                  <div class="fw-bold fs-5 font-monospace text-success">14,200+</div>
+                <div class="p-3 rounded-3 bg-tertiary border border-subtle">
+                  <div class="fw-bold fs-4 font-monospace text-success">14,200+</div>
                   <div class="text-muted small">Replies Shared</div>
                 </div>
               </div>
+              <div class="col-6">
+                <div class="p-3 rounded-3 bg-tertiary border border-subtle">
+                  <div class="fw-bold fs-4 font-monospace text-primary">640+</div>
+                  <div class="text-muted small">Active Stores</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="p-3 rounded-3 bg-tertiary border border-subtle">
+                  <div class="fw-bold fs-4 font-monospace text-info">99.4%</div>
+                  <div class="text-muted small">Peer Verified</div>
+                </div>
+              </div>
+            </div>
+            <div class="p-2 rounded bg-tertiary border border-subtle text-muted text-center" style="font-size: 0.78rem;">
+              <i class="bi bi-shield-check text-success me-1"></i> Moderated daily by verified automotive sales directors.
             </div>
           </div>
 
           <!-- Community Guidelines -->
-          <div class="detail-sidebar-card">
+          <div class="detail-sidebar-card shadow-sm">
             <h4 class="h6 fw-bold mb-3"><i class="bi bi-shield-check text-warning me-1"></i> Community Standards</h4>
             <ul class="list-unstyled small text-muted mb-0 d-flex flex-column gap-2">
-              <li><i class="bi bi-check2 text-success me-1"></i> <strong>Real Experiences:</strong> Focus on tactical, tested advice from actual retail floors.</li>
-              <li><i class="bi bi-check2 text-success me-1"></i> <strong>Respectful Candor:</strong> Disagree with ideas, never demean fellow professionals.</li>
-              <li><i class="bi bi-check2 text-success me-1"></i> <strong>No Dealer Shaming:</strong> Keep dealership names and proprietary customer info anonymous.</li>
+              <li class="d-flex align-items-start gap-2">
+                <i class="bi bi-check-circle-fill text-success mt-1"></i>
+                <div><strong>Real Experiences:</strong> Focus on tactical, tested advice from actual retail showroom floors.</div>
+              </li>
+              <li class="d-flex align-items-start gap-2">
+                <i class="bi bi-check-circle-fill text-success mt-1"></i>
+                <div><strong>Respectful Candor:</strong> Disagree with techniques or scripts constructively; respect fellow pros.</div>
+              </li>
+              <li class="d-flex align-items-start gap-2">
+                <i class="bi bi-check-circle-fill text-success mt-1"></i>
+                <div><strong>No Dealer Shaming:</strong> Keep dealership names and proprietary customer deal sheets anonymous.</div>
+              </li>
             </ul>
           </div>
 
+          <!-- Top Contributors Mini-Widget -->
+          <div class="detail-sidebar-card shadow-sm">
+            <h4 class="h6 fw-bold mb-3"><i class="bi bi-trophy-fill text-warning me-1"></i> Top Contributors This Month</h4>
+            <div class="d-flex flex-column gap-3">
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                  <div class="discussion-avatar" style="width: 36px; height: 36px; font-size: 0.8rem;">MK</div>
+                  <div>
+                    <div class="fw-bold small" style="color: var(--text-primary);">Marcus K.</div>
+                    <div class="text-muted" style="font-size: 0.75rem;">Sales Consultant • 1,240 pts</div>
+                  </div>
+                </div>
+                <span class="badge bg-warning-subtle text-warning border border-warning-subtle small fw-bold">#1 Closer</span>
+              </div>
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                  <div class="discussion-avatar avatar-blue" style="width: 36px; height: 36px; font-size: 0.8rem;">SL</div>
+                  <div>
+                    <div class="fw-bold small" style="color: var(--text-primary);">Sarah L.</div>
+                    <div class="text-muted" style="font-size: 0.75rem;">BDC Director • 980 pts</div>
+                  </div>
+                </div>
+                <span class="badge bg-primary-subtle text-primary border border-primary-subtle small fw-bold">Cadence Pro</span>
+              </div>
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                  <div class="discussion-avatar avatar-green" style="width: 36px; height: 36px; font-size: 0.8rem;">DR</div>
+                  <div>
+                    <div class="fw-bold small" style="color: var(--text-primary);">David R.</div>
+                    <div class="text-muted" style="font-size: 0.75rem;">Used Director • 890 pts</div>
+                  </div>
+                </div>
+                <span class="badge bg-success-subtle text-success border border-success-subtle small fw-bold">Appraiser</span>
+              </div>
+            </div>
+          </div>
+
           <!-- Trending Tags -->
-          <div class="detail-sidebar-card">
-            <h4 class="h6 fw-bold mb-3">Trending Topics</h4>
+          <div class="detail-sidebar-card shadow-sm">
+            <h4 class="h6 fw-bold mb-3"><i class="bi bi-tags-fill text-warning me-1"></i> Trending Topics</h4>
             <div class="d-flex flex-wrap gap-1">
-              <span class="popular-tag">#Objections</span>
-              <span class="popular-tag">#FollowUp</span>
-              <span class="popular-tag">#TradeIn</span>
-              <span class="popular-tag">#EVQuestions</span>
-              <span class="popular-tag">#PhoneDiscovery</span>
-              <span class="popular-tag">#ShowroomPacing</span>
-              <span class="popular-tag">#LeasePencil</span>
+              <span class="popular-tag" data-search="Objections">#Objections</span>
+              <span class="popular-tag" data-search="FollowUp">#FollowUp</span>
+              <span class="popular-tag" data-search="TradeIn">#TradeIn</span>
+              <span class="popular-tag" data-search="EVQuestions">#EVQuestions</span>
+              <span class="popular-tag" data-search="PhoneDiscovery">#PhoneDiscovery</span>
+              <span class="popular-tag" data-search="ShowroomPacing">#ShowroomPacing</span>
+              <span class="popular-tag" data-search="LeasePencil">#LeasePencil</span>
+              <span class="popular-tag" data-search="PriceStall">#PriceStall</span>
             </div>
           </div>
         </div>
@@ -331,17 +708,19 @@
     </div>
   </main>
 
-  <!-- START DISCUSSION MODAL -->
+  <!-- ===================================================================
+       START DISCUSSION MODAL
+       =================================================================== -->
   <div class="modal fade modal-custom" id="startDiscussionModal" tabindex="-1" aria-labelledby="startDiscussionModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content">
+      <div class="modal-content border-medium shadow-lg">
         <form id="newDiscussionForm">
-          <div class="modal-header">
+          <div class="modal-header border-bottom border-subtle">
             <div>
               <span class="badge-custom badge-amber mb-1">New Thread</span>
               <h5 class="modal-title h5 fw-bold" id="startDiscussionModalLabel">Start a Community Discussion</h5>
             </div>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body p-4">
             <div class="mb-3">
@@ -353,12 +732,11 @@
               <div class="col-md-6">
                 <label for="discussionCategory" class="form-label-custom">Category *</label>
                 <select class="form-select form-control-custom" id="discussionCategory" required>
-                  <option value="Sales Techniques">Sales Techniques</option>
-                  <option value="Customer Conversations">Customer Conversations</option>
-                  <option value="Follow-Up">Follow-Up</option>
-                  <option value="Negotiation">Negotiation</option>
-                  <option value="Dealership Life">Dealership Life</option>
-                  <option value="Training">Training & Mentorship</option>
+                  <option value="techniques">Sales Techniques</option>
+                  <option value="conversations" selected>Customer Conversations</option>
+                  <option value="follow-up">Follow-Up Cadence</option>
+                  <option value="negotiation">Negotiation & Desking</option>
+                  <option value="dealership">Dealership Life</option>
                 </select>
               </div>
               <div class="col-md-6">
@@ -369,14 +747,14 @@
 
             <div class="mb-3">
               <label for="discussionMessage" class="form-label-custom">Detailed Context / Scenario *</label>
-              <textarea class="form-control form-control-custom" id="discussionMessage" rows="5" placeholder="Describe the customer scenario, what happened, and what advice you are looking for from fellow consultants..." required></textarea>
+              <textarea class="form-control form-control-custom" id="discussionMessage" rows="5" placeholder="Describe the showroom scenario, what happened, and what advice you are looking for from fellow consultants..." required></textarea>
             </div>
 
             <div class="form-text small text-muted">
-              <i class="bi bi-info-circle me-1"></i> Your discussion will be posted immediately to the DRIVEFORGE front-end feed.
+              <i class="bi bi-info-circle text-warning me-1"></i> Your discussion will be published immediately to the DRIVEFORGE peer feed.
             </div>
           </div>
-          <div class="modal-footer">
+          <div class="modal-footer border-top border-subtle">
             <button type="button" class="btn btn-secondary-custom" data-bs-dismiss="modal">Cancel</button>
             <button type="submit" class="btn btn-primary-custom">
               <i class="bi bi-send-fill me-1"></i> Post Discussion
@@ -387,18 +765,28 @@
     </div>
   </div>
 
-  <!-- FOOTER -->
+  <!-- ===================================================================
+       FOOTER
+       =================================================================== -->
   <footer class="footer-driveforge">
     <div class="container">
       <div class="row g-4">
+        <!-- Col 1: Brand -->
         <div class="col-lg-4 col-md-6">
           <div class="footer-logo-title">
             <span class="logo-badge"><i class="bi bi-shield-shaded"></i></span>
             <span>DRIVE<span class="text-warning">FORGE</span></span>
           </div>
-          <p style="color: #94a3b8; font-size: 0.95rem;">"Knowledge That Moves Sales Forward."</p>
-          <p style="color: #64748b; font-size: 0.85rem;">Practical resources and proven knowledge for vehicle sales professionals.</p>
+          <p class="footer-tagline">"Knowledge That Moves Sales Forward."</p>
+          <p class="footer-desc">Practical resources, proven sales knowledge, and a community built for vehicle sales professionals.</p>
+          <div class="d-flex gap-2 mt-3">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
         </div>
+
+        <!-- Col 2: Explore -->
         <div class="col-lg-2 col-md-6 col-6">
           <h4 class="footer-heading">Explore</h4>
           <ul class="footer-nav-list">
@@ -408,14 +796,19 @@
             <li><a href="templates.html">Templates</a></li>
           </ul>
         </div>
+
+        <!-- Col 3: Community -->
         <div class="col-lg-3 col-md-6 col-6">
           <h4 class="footer-heading">Community</h4>
           <ul class="footer-nav-list">
             <li><a href="community.html">Discussions</a></li>
             <li><a href="community.html">Popular Topics</a></li>
-            <li><a href="community.html">Start a Discussion</a></li>
+            <li><a href="community.html" data-bs-toggle="modal" data-bs-target="#startDiscussionModal">Start a Discussion</a></li>
+            <li><a href="about.html">Community Guidelines</a></li>
           </ul>
         </div>
+
+        <!-- Col 4: Company -->
         <div class="col-lg-3 col-md-6">
           <h4 class="footer-heading">Company</h4>
           <ul class="footer-nav-list">
@@ -426,6 +819,8 @@
           </ul>
         </div>
       </div>
+
+      <!-- Bottom Strip -->
       <div class="footer-bottom-strip d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
         <div>© 2026 DRIVEFORGE. All rights reserved. Fictional demonstration brand.</div>
         <div class="d-flex gap-3">
@@ -436,6 +831,7 @@
     </div>
   </footer>
 
+  <!-- Scripts -->
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/gsap.min.js"></script>
   <script src="assets/js/main.js"></script>

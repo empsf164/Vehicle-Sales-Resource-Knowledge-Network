@@ -1,129 +1,109 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="light">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login — DRIVEFORGE Knowledge Network</title>
-  <meta name="description" content="Sign in to your DRIVEFORGE account to save resources, join community discussions, and track your sales curriculum progress.">
-  
+  <meta name="description"
+    content="Sign in to your DRIVEFORGE account to save resources, join community discussions, and track your sales curriculum progress.">
+
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23f57c00'/><path d='M30 25 L70 50 L30 75 Z' fill='%23ffffff'/></svg>">
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23f57c00'/><path d='M30 25 L70 50 L30 75 Z' fill='%23ffffff'/></svg>">
 </head>
-<body>
+
+<body class="auth-page-wrapper">
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- TOP MINIMAL NAV -->
-  <header class="py-3 border-bottom border-subtle" style="background: var(--bg-secondary);">
-    <div class="container d-flex justify-content-between align-items-center">
-      <a class="navbar-brand navbar-brand-logo mb-0" href="index.html">
-        <span class="logo-badge"><i class="bi bi-shield-shaded"></i></span>
-        <span>DRIVE<span class="text-warning">FORGE</span></span>
-      </a>
+  <!-- TOP-RIGHT THEME TOGGLE BUTTON -->
+  <div class="auth-fixed-theme-btn">
+    <button class="btn btn-icon theme-toggle-btn shadow-sm" type="button" aria-label="Toggle Theme">
+      <i class="bi bi-moon-stars-fill"></i>
+    </button>
+  </div>
 
-      <div class="d-flex align-items-center gap-3">
-        <button class="btn btn-icon theme-toggle-btn" type="button" aria-label="Toggle Theme">
-          <i class="bi bi-moon-stars-fill"></i>
-        </button>
-        <a href="index.html" class="btn btn-ghost-custom small">
-          <i class="bi bi-arrow-left me-1"></i> Back to Home
+  <!-- CENTERED AUTH CARD -->
+  <main id="main-content" class="w-100 d-flex justify-content-center">
+    <div class="auth-card-centered">
+      
+      <!-- BRAND LOGO IN TOP CENTER INSIDE BOX -->
+      <div class="auth-brand-header">
+        <a class="auth-brand-logo" href="index.html">
+          <span class="logo-badge"><i class="bi bi-shield-shaded"></i></span>
+          <span>DRIVE<span class="text-warning">FORGE</span></span>
         </a>
+        <h1 class="h3 fw-bold mb-1">Welcome Back</h1>
+        <p class="text-muted small mb-0">Enter your credentials to access your account.</p>
       </div>
-    </div>
-  </header>
 
-  <!-- SPLIT SCREEN AUTH WRAPPER -->
-  <main id="main-content" class="auth-wrapper">
-    <div class="container-fluid p-0">
-      <div class="row g-0 h-100">
-        <!-- Visual Column (Left) -->
-        <div class="col-lg-6 d-none d-lg-flex auth-visual-col">
-          <img src="assets/images/hero/hero_automotive_knowledge.jpg" alt="Automotive knowledge network" class="auth-visual-img">
-          <div class="auth-visual-overlay"></div>
-          
-          <div class="auth-visual-content">
-            <span class="badge-custom badge-amber mb-3">Vehicle Sales Network</span>
-            <blockquote class="fs-3 fw-bold mb-3 font-serif">
-              "Practical resources, proven sales knowledge, and a community built for vehicle sales professionals."
-            </blockquote>
-            <p class="text-light-emphasis small mb-4" style="max-width: 460px;">
-              Join thousands of vehicle sales consultants, sales directors, and BDC pros refining their deal structuring, objection handling, and customer retention.
-            </p>
+      <!-- Feedback Alert -->
+      <div id="loginFeedbackAlert" style="display: none;" class="mb-3"></div>
 
-            <div class="d-flex gap-4 pt-3 border-top border-secondary-subtle">
-              <div>
-                <div class="fw-bold fs-4 text-warning">180+</div>
-                <div class="text-white-50 small">Field Guides</div>
-              </div>
-              <div>
-                <div class="fw-bold fs-4 text-white">45+</div>
-                <div class="text-white-50 small">Video Masterclasses</div>
-              </div>
-              <div>
-                <div class="fw-bold fs-4 text-white">100%</div>
-                <div class="text-white-50 small">Free Toolkits</div>
-              </div>
-            </div>
+      <form id="loginForm">
+        <div class="mb-3">
+          <label for="loginEmail" class="form-label-custom">Email Address</label>
+          <div class="input-group">
+            <span class="input-group-text bg-tertiary border-medium"><i class="bi bi-envelope text-muted"></i></span>
+            <input type="email" class="form-control form-control-custom" id="loginEmail"
+              placeholder="e.g. consultant@dealership.com" value="consultant@driveforge.demo" required>
           </div>
         </div>
 
-        <!-- Form Column (Right) -->
-        <div class="col-lg-6 auth-form-col">
-          <div class="auth-card">
-            <div class="mb-4">
-              <span class="badge-custom badge-amber mb-2">Member Access</span>
-              <h1 class="h2 fw-bold mb-1">Welcome Back</h1>
-              <p class="text-muted small">Enter your credentials to access your saved resources and community bookmarks.</p>
-            </div>
-
-            <!-- Feedback Alert (No redirect to non-existent dashboard!) -->
-            <div id="loginFeedbackAlert" style="display: none;" class="mb-3"></div>
-
-            <form id="loginForm">
-              <div class="mb-3">
-                <label for="loginEmail" class="form-label-custom">Email Address</label>
-                <div class="input-group">
-                  <span class="input-group-text bg-tertiary border-medium"><i class="bi bi-envelope text-muted"></i></span>
-                  <input type="email" class="form-control form-control-custom" id="loginEmail" placeholder="e.g. consultant@dealership.com" value="consultant@driveforge.demo" required>
-                </div>
-              </div>
-
-              <div class="mb-3">
-                <div class="d-flex justify-content-between align-items-center mb-1">
-                  <label for="loginPassword" class="form-label-custom mb-0">Password</label>
-                  <a href="forgot-password.html" class="small text-warning fw-semibold">Forgot Password?</a>
-                </div>
-                <div class="password-input-wrap">
-                  <input type="password" class="form-control form-control-custom" id="loginPassword" placeholder="••••••••" value="salespro2026" required>
-                  <button type="button" class="password-toggle-btn" aria-label="Toggle password visibility">
-                    <i class="bi bi-eye"></i>
-                  </button>
-                </div>
-              </div>
-
-              <div class="form-check mb-4">
-                <input class="form-check-input" type="checkbox" id="rememberMe" checked>
-                <label class="form-check-label text-muted small" for="rememberMe">
-                  Remember my session on this device
-                </label>
-              </div>
-
-              <button type="submit" class="btn btn-primary-custom w-100 py-3 mb-3">
-                <i class="bi bi-box-arrow-in-right me-1"></i> Sign In to DRIVEFORGE
-              </button>
-
-              <button type="button" class="btn btn-secondary-custom w-100 py-2 mb-4" onclick="showToast('Google OAuth sign-in demo triggered.', 'bi-google')">
-                <i class="bi bi-google me-2 text-danger"></i> Continue with Google
-              </button>
-            </form>
-
-            <div class="text-center pt-3 border-top border-subtle text-muted small">
-              Don't have an account yet? 
-              <a href="signup.html" class="text-warning fw-bold ms-1">Join the Network</a>
-            </div>
+        <div class="mb-3">
+          <label for="loginPassword" class="form-label-custom">Password</label>
+          <div class="password-input-wrap">
+            <input type="password" class="form-control form-control-custom" id="loginPassword"
+              placeholder="••••••••" value="salespro2026" required>
+            <button type="button" class="password-toggle-btn" aria-label="Toggle password visibility">
+              <i class="bi bi-eye"></i>
+            </button>
           </div>
         </div>
+
+        <!-- REMEMBER ME AND FORGOT PASSWORD ON SAME LINE -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <div class="form-check mb-0">
+            <input class="form-check-input" type="checkbox" id="rememberMe" checked>
+            <label class="form-check-label text-muted small" for="rememberMe">
+              Remember me
+            </label>
+          </div>
+          <a href="forgot-password.html" class="small text-warning fw-semibold text-decoration-none">Forgot Password?</a>
+        </div>
+
+        <button type="submit" class="btn btn-primary-custom w-100 py-3 mb-4">
+          <i class="bi bi-box-arrow-in-right me-1"></i> Sign In to DRIVEFORGE
+        </button>
+
+        <!-- SOCIAL ICONS GOOGLE & APPLE AT BOTTOM -->
+        <div class="d-flex align-items-center mb-3">
+          <hr class="flex-grow-1 border-subtle my-0">
+          <span class="px-3 text-muted small fw-medium">Or continue with</span>
+          <hr class="flex-grow-1 border-subtle my-0">
+        </div>
+
+        <div class="row g-2 mb-4">
+          <div class="col-6">
+            <button type="button" class="auth-social-btn" onclick="showToast('Google Sign-in demo triggered', 'bi-google')">
+              <i class="bi bi-google text-danger fs-5"></i>
+              <span>Google</span>
+            </button>
+          </div>
+          <div class="col-6">
+            <button type="button" class="auth-social-btn" onclick="showToast('Apple Sign-in demo triggered', 'bi-apple')">
+              <i class="bi bi-apple fs-5"></i>
+              <span>Apple</span>
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <div class="text-center pt-3 border-top border-subtle text-muted small">
+        Don't have an account yet?
+        <a href="signup.html" class="text-warning fw-bold ms-1 text-decoration-none">Join the Network</a>
       </div>
     </div>
   </main>
@@ -132,4 +112,5 @@
   <script src="assets/js/gsap.min.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>

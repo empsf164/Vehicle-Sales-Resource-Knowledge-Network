@@ -35,14 +35,7 @@
         <div class="collapse navbar-collapse" id="desktopNavMenu">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
             <li class="nav-item"><a class="nav-link-custom" href="index.html">Home</a></li>
-            <li class="nav-item dropdown">
-              <a class="nav-link-custom dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Resources</a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item dropdown-item-custom" href="resources.html"><i class="bi bi-collection"></i> All Resources</a></li>
-                <li><a class="dropdown-item dropdown-item-custom" href="resources.html?type=playbooks"><i class="bi bi-diagram-3"></i> Playbooks</a></li>
-                <li><a class="dropdown-item dropdown-item-custom" href="templates.html"><i class="bi bi-download"></i> Downloads</a></li>
-              </ul>
-            </li>
+            <li class="nav-item"><a class="nav-link-custom" href="resources.html">Resources</a></li>
             <li class="nav-item dropdown">
               <a class="nav-link-custom dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Learn</a>
               <ul class="dropdown-menu">
@@ -57,13 +50,12 @@
           </ul>
 
           <div class="d-flex align-items-center gap-3">
-            <button class="btn btn-icon theme-toggle-btn" type="button" aria-label="Toggle Theme">
+            <button class="btn btn-icon theme-toggle-btn" type="button" aria-label="Toggle Theme" title="Toggle Theme">
               <i class="bi bi-moon-stars-fill"></i>
             </button>
-            <a href="login.html" class="btn-ghost-custom">Login</a>
-            <a href="signup.html" class="btn-primary-custom py-2 px-3" style="font-size: 0.9rem;">
-              <span>Join the Network</span>
-              <i class="bi bi-arrow-right"></i>
+            <a href="login.html" class="btn btn-primary-custom py-2 px-3" style="font-size: 0.9rem;">
+              <i class="bi bi-box-arrow-in-right me-1"></i>
+              <span>Login</span>
             </a>
           </div>
         </div>
@@ -80,19 +72,33 @@
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
       </div>
       <div class="offcanvas-body d-flex flex-column justify-content-between p-4">
-        <ul class="navbar-nav mb-4">
-          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="index.html">Home</a></li>
-          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="resources.html">Resources</a></li>
-          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="learn.html">Learn Hub</a></li>
-          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="video-tutorials.html">Video Tutorials</a></li>
-          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="community.html">Community</a></li>
-          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="templates.html">Templates</a></li>
-          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="about.html">About</a></li>
-          <li class="nav-item mb-2"><a class="nav-link-custom active fs-5" href="contact.html">Contact</a></li>
-        </ul>
+        <div>
+          <ul class="navbar-nav mb-4">
+            <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="index.html">Home</a></li>
+            <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="resources.html">Resources</a></li>
+            
+            <!-- Learn Dropdown -->
+            <li class="nav-item mb-2 dropdown">
+              <a class="nav-link-custom dropdown-toggle fs-5 d-flex align-items-center justify-content-between" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span>Learn</span>
+              </a>
+              <ul class="dropdown-menu border border-subtle shadow-sm my-1">
+                <li><a class="dropdown-item dropdown-item-custom py-2" href="video-tutorials.html"><i class="bi bi-play-circle-fill me-2 text-warning"></i> Video Tutorials</a></li>
+                <li><a class="dropdown-item dropdown-item-custom py-2" href="learn.html"><i class="bi bi-mortarboard me-2 text-warning"></i> Learning Paths</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="templates.html">Templates</a></li>
+            <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="community.html">Community</a></li>
+            <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="about.html">About</a></li>
+            <li class="nav-item mb-2"><a class="nav-link-custom active fs-5" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
         <div class="pt-3 border-top border-subtle d-grid gap-2">
-          <a href="login.html" class="btn btn-secondary-custom w-100">Login</a>
-          <a href="signup.html" class="btn btn-primary-custom w-100">Join the Network</a>
+          <a href="login.html" class="btn btn-primary-custom w-100 py-2">
+            <i class="bi bi-box-arrow-in-right me-1"></i>
+            <span>Login</span>
+          </a>
         </div>
       </div>
     </div>
@@ -138,8 +144,31 @@
               <div class="category-pill-icon" style="background: rgba(16, 185, 129, 0.1); color: #10b981;"><i class="bi bi-geo-alt-fill"></i></div>
               <div>
                 <div class="text-muted small">Platform Headquarters</div>
-                <div class="fw-bold">Automotive Knowledge Network (Fictional Demo)</div>
+                <div class="fw-bold">100 Renaissance Center, Ste 4200, Detroit, MI 48243</div>
               </div>
+            </div>
+          </div>
+
+          <!-- Social Channels & Community Connect -->
+          <div class="p-3 p-md-4 rounded-3 bg-secondary border border-subtle mb-4">
+            <h3 class="h6 fw-bold text-uppercase text-warning mb-2"><i class="bi bi-share me-1"></i> Connect on Social</h3>
+            <p class="text-muted small mb-3">Follow our editorial releases, daily dealership micro-scripts, video breakdowns, and community highlights.</p>
+            <div class="d-flex flex-wrap gap-2">
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="Follow DRIVEFORGE on X (Twitter)" title="Follow on X (Twitter)">
+                <i class="bi bi-twitter-x"></i>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="Connect with DRIVEFORGE on LinkedIn" title="Connect on LinkedIn">
+                <i class="bi bi-linkedin"></i>
+              </a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="Watch DRIVEFORGE on YouTube" title="Watch on YouTube">
+                <i class="bi bi-youtube"></i>
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="Follow DRIVEFORGE on Instagram" title="Follow on Instagram">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="Join our Discord Community" title="Join Sales Floor Discord">
+                <i class="bi bi-discord"></i>
+              </a>
             </div>
           </div>
 
@@ -198,6 +227,43 @@
           </div>
         </div>
       </div>
+
+      <!-- MAP & HEADQUARTERS LOCATION SECTION -->
+      <section class="mt-5 pt-4 border-top border-subtle">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4 gap-3">
+          <div>
+            <span class="badge-custom badge-amber mb-2"><i class="bi bi-geo-alt-fill me-1"></i> Headquarters & Studio Location</span>
+            <h2 class="display-6 fw-bold mb-1">Visit DRIVEFORGE in Motor City</h2>
+            <p class="text-muted fs-5 mb-0">Our editorial studio and dealership sales lab are situated in Downtown Detroit along the historic automotive corridor.</p>
+          </div>
+          <div>
+            <a href="https://maps.google.com/?q=Renaissance+Center+Detroit+MI" target="_blank" rel="noopener noreferrer" class="btn btn-outline-custom">
+              <i class="bi bi-box-arrow-up-right me-1"></i> Open in Google Maps
+            </a>
+          </div>
+        </div>
+
+        <div class="card overflow-hidden border-medium shadow-md position-relative" style="background: var(--bg-card); border-radius: var(--radius-lg);">
+          <iframe 
+            title="DRIVEFORGE Headquarters Location Map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2949.697666249964!2d-83.04169762343997!3d42.32766863717208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2d2db73b1ff7%3A0x7d0a2d2003c20058!2sRenaissance%20Center!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+            width="100%" 
+            height="420" 
+            style="border:0; display: block;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+          <div class="position-absolute bottom-0 start-0 m-3 p-3 rounded-3 shadow-md d-none d-md-flex align-items-center gap-3" style="background: var(--bg-glass); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border: 1px solid var(--border-medium); max-width: 420px; z-index: 5;">
+            <div class="category-pill-icon" style="background: var(--accent-amber-soft); color: var(--accent-amber);"><i class="bi bi-building"></i></div>
+            <div>
+              <div class="fw-bold" style="color: var(--text-primary); font-size: 0.95rem;">DRIVEFORGE Platform HQ</div>
+              <div class="text-muted" style="font-size: 0.82rem;">100 Renaissance Center, Suite 4200, Detroit, MI 48243</div>
+              <div class="text-success small fw-semibold mt-1"><i class="bi bi-clock-fill me-1"></i> Open Mon–Fri, 8:30 AM – 6:00 PM EST</div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   </main>
 
@@ -210,8 +276,13 @@
             <span class="logo-badge"><i class="bi bi-shield-shaded"></i></span>
             <span>DRIVE<span class="text-warning">FORGE</span></span>
           </div>
-          <p style="color: #94a3b8; font-size: 0.95rem;">"Knowledge That Moves Sales Forward."</p>
-          <p style="color: #64748b; font-size: 0.85rem;">Practical resources and proven knowledge for vehicle sales professionals.</p>
+          <p class="footer-tagline">"Knowledge That Moves Sales Forward."</p>
+          <p class="footer-desc">Practical resources and proven knowledge for vehicle sales professionals.</p>
+          <div class="d-flex gap-2 mt-3">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
         </div>
         <div class="col-lg-2 col-md-6 col-6">
           <h4 class="footer-heading">Explore</h4>

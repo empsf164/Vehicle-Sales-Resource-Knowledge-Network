@@ -219,12 +219,17 @@ document.addEventListener('DOMContentLoaded', () => {
   // Popular search pills click handler
   document.querySelectorAll('.popular-tag').forEach(tag => {
     tag.addEventListener('click', () => {
-      const term = tag.getAttribute('data-search') || tag.innerText.trim();
-      const input = document.querySelector('.global-search-input');
+      const term = tag.getAttribute('data-search') || tag.innerText.trim().replace(/^#/, '');
+      const input = document.querySelector('.library-search-input') || document.querySelector('.global-search-input');
       if (input) {
         input.value = term;
         input.dispatchEvent(new Event('input'));
         input.focus();
+        // If on community page, smooth scroll to feed
+        const feed = document.getElementById('communityDiscussionFeed');
+        if (feed) {
+          feed.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
       }
     });
   });
@@ -239,7 +244,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const resultsCounter = document.querySelector('.results-counter');
 
   function updateResourceFilter() {
-    if (!resourceCards.length) return;
+    const cards = document.querySelectorAll('.filterable-card');
+    if (!cards.length) return;
 
     const activeBtn = document.querySelector('.filter-btn.active');
     const selectedCategory = activeBtn ? activeBtn.getAttribute('data-filter') : 'all';
@@ -248,13 +254,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let visibleCount = 0;
 
-    resourceCards.forEach(card => {
-      const cardCategory = card.getAttribute('data-category') || '';
+    cards.forEach(card => {
+      const cardCategory = (card.getAttribute('data-category') || '').toLowerCase();
       const cardTitle = (card.querySelector('.card-title-text')?.innerText || '').toLowerCase();
       const cardDesc = (card.querySelector('.card-desc-text')?.innerText || '').toLowerCase();
+      const cardText = (card.innerText || '').toLowerCase();
 
-      const matchesCategory = (selectedCategory === 'all' || cardCategory.toLowerCase() === selectedCategory.toLowerCase());
-      const matchesSearch = !searchQuery || cardTitle.includes(searchQuery) || cardDesc.includes(searchQuery);
+      const matchesCategory = (selectedCategory === 'all' || cardCategory === selectedCategory.toLowerCase());
+      const matchesSearch = !searchQuery || cardTitle.includes(searchQuery) || cardDesc.includes(searchQuery) || cardText.includes(searchQuery);
 
       if (matchesCategory && matchesSearch) {
         card.style.display = '';
@@ -265,7 +272,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     if (resultsCounter) {
-      resultsCounter.innerText = `Showing ${visibleCount} resource${visibleCount === 1 ? '' : 's'}`;
+      const isCommunity = document.getElementById('communityDiscussionFeed') !== null;
+      const entityName = isCommunity ? 'discussion' : 'resource';
+      resultsCounter.innerText = `Showing ${visibleCount} ${entityName}${visibleCount === 1 ? '' : 's'}`;
     }
 
     const noResultsNotice = document.querySelector('.no-results-notice');
@@ -442,11 +451,128 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
+  // Reset filters button click
+  document.addEventListener('click', (e) => {
+    if (e.target.closest('.reset-filter-btn')) {
+      const allFilterBtn = document.querySelector('.filter-btn[data-filter="all"]');
+      if (allFilterBtn) {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        allFilterBtn.classList.add('active');
+      }
+      const searchField = document.querySelector('.library-search-input');
+      if (searchField) {
+        searchField.value = '';
+      }
+      updateResourceFilter();
+    }
+  });
+
   // -----------------------------------------------------------------
-  // 10. COMMUNITY DISCUSSION CREATION (MODAL & REALTIME PREPEND)
+  // 10. COMMUNITY DISCUSSION INTERACTIONS & CREATION
   // -----------------------------------------------------------------
+  // Upvote handling
+  document.addEventListener('click', (e) => {
+    const upvoteBtn = e.target.closest('.upvote-btn');
+    if (upvoteBtn) {
+      e.preventDefault();
+      const countEl = upvoteBtn.querySelector('.vote-count');
+      let currentVotes = parseInt(upvoteBtn.getAttribute('data-votes') || countEl.innerText || '0', 10);
+      const isUpvoted = upvoteBtn.classList.contains('upvoted');
+
+      if (isUpvoted) {
+        currentVotes = Math.max(0, currentVotes - 1);
+        upvoteBtn.classList.remove('upvoted', 'active');
+        if (countEl) countEl.innerText = currentVotes;
+        upvoteBtn.setAttribute('data-votes', currentVotes);
+        showToast('Upvote removed', 'bi-hand-thumbs-down');
+      } else {
+        currentVotes += 1;
+        upvoteBtn.classList.add('upvoted', 'active');
+        if (countEl) countEl.innerText = currentVotes;
+        upvoteBtn.setAttribute('data-votes', currentVotes);
+        showToast('Discussion upvoted (+1)!', 'bi-hand-thumbs-up-fill');
+      }
+    }
+
+    // Toggle replies drawer
+    const replyToggleBtn = e.target.closest('.reply-toggle-btn') || e.target.closest('.discussion-title-link');
+    if (replyToggleBtn) {
+      e.preventDefault();
+      const card = replyToggleBtn.closest('.card-treatment-discussion');
+      if (card) {
+        const drawer = card.querySelector('.discussion-reply-drawer');
+        if (drawer) {
+          const isOpen = drawer.style.display === 'block';
+          drawer.style.display = isOpen ? 'none' : 'block';
+        }
+      }
+    }
+
+    // Share button
+    const shareBtn = e.target.closest('.share-btn');
+    if (shareBtn) {
+      e.preventDefault();
+      const shareUrl = window.location.href.split('#')[0] + '#community';
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(shareUrl).then(() => {
+          showToast('Discussion link copied to clipboard!', 'bi-clipboard-check-fill');
+        }).catch(() => {
+          showToast('Link copied to clipboard!', 'bi-share-fill');
+        });
+      } else {
+        showToast('Discussion link ready to share!', 'bi-share-fill');
+      }
+    }
+  });
+
+  // Quick reply form submission
+  document.addEventListener('submit', (e) => {
+    if (e.target.classList.contains('quick-reply-form')) {
+      e.preventDefault();
+      const form = e.target;
+      const input = form.querySelector('input');
+      const val = input.value.trim();
+      if (!val) return;
+
+      const card = form.closest('.card-treatment-discussion');
+      const drawer = form.closest('.discussion-reply-drawer');
+      if (drawer) {
+        const newBubble = document.createElement('div');
+        newBubble.className = 'reply-bubble';
+        newBubble.innerHTML = `
+          <div class="d-flex align-items-center justify-content-between mb-1">
+            <strong class="small" style="color: var(--accent-amber);">You (Consultant)</strong>
+            <span class="text-muted" style="font-size: 0.75rem;">Just now</span>
+          </div>
+          <p class="small text-secondary mb-0">${val}</p>
+        `;
+        drawer.insertBefore(newBubble, form);
+        input.value = '';
+
+        // Increment reply count button in card
+        if (card) {
+          const replyCountSpan = card.querySelector('.reply-toggle-btn span');
+          if (replyCountSpan) {
+            const currentReplies = parseInt(replyCountSpan.innerText, 10) || 0;
+            replyCountSpan.innerText = `${currentReplies + 1} replies`;
+          }
+        }
+        showToast('Your showroom insight was added!', 'bi-chat-left-check-fill');
+      }
+    }
+  });
+
+  // New Discussion Form
   const newDiscussionForm = document.getElementById('newDiscussionForm');
   if (newDiscussionForm) {
+    const categoryLabels = {
+      'techniques': 'Sales Techniques',
+      'conversations': 'Customer Conversations',
+      'follow-up': 'Follow-Up',
+      'negotiation': 'Negotiation',
+      'dealership': 'Dealership Life'
+    };
+
     newDiscussionForm.addEventListener('submit', (e) => {
       e.preventDefault();
       const titleInput = document.getElementById('discussionTitle');
@@ -460,51 +586,82 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       const title = titleInput.value.trim();
-      const category = categorySelect.value || 'Sales Techniques';
+      const categorySlug = categorySelect.value || 'techniques';
+      const categoryLabel = categoryLabels[categorySlug] || categorySelect.options[categorySelect.selectedIndex]?.text || 'Sales Techniques';
       const message = messageInput.value.trim();
-      const tags = (tagsInput ? tagsInput.value.trim() : 'Sales, Best Practices')
+      const tags = (tagsInput ? tagsInput.value.trim() : 'Showroom, BestPractices')
         .split(',')
-        .map(t => t.trim())
+        .map(t => t.trim().replace(/^#/, ''))
         .filter(Boolean);
 
-      // Prepend to discussion list
       const feed = document.getElementById('communityDiscussionFeed');
       if (feed) {
         const newCard = document.createElement('div');
-        newCard.className = 'resource-card-base card-treatment-discussion filterable-card mb-3';
-        newCard.setAttribute('data-category', category);
+        newCard.className = 'card-treatment-discussion filterable-card mb-4 p-4 rounded-4 bg-card border border-subtle shadow-sm';
+        newCard.setAttribute('data-category', categorySlug);
+        newCard.setAttribute('data-date', '20261001');
+        newCard.setAttribute('data-popularity', '100');
         newCard.innerHTML = `
-          <div class="d-flex align-items-center justify-content-between mb-2">
+          <div class="d-flex align-items-center justify-content-between mb-3 flex-wrap gap-2">
             <div class="d-flex align-items-center gap-2">
               <div class="discussion-avatar" style="background: var(--accent-amber-soft); color: var(--accent-amber);">YOU</div>
               <div>
-                <strong style="font-size: 0.92rem;">You (Consultant)</strong>
-                <span class="text-muted" style="font-size: 0.78rem;"> • Just now</span>
+                <div class="fw-bold" style="font-size: 0.95rem; color: var(--text-primary);">You <span class="badge-custom ms-1" style="font-size: 0.72rem;">Sales Consultant</span></div>
+                <span class="text-muted" style="font-size: 0.8rem;">Just now</span>
               </div>
             </div>
-            <span class="badge-custom badge-amber">${category}</span>
-          </div>
-          <h4 class="card-title-text h5 mb-2">${title}</h4>
-          <p class="card-desc-text text-secondary mb-3" style="font-size: 0.95rem;">${message}</p>
-          <div class="d-flex flex-wrap gap-2 mb-3">
-            ${tags.map(t => `<span class="badge-custom">${t}</span>`).join('')}
-          </div>
-          <div class="d-flex align-items-center justify-content-between pt-2 border-top border-subtle" style="font-size: 0.85rem; color: var(--text-muted);">
-            <div class="d-flex gap-3">
-              <span><i class="bi bi-chat-dots me-1"></i> 0 replies</span>
-              <span><i class="bi bi-eye me-1"></i> 1 view</span>
+            <div class="d-flex align-items-center gap-2">
+              <span class="badge-custom badge-amber">${categoryLabel}</span>
+              <span class="badge bg-warning-subtle text-warning border border-warning-subtle small"><i class="bi bi-star-fill me-1"></i> New</span>
             </div>
-            <span class="text-warning fw-semibold"><i class="bi bi-star me-1"></i> New Topic</span>
+          </div>
+          <h3 class="card-title-text h5 fw-bold mb-2">
+            <a href="javascript:void(0);" class="text-reset text-decoration-none hover-amber discussion-title-link">${title}</a>
+          </h3>
+          <p class="card-desc-text text-secondary mb-3" style="font-size: 0.96rem; line-height: 1.65;">${message}</p>
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            ${tags.map(t => `<span class="badge-custom popular-tag" data-search="${t}">#${t}</span>`).join('')}
+          </div>
+          <div class="d-flex align-items-center justify-content-between pt-3 border-top border-subtle flex-wrap gap-2">
+            <div class="d-flex align-items-center gap-2">
+              <button type="button" class="discussion-action-btn upvote-btn" data-votes="1" aria-label="Upvote discussion">
+                <i class="bi bi-hand-thumbs-up-fill"></i>
+                <span class="vote-count">1</span>
+              </button>
+              <button type="button" class="discussion-action-btn reply-toggle-btn" aria-label="Toggle replies">
+                <i class="bi bi-chat-dots-fill"></i>
+                <span>0 replies</span>
+              </button>
+              <span class="text-muted small ms-2"><i class="bi bi-eye me-1"></i> 1 view</span>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <button type="button" class="discussion-action-btn share-btn" aria-label="Share discussion link">
+                <i class="bi bi-share"></i>
+                <span>Share</span>
+              </button>
+              <button type="button" class="discussion-action-btn bookmark-btn" aria-label="Bookmark discussion">
+                <i class="bi bi-bookmark"></i>
+              </button>
+            </div>
+          </div>
+          <div class="discussion-reply-drawer mt-3" style="display: none;">
+            <p class="small text-muted mb-2">No replies yet. Be the first to share advice!</p>
+            <form class="quick-reply-form mt-2 d-flex gap-2">
+              <input type="text" class="form-control form-control-sm form-control-custom" placeholder="Add showroom advice..." required>
+              <button type="submit" class="btn btn-sm btn-primary-custom flex-shrink-0">Reply</button>
+            </form>
           </div>
         `;
 
         feed.insertBefore(newCard, feed.firstChild);
 
         // Highlight animation
-        newCard.style.boxShadow = '0 0 20px rgba(245, 124, 0, 0.4)';
+        newCard.style.boxShadow = '0 0 24px var(--accent-amber-glow)';
         setTimeout(() => {
           newCard.style.boxShadow = '';
         }, 3000);
+
+        updateResourceFilter();
       }
 
       // Close modal

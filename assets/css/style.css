@@ -58,8 +58,14 @@
   --code-text: #f8fafc;
 
   --navbar-bg: rgba(255, 255, 255, 0.92);
-  --footer-bg: #0c1017;
-  --footer-text: #cbd5e1;
+  --footer-bg: #ffffff;
+  --footer-text: #475569;
+  --footer-heading: #0f172a;
+  --footer-link: #64748b;
+  --footer-link-hover: var(--accent-amber);
+  --footer-border: #e2e8f0;
+  --footer-border-subtle: #e2e8f0;
+  --footer-muted: #64748b;
 
   --radius-xs: 4px;
   --radius-sm: 8px;
@@ -104,6 +110,13 @@
 
   --navbar-bg: rgba(10, 14, 20, 0.92);
   --footer-bg: #07090d;
+  --footer-text: #cbd5e1;
+  --footer-heading: #ffffff;
+  --footer-link: #94a3b8;
+  --footer-link-hover: var(--accent-amber);
+  --footer-border: #1e293b;
+  --footer-border-subtle: rgba(255, 255, 255, 0.08);
+  --footer-muted: #94a3b8;
 }
 
 /* -------------------------------------------------------------------
@@ -495,6 +508,20 @@ img, svg {
   filter: var(--bs-btn-close-filter);
 }
 
+.mobile-nav-panel .dropdown-menu {
+  position: static !important;
+  float: none !important;
+  transform: none !important;
+  box-shadow: none !important;
+  width: 100% !important;
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+  padding: 0.5rem 0.75rem !important;
+  background-color: var(--bg-tertiary) !important;
+  border: 1px solid var(--border-medium) !important;
+  border-radius: var(--radius-md) !important;
+}
+
 /* -------------------------------------------------------------------
    6. SEARCH SYSTEM (DESKTOP & HERO)
    ------------------------------------------------------------------- */
@@ -830,20 +857,87 @@ img, svg {
 /* 8d. Discussion Card Treatment */
 .card-treatment-discussion {
   border-left: 4px solid #10b981;
+  height: auto !important;
+  margin-bottom: 1.5rem;
 }
 
 .discussion-avatar {
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
+  letter-spacing: 0.02em;
   background: var(--bg-tertiary);
   color: var(--accent-amber);
-  border: 1px solid var(--border-medium);
+  border: 1.5px solid var(--border-medium);
+  flex-shrink: 0;
+}
+
+.discussion-avatar.avatar-blue {
+  color: var(--accent-blue);
+  background: var(--accent-blue-soft);
+  border-color: rgba(37, 99, 235, 0.25);
+}
+
+.discussion-avatar.avatar-green {
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.12);
+  border-color: rgba(16, 185, 129, 0.25);
+}
+
+.discussion-avatar.avatar-purple {
+  color: #8b5cf6;
+  background: rgba(139, 92, 246, 0.12);
+  border-color: rgba(139, 92, 246, 0.25);
+}
+
+.discussion-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px solid transparent;
+  padding: 0.3rem 0.65rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.discussion-action-btn:hover {
+  color: var(--text-primary);
+  background: var(--bg-tertiary);
+  border-color: var(--border-subtle);
+}
+
+.discussion-action-btn.active,
+.discussion-action-btn.upvoted {
+  color: var(--accent-amber);
+  background: var(--accent-amber-soft);
+  border-color: rgba(245, 124, 0, 0.3);
+  font-weight: 600;
+}
+
+.discussion-reply-drawer {
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  margin-top: 1rem;
+  border: 1px solid var(--border-subtle);
+}
+
+.reply-bubble {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.65rem;
 }
 
 /* 8e. Editorial Guide Card Treatment */
@@ -852,14 +946,31 @@ img, svg {
   overflow: hidden;
 }
 
-.guide-cover-img {
+.card-cover-container {
+  position: relative;
   width: 100%;
-  height: 180px;
-  object-fit: cover;
+  height: 200px;
+  overflow: hidden;
+  background: var(--bg-tertiary);
+  flex-shrink: 0;
 }
 
+.guide-cover-img,
+.card-cover-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform var(--transition-smooth);
+}
+
+.resource-card-base:hover .card-cover-img,
+.resource-card-base:hover .guide-cover-img {
+  transform: scale(1.05);
+}
+
+.card-body-content,
 .guide-content-body {
-  padding: 1.5rem;
+  padding: 1.35rem 1.5rem;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -1292,16 +1403,17 @@ img, svg {
 .footer-driveforge {
   background-color: var(--footer-bg);
   color: var(--footer-text);
-  border-top: 1px solid var(--border-subtle);
+  border-top: 1px solid var(--footer-border);
   padding: 4.5rem 0 2rem;
   margin-top: auto;
+  transition: background-color var(--transition-smooth), color var(--transition-smooth);
 }
 
 .footer-logo-title {
   font-family: var(--font-display);
   font-size: 1.4rem;
   font-weight: 800;
-  color: #ffffff;
+  color: var(--footer-heading);
   display: flex;
   align-items: center;
   gap: 0.65rem;
@@ -1312,7 +1424,7 @@ img, svg {
   font-family: var(--font-display);
   font-size: 0.95rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--footer-heading);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   margin-bottom: 1.35rem;
@@ -1329,21 +1441,30 @@ img, svg {
 }
 
 .footer-nav-list a {
-  color: #94a3b8;
+  color: var(--footer-link);
   font-size: 0.92rem;
   transition: color var(--transition-fast);
 }
 
 .footer-nav-list a:hover {
-  color: var(--accent-amber);
+  color: var(--footer-link-hover);
 }
 
 .footer-bottom-strip {
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid var(--footer-border-subtle);
   padding-top: 1.75rem;
   margin-top: 3.5rem;
   font-size: 0.85rem;
-  color: #64748b;
+  color: var(--footer-muted);
+}
+
+.footer-driveforge p {
+  color: var(--footer-muted);
+}
+
+.footer-driveforge .footer-tagline {
+  color: var(--footer-heading);
+  font-weight: 500;
 }
 
 /* -------------------------------------------------------------------
@@ -1388,3 +1509,94 @@ img, svg {
     height: 260px;
   }
 }
+
+/* -------------------------------------------------------------------
+   18. AUTHENTICATION PAGES (CENTERED LAYOUT)
+   ------------------------------------------------------------------- */
+.auth-page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 3rem 1.25rem;
+  background: var(--bg-primary);
+}
+
+.auth-fixed-theme-btn {
+  position: fixed;
+  top: 1.25rem;
+  right: 1.25rem;
+  z-index: 1050;
+}
+
+.auth-card-centered {
+  width: 100%;
+  max-width: 460px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-xl);
+  padding: 2.75rem 2.25rem;
+  box-shadow: var(--shadow-xl);
+  transition: background-color var(--transition-smooth), border-color var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.auth-brand-header {
+  text-align: center;
+  margin-bottom: 1.75rem;
+}
+
+.auth-brand-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  font-family: var(--font-display);
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  text-decoration: none;
+  margin-bottom: 0.75rem;
+}
+
+.auth-brand-logo:hover {
+  color: var(--text-primary);
+}
+
+.auth-social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  width: 100%;
+  padding: 0.65rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-medium);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all var(--transition-fast);
+}
+
+.auth-social-btn:hover {
+  background: var(--bg-tertiary);
+  border-color: var(--border-strong);
+  color: var(--text-primary);
+}
+
+/* -------------------------------------------------------------------
+   19. 1024px HAMBURGER MENU RESPONSIVE BREAKPOINT
+   ------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .navbar-expand-lg .navbar-collapse {
+    display: none !important;
+  }
+  .navbar-expand-lg .navbar-toggler,
+  header .d-lg-none,
+  header .navbar .d-lg-none {
+    display: flex !important;
+  }
+}
+
+

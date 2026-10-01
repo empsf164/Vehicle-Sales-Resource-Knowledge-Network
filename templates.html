@@ -35,14 +35,7 @@
         <div class="collapse navbar-collapse" id="desktopNavMenu">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
             <li class="nav-item"><a class="nav-link-custom" href="index.html">Home</a></li>
-            <li class="nav-item dropdown">
-              <a class="nav-link-custom dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Resources</a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item dropdown-item-custom" href="resources.html"><i class="bi bi-collection"></i> All Resources</a></li>
-                <li><a class="dropdown-item dropdown-item-custom" href="resources.html?type=playbooks"><i class="bi bi-diagram-3"></i> Playbooks</a></li>
-                <li><a class="dropdown-item dropdown-item-custom" href="templates.html"><i class="bi bi-download"></i> Downloads</a></li>
-              </ul>
-            </li>
+            <li class="nav-item"><a class="nav-link-custom" href="resources.html">Resources</a></li>
             <li class="nav-item dropdown">
               <a class="nav-link-custom dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Learn</a>
               <ul class="dropdown-menu">
@@ -57,13 +50,12 @@
           </ul>
 
           <div class="d-flex align-items-center gap-3">
-            <button class="btn btn-icon theme-toggle-btn" type="button" aria-label="Toggle Theme">
+            <button class="btn btn-icon theme-toggle-btn" type="button" aria-label="Toggle Theme" title="Toggle Theme">
               <i class="bi bi-moon-stars-fill"></i>
             </button>
-            <a href="login.html" class="btn-ghost-custom">Login</a>
-            <a href="signup.html" class="btn-primary-custom py-2 px-3" style="font-size: 0.9rem;">
-              <span>Join the Network</span>
-              <i class="bi bi-arrow-right"></i>
+            <a href="login.html" class="btn btn-primary-custom py-2 px-3" style="font-size: 0.9rem;">
+              <i class="bi bi-box-arrow-in-right me-1"></i>
+              <span>Login</span>
             </a>
           </div>
         </div>
@@ -80,19 +72,33 @@
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
       </div>
       <div class="offcanvas-body d-flex flex-column justify-content-between p-4">
-        <ul class="navbar-nav mb-4">
-          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="index.html">Home</a></li>
-          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="resources.html">Resources</a></li>
-          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="learn.html">Learn Hub</a></li>
-          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="video-tutorials.html">Video Tutorials</a></li>
-          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="community.html">Community</a></li>
-          <li class="nav-item mb-2"><a class="nav-link-custom active fs-5" href="templates.html">Templates</a></li>
-          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="about.html">About</a></li>
-          <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="contact.html">Contact</a></li>
-        </ul>
+        <div>
+          <ul class="navbar-nav mb-4">
+            <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="index.html">Home</a></li>
+            <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="resources.html">Resources</a></li>
+            
+            <!-- Learn Dropdown -->
+            <li class="nav-item mb-2 dropdown">
+              <a class="nav-link-custom dropdown-toggle fs-5 d-flex align-items-center justify-content-between" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span>Learn</span>
+              </a>
+              <ul class="dropdown-menu border border-subtle shadow-sm my-1">
+                <li><a class="dropdown-item dropdown-item-custom py-2" href="video-tutorials.html"><i class="bi bi-play-circle-fill me-2 text-warning"></i> Video Tutorials</a></li>
+                <li><a class="dropdown-item dropdown-item-custom py-2" href="learn.html"><i class="bi bi-mortarboard me-2 text-warning"></i> Learning Paths</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item mb-2"><a class="nav-link-custom active fs-5" href="templates.html">Templates</a></li>
+            <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="community.html">Community</a></li>
+            <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="about.html">About</a></li>
+            <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
         <div class="pt-3 border-top border-subtle d-grid gap-2">
-          <a href="login.html" class="btn btn-secondary-custom w-100">Login</a>
-          <a href="signup.html" class="btn btn-primary-custom w-100">Join the Network</a>
+          <a href="login.html" class="btn btn-primary-custom w-100 py-2">
+            <i class="bi bi-box-arrow-in-right me-1"></i>
+            <span>Login</span>
+          </a>
         </div>
       </div>
     </div>
@@ -126,7 +132,7 @@
             </div>
           </div>
           <div class="col-lg-5 d-flex justify-content-lg-end align-items-center gap-3">
-            <div class="results-counter text-muted small fw-semibold">Showing 8 templates</div>
+            <div class="results-counter text-muted small fw-semibold">Showing 6 templates</div>
           </div>
         </div>
 
@@ -281,53 +287,67 @@
           </div>
         </div>
 
-        <!-- Template 7 -->
-        <div class="col-lg-4 col-md-6 filterable-card" data-category="checklists" data-date="20260910" data-popularity="89">
-          <div class="resource-card-base card-treatment-download">
-            <div class="d-flex justify-content-between align-items-center mb-3">
-              <div>
-                <span class="download-format-badge">PDF</span>
-                <span class="badge-custom">Appraisals</span>
-              </div>
-              <button type="button" class="btn btn-icon bookmark-toggle-btn" aria-label="Bookmark"><i class="bi bi-bookmark"></i></button>
-            </div>
-            <h3 class="card-title-text h5 fw-bold mb-2">Trade-In Silent Appraisal Prep Sheet</h3>
-            <p class="card-desc-text text-muted small mb-3">
-              Customer-facing appraisal condition checklist used during silent walkarounds to note tires, body paint, and maintenance history jointly.
-            </p>
-            <div class="download-meta-strip">
-              <span><i class="bi bi-file-earmark-pdf me-1"></i> 1.3 MB • PDF</span>
-              <button type="button" class="btn btn-primary-custom py-1 px-3 download-trigger-btn" data-file="Trade-In-Appraisal-Prep-Sheet.pdf" data-type="PDF Document" data-size="1.3 MB" style="font-size: 0.85rem;">
-                <i class="bi bi-download"></i> Download
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Template 8 -->
-        <div class="col-lg-4 col-md-6 filterable-card" data-category="management" data-date="20260905" data-popularity="87">
-          <div class="resource-card-base card-treatment-download">
-            <div class="d-flex justify-content-between align-items-center mb-3">
-              <div>
-                <span class="download-format-badge" style="background: rgba(37, 99, 235, 0.1); color: var(--accent-blue);">XLSX</span>
-                <span class="badge-custom">BDC</span>
-              </div>
-              <button type="button" class="btn btn-icon bookmark-toggle-btn" aria-label="Bookmark"><i class="bi bi-bookmark"></i></button>
-            </div>
-            <h3 class="card-title-text h5 fw-bold mb-2">Dealership BDC Speed-to-Lead Matrix</h3>
-            <p class="card-desc-text text-muted small mb-3">
-              Multi-channel escalation rules, response time benchmarks, and appointment confirmation workflow formulas for sales management.
-            </p>
-            <div class="download-meta-strip">
-              <span><i class="bi bi-file-earmark-spreadsheet me-1"></i> 780 KB • Excel</span>
-              <button type="button" class="btn btn-primary-custom py-1 px-3 download-trigger-btn" data-file="BDC-Speed-To-Lead-Matrix.xlsx" data-type="Excel Spreadsheet" data-size="780 KB" style="font-size: 0.85rem;">
-                <i class="bi bi-download"></i> Download
-              </button>
-            </div>
-          </div>
-        </div>
-
       </div>
+
+      <!-- NEW SECTION: CUSTOM TOOLKITS & REQUEST STUDIO -->
+      <section class="mt-5 pt-5 border-top border-subtle">
+        <div class="row align-items-center mb-4">
+          <div class="col-lg-8">
+            <span class="badge-custom badge-amber mb-2">Toolkit Studio</span>
+            <h2 class="h3 fw-bold mb-1">Custom Dealership Toolkits & Request Hub</h2>
+            <p class="text-muted mb-0">Need a custom desking calculator, tailored CRM email cadence, or dealership brand-aligned walkaround checklist?</p>
+          </div>
+          <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+            <button type="button" class="btn btn-primary-custom" onclick="showToast('Custom Toolkit Request modal triggered.', 'bi-tools')">
+              <i class="bi bi-plus-circle me-1"></i> Request Custom Template
+            </button>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="card p-4 h-100 border-medium shadow-sm" style="background: var(--bg-card); border-radius: var(--radius-lg);">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="category-pill-icon" style="background: rgba(245, 124, 0, 0.12); color: var(--accent-amber);">
+                  <i class="bi bi-magic"></i>
+                </div>
+                <div>
+                  <h3 class="h5 fw-bold mb-0">Custom Spreadsheet Formulas</h3>
+                  <span class="badge-custom">Excel & Google Sheets</span>
+                </div>
+              </div>
+              <p class="text-muted small mb-4">
+                Our team builds custom desking pencils, commission tier calculators, and daily activity logs configured for your specific DMS software.
+              </p>
+              <div class="mt-auto d-flex justify-content-between align-items-center pt-3 border-top border-subtle">
+                <span class="text-muted small"><i class="bi bi-clock-history me-1"></i> 24h Turnaround</span>
+                <button type="button" class="btn btn-secondary-custom py-1 px-3" onclick="showToast('Formula request form opened', 'bi-magic')">Submit Specs</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card p-4 h-100 border-medium shadow-sm" style="background: var(--bg-card); border-radius: var(--radius-lg);">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="category-pill-icon" style="background: rgba(37, 99, 235, 0.12); color: var(--accent-blue);">
+                  <i class="bi bi-camera-reels"></i>
+                </div>
+                <div>
+                  <h3 class="h5 fw-bold mb-0">Template Video Walkthroughs</h3>
+                  <span class="badge-custom badge-blue">Implementation Guide</span>
+                </div>
+              </div>
+              <p class="text-muted small mb-4">
+                Watch step-by-step 3-minute video lessons explaining how to implement each template on your sales floor for maximum conversion.
+              </p>
+              <div class="mt-auto d-flex justify-content-between align-items-center pt-3 border-top border-subtle">
+                <span class="text-muted small"><i class="bi bi-play-circle text-warning me-1"></i> 6 Video Lessons</span>
+                <a href="video-tutorials.html" class="fw-semibold text-warning text-decoration-none">Watch Walkthroughs <i class="bi bi-arrow-right ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- No Results Notice -->
       <div class="no-results-notice text-center py-5" style="display: none;">
@@ -348,8 +368,13 @@
             <span class="logo-badge"><i class="bi bi-shield-shaded"></i></span>
             <span>DRIVE<span class="text-warning">FORGE</span></span>
           </div>
-          <p style="color: #94a3b8; font-size: 0.95rem;">"Knowledge That Moves Sales Forward."</p>
-          <p style="color: #64748b; font-size: 0.85rem;">Practical resources and proven knowledge for vehicle sales professionals.</p>
+          <p class="footer-tagline">"Knowledge That Moves Sales Forward."</p>
+          <p class="footer-desc">Practical resources and proven knowledge for vehicle sales professionals.</p>
+          <div class="d-flex gap-2 mt-3">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
         </div>
         <div class="col-lg-2 col-md-6 col-6">
           <h4 class="footer-heading">Explore</h4>

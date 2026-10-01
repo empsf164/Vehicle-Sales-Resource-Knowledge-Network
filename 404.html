@@ -36,7 +36,13 @@
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
             <li class="nav-item"><a class="nav-link-custom" href="index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link-custom" href="resources.html">Resources</a></li>
-            <li class="nav-item"><a class="nav-link-custom" href="learn.html">Learn</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link-custom dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Learn</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item dropdown-item-custom" href="video-tutorials.html"><i class="bi bi-play-circle-fill"></i> Video Tutorials</a></li>
+                <li><a class="dropdown-item dropdown-item-custom" href="learn.html"><i class="bi bi-mortarboard"></i> Learning Paths</a></li>
+              </ul>
+            </li>
             <li class="nav-item"><a class="nav-link-custom" href="community.html">Community</a></li>
             <li class="nav-item"><a class="nav-link-custom" href="templates.html">Templates</a></li>
             <li class="nav-item"><a class="nav-link-custom" href="about.html">About</a></li>
@@ -44,18 +50,58 @@
           </ul>
 
           <div class="d-flex align-items-center gap-3">
-            <button class="btn btn-icon theme-toggle-btn" type="button" aria-label="Toggle Theme">
+            <button class="btn btn-icon theme-toggle-btn" type="button" aria-label="Toggle Theme" title="Toggle Theme">
               <i class="bi bi-moon-stars-fill"></i>
             </button>
-            <a href="login.html" class="btn-ghost-custom">Login</a>
-            <a href="signup.html" class="btn-primary-custom py-2 px-3" style="font-size: 0.9rem;">
-              <span>Join the Network</span>
-              <i class="bi bi-arrow-right"></i>
+            <a href="login.html" class="btn btn-primary-custom py-2 px-3" style="font-size: 0.9rem;">
+              <i class="bi bi-box-arrow-in-right me-1"></i>
+              <span>Login</span>
             </a>
           </div>
         </div>
       </div>
     </nav>
+
+    <!-- Mobile Offcanvas -->
+    <div class="offcanvas offcanvas-end mobile-nav-panel" tabindex="-1" id="mobileNavbar">
+      <div class="offcanvas-header border-bottom border-subtle">
+        <a class="navbar-brand navbar-brand-logo mb-0" href="index.html">
+          <span class="logo-badge"><i class="bi bi-shield-shaded"></i></span>
+          <span>DRIVE<span class="text-warning">FORGE</span></span>
+        </a>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <div class="offcanvas-body d-flex flex-column justify-content-between p-4">
+        <div>
+          <ul class="navbar-nav mb-4">
+            <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="index.html">Home</a></li>
+            <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="resources.html">Resources</a></li>
+            
+            <!-- Learn Dropdown -->
+            <li class="nav-item mb-2 dropdown">
+              <a class="nav-link-custom dropdown-toggle fs-5 d-flex align-items-center justify-content-between" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span>Learn</span>
+              </a>
+              <ul class="dropdown-menu border border-subtle shadow-sm my-1">
+                <li><a class="dropdown-item dropdown-item-custom py-2" href="video-tutorials.html"><i class="bi bi-play-circle-fill me-2 text-warning"></i> Video Tutorials</a></li>
+                <li><a class="dropdown-item dropdown-item-custom py-2" href="learn.html"><i class="bi bi-mortarboard me-2 text-warning"></i> Learning Paths</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="templates.html">Templates</a></li>
+            <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="community.html">Community</a></li>
+            <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="about.html">About</a></li>
+            <li class="nav-item mb-2"><a class="nav-link-custom fs-5" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="pt-3 border-top border-subtle d-grid gap-2">
+          <a href="login.html" class="btn btn-primary-custom w-100 py-2">
+            <i class="bi bi-box-arrow-in-right me-1"></i>
+            <span>Login</span>
+          </a>
+        </div>
+      </div>
+    </div>
   </header>
 
   <!-- 404 MAIN HERO -->
@@ -102,8 +148,13 @@
             <span class="logo-badge"><i class="bi bi-shield-shaded"></i></span>
             <span>DRIVE<span class="text-warning">FORGE</span></span>
           </div>
-          <p style="color: #94a3b8; font-size: 0.95rem;">"Knowledge That Moves Sales Forward."</p>
-          <p style="color: #64748b; font-size: 0.85rem;">Practical resources and proven knowledge for vehicle sales professionals.</p>
+          <p class="footer-tagline">"Knowledge That Moves Sales Forward."</p>
+          <p class="footer-desc">Practical resources and proven knowledge for vehicle sales professionals.</p>
+          <div class="d-flex gap-2 mt-3">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
         </div>
         <div class="col-lg-2 col-md-6 col-6">
           <h4 class="footer-heading">Explore</h4>
